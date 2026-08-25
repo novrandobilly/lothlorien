@@ -1,6 +1,5 @@
 import React from "react";
 import { HeroSection } from "./features/hero-section";
-import { ProofStripSection } from "./features/ProofStripSection";
 import { ProblemSolutionSection } from "./features/ProblemSolutionSection";
 import { CaseStudiesSection } from "./features/CaseStudiesSection";
 import { ProcessSection } from "./features/ProcessSection";
@@ -74,14 +73,13 @@ export function HomePageFeature() {
       {/* Main Content: 9 Modular Sections */}
       <main className="flex-1">
         <HeroSection />
-        <ProofStripSection />
-        <ProblemSolutionSection />
+        {/* <ProblemSolutionSection />
         <CaseStudiesSection />
         <ProcessSection />
         <PricingTiersSection />
         <AboutStudioSection />
         <FaqSection />
-        <CtaIntakeSection />
+        <CtaIntakeSection /> */}
       </main>
 
       {/* Footer */}

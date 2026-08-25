@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
 import { ArrowRight, Calendar } from "lucide-react";
+import { ProofStripSection } from "../ProofStripSection";
 
 const heroPairs = [
   {
@@ -52,7 +53,7 @@ export function HeroSection() {
   const currentPair = heroPairs[index];
 
   return (
-    <section className="relative overflow-hidden pt-24 pb-24 md:pt-36 md:pb-36 border-b border-stone-200 bg-stone-50">
+    <section className="relative overflow-hidden pt-24 pb-20 md:pt-36 md:pb-28 border-b border-stone-200 bg-stone-50">
       {/* Dynamic rolling animations */}
       <style
         dangerouslySetInnerHTML={{
@@ -129,6 +130,8 @@ export function HeroSection() {
             <ArrowRight className="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
           </a>
         </div>
+
+        <ProofStripSection />
       </div>
     </section>
   );
