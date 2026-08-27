@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
 import { ArrowRight, Calendar } from "lucide-react";
-import { ProofStripSection } from "../ProofStripSection";
+import { ProofStripSection } from "./features/ProofStripSection";
 
 const heroPairs = [
   {

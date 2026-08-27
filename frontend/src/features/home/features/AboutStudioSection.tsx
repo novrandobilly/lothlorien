@@ -1,5 +1,12 @@
 import React from "react";
-import { Code2, GitMerge, Bot, Terminal, CheckCircle2, User } from "lucide-react";
+import {
+  Code2,
+  GitMerge,
+  Bot,
+  Terminal,
+  CheckCircle2,
+  User,
+} from "lucide-react";
 
 export function AboutStudioSection() {
   const pillars = [
@@ -39,11 +46,16 @@ export function AboutStudioSection() {
             </h2>
 
             <p className="text-stone-600 leading-relaxed text-sm sm:text-base">
-              Hi, I&apos;m a Senior Frontend Engineer and UI Architect. I help founders, product teams, and tech leaders build exceptional digital experiences without drowning in technical debt.
+              Hi, I&apos;m a Senior Frontend Engineer and UI Architect. I help
+              founders, product teams, and tech leaders build exceptional
+              digital experiences without drowning in technical debt.
             </p>
 
             <p className="text-stone-600 leading-relaxed text-sm sm:text-base">
-              Whether you need to ship a brand-new 0-to-1 MVP, untangle a sluggish legacy frontend, or build responsive cross-platform apps with React Native, I bring clarity, velocity, and craftsmanship to every pull request.
+              Whether you need to ship a brand-new 0-to-1 MVP, untangle a
+              sluggish legacy frontend, or build responsive cross-platform apps
+              with React Native, I bring clarity, velocity, and craftsmanship to
+              every pull request.
             </p>
 
             <div className="p-4 rounded-xl bg-white border border-stone-200 shadow-2xs space-y-3">
@@ -57,7 +69,10 @@ export function AboutStudioSection() {
                   "Direct code ownership with full documentation",
                   "Performance and accessibility as default requirements",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-stone-700">
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 text-xs text-stone-700"
+                  >
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                     <span>{item}</span>
                   </div>
@@ -83,7 +98,7 @@ export function AboutStudioSection() {
                       {pillar.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-stone-600 leading-relaxed pl-0 sm:pl-[52px]">
+                  <p className="text-sm text-stone-600 leading-relaxed pl-0 sm:pl-13">
                     {pillar.description}
                   </p>
                 </div>

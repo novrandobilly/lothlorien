@@ -21,14 +21,14 @@ export function ProofStripSection() {
   ];
 
   return (
-    <div className="mt-16 md:mt-24 pt-12 border-t border-stone-200">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-32">
+    <div className="mt-10 md:mt-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 md:gap-12">
         {metrics.map((item) => (
-          <div key={item.label} className="space-y-1">
-            <div className="text-xl sm:text-2xl font-extrabold text-stone-900 tracking-tight font-sans">
+          <div key={item.label} className="space-y-0.5">
+            <div className="text-lg sm:text-xl font-extrabold text-stone-950 tracking-tight font-sans">
               {item.value}
             </div>
-            <div className="text-xs sm:text-sm text-stone-600 font-medium leading-snug">
+            <div className="text-xs sm:text-sm text-stone-500 font-medium leading-snug">
               {item.label}
             </div>
           </div>
