@@ -20,13 +20,13 @@ export function HomePageFeature() {
       <main className="flex-1">
         <HeroSection />
 
-        {/* <ProblemSolutionSection />
+        {/* <ProblemSolutionSection /> */}
         <CaseStudiesSection />
-        <ProcessSection />
-        <PricingTiersSection />
-        <AboutStudioSection />
-        <FaqSection />
-        <CtaIntakeSection /> */}
+        {/* <ProcessSection /> */}
+        {/* <PricingTiersSection /> */}
+        {/* <AboutStudioSection /> */}
+        {/* <FaqSection /> */}
+        <CtaIntakeSection />
       </main>
 
       {/* Footer */}
