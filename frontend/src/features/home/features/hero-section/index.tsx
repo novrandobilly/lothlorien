@@ -53,7 +53,7 @@ export function HeroSection() {
   const currentPair = heroPairs[index];
 
   return (
-    <section className="relative overflow-hidden pt-24 pb-20 md:pt-36 md:pb-28 border-b border-stone-200 bg-stone-50">
+    <section className="relative overflow-hidden pt-20 pb-20 md:pt-28 md:pb-24">
       {/* Dynamic rolling animations */}
       <style
         dangerouslySetInnerHTML={{
