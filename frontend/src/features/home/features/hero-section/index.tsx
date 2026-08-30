@@ -25,7 +25,7 @@ const heroPairs = [
 ];
 
 // Choose from: "emerald" | "gradient" | "highlight"
-const ACTIVE_OUTCOME_STYLE: "emerald" | "gradient" | "highlight" = "emerald";
+const ACTIVE_OUTCOME_STYLE: "emerald" | "gradient" | "highlight" = "gradient";
 
 const OUTCOME_STYLES = {
   emerald: "text-emerald-700 border-b-2 border-emerald-500 pb-0.5",
