@@ -1,7 +1,7 @@
 import React from "react";
 import { HeroSection } from "./features/hero-section";
 import { ProblemSolutionSection } from "./features/ProblemSolutionSection";
-import { CaseStudiesSection } from "./features/CaseStudiesSection";
+import { CaseStudiesSection } from "./features/case-studies";
 import { ProcessSection } from "./features/ProcessSection";
 import { PricingTiersSection } from "./features/PricingTiersSection";
 import { AboutStudioSection } from "./features/AboutStudioSection";
