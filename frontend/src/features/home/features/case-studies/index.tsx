@@ -20,22 +20,26 @@ export function CaseStudiesSection() {
     {
       title: "Bagels PreOrder App",
       description:
-        "Multi-step registration and identity verification flow built with deterministic state machine logic and strict schema validation.",
+        "Pre-order bagels and schedule custom pickups at your favorite bakery",
       bullets: [
-        "State machine router enforcing linear and conditional paths",
-        "On-device OCR check and biometric verification step matching",
-        "Persistent step auto-save with encrypted local storage caches",
+        "Smooth multi-step checkout flow",
+        "Interactive time-slot selector",
+        "Auto-saves progress on interrupt",
+        "Strict validation avoids order errors",
+        "Secure, offline-ready payment caches",
       ],
       url: `${process.env.NEXT_PUBLIC_DEMO_URL_KICKSERVE}/project/bagels`,
     },
     {
       title: "Online Psychological Test",
       description:
-        "Resilient web & mobile companion app designed with optimistic mutation queues for seamless offline sync.",
+        "Take assessments and view results anywhere, even with poor connection",
       bullets: [
-        "Offline-first sync engine with automatic conflict resolution",
-        "Optimistic UI updates for instant feedback during unstable connections",
-        "Encrypted background database synchronizer using service workers",
+        "Full offline support and automatic sync",
+        "Instant response with zero latency",
+        "Secure local data encryption",
+        "Auto-retries on unstable connection",
+        "Export and share PDF results instantly",
       ],
       url: `${process.env.NEXT_PUBLIC_DEMO_URL_KICKSERVE}/project/psikotes`,
     },
