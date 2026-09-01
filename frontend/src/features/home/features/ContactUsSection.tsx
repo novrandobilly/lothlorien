@@ -41,27 +41,26 @@ export function ContactUsSection() {
   ];
 
   return (
-    <section id="contact" className="py-12 sm:py-16 relative">
+    <section
+      id="contact"
+      className="py-20 sm:py-24 relative bg-[#131825] border-t border-stone-800/90"
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="rounded-3xl bg-[#111520]/85 backdrop-blur-md border border-amber-500/25 p-8 sm:py-10 sm:px-12 text-center shadow-xl shadow-black/50 hover:border-amber-400/40 transition-all">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121622] border border-amber-500/20 text-amber-300/90 text-xs font-semibold tracking-[0.2em] uppercase mb-4 shadow-xs">
-            <span>Direct Inquiries</span>
-          </div>
-
-          <h2 className="text-2xl sm:text-3xl font-normal font-serif text-stone-100 mb-2 tracking-tight">
-            Let&apos;s Build Something Resilient
+        <div className="rounded-3xl bg-white/2 backdrop-blur-xs border border-stone-700/60 p-8 sm:py-12 sm:px-12 text-center shadow-xl shadow-black/40 hover:border-amber-500/35 transition-all">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal font-serif text-stone-100 mb-2 tracking-tight">
+            Send a Letter!
           </h2>
 
-          <p className="text-stone-400 text-sm sm:text-base mb-7 max-w-2xl mx-auto leading-relaxed font-sans">
-            Got an ambitious product in mind, need technical leadership for your frontend architecture,
-            or just want to say hi? Drop me a message.
+          <p className="text-stone-400 text-sm sm:text-base mb-8 max-w-2xl mx-auto leading-relaxed font-sans">
+            Got questions, feedback, or just want to say hi? Drop a message in
+            my mailbox.
           </p>
 
           {/* Email CTA Pill Button */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-8">
             <a
               href={`mailto:${email}`}
-              className="inline-flex items-center gap-3 bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 text-stone-950 font-semibold px-7 py-3.5 rounded-full text-sm sm:text-base shadow-md shadow-amber-950/40 border border-amber-300/60 hover:shadow-[0_0_25px_-3px_rgba(245,158,11,0.4)] hover:-translate-y-0.5 transition-all group cursor-pointer"
+              className="inline-flex items-center gap-3 bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 text-stone-950 font-semibold px-8 py-3.5 rounded-full text-sm sm:text-base shadow-lg shadow-amber-950/60 border border-amber-300/80 hover:shadow-[0_0_25px_-3px_rgba(245,158,11,0.4)] hover:-translate-y-0.5 transition-all group cursor-pointer font-sans"
             >
               <Mail className="w-5 h-5 text-stone-950 group-hover:scale-110 transition-transform" />
               <span>{email}</span>
@@ -70,7 +69,7 @@ export function ContactUsSection() {
 
           {/* Social Links */}
           <div className="pt-6 border-t border-stone-800/80 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 mr-1">
+            <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 mr-1 font-sans">
               Connect elsewhere:
             </span>
             {socialLinks.map((item) => {
@@ -82,7 +81,7 @@ export function ContactUsSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.name}
-                  className="flex items-center justify-center w-9 h-9 rounded-full bg-[#131724] text-stone-300 hover:text-amber-200 hover:bg-stone-800 hover:border-amber-500/40 hover:scale-110 transition-all border border-stone-800/90"
+                  className="flex items-center justify-center w-9 h-9 rounded-full bg-[#131724] text-stone-300 hover:text-amber-200 hover:bg-stone-800 hover:border-amber-500/40 hover:scale-110 transition-all border border-stone-800/90 shadow-xs"
                 >
                   <Icon className="w-4 h-4" />
                 </a>

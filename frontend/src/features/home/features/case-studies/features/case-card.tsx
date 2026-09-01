@@ -11,7 +11,7 @@ interface CaseCardProps {
 
 export function CaseCard({ title, description, bullets, url }: CaseCardProps) {
   return (
-    <div className="flex flex-col w-full h-full justify-between p-7 sm:p-8 rounded-3xl bg-[#111520]/85 backdrop-blur-md border border-stone-800/90 hover:border-amber-500/40 shadow-lg shadow-black/40 hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.15)] hover:-translate-y-1.5 transition-all duration-300 group">
+    <div className="flex flex-col w-full h-full justify-between p-7 sm:p-8 rounded-3xl bg-linear-to-b from-[#0e121b] via-[#090c14] to-[#070910] border border-stone-700/70 hover:border-amber-500/50 shadow-2xl shadow-black/80 hover:shadow-[0_0_35px_-5px_rgba(212,175,55,0.2)] hover:-translate-y-1.5 transition-all duration-300 group ring-1 ring-white/5">
       <div>
         <h3 className="text-xl sm:text-2xl font-normal font-serif text-stone-100 mb-3 group-hover:text-amber-200 transition-colors">
           {title}
@@ -36,7 +36,7 @@ export function CaseCard({ title, description, bullets, url }: CaseCardProps) {
           className="w-full justify-center text-xs sm:text-sm"
           rightIcon={<ExternalLink className="w-4 h-4" />}
         >
-          Launch App
+          Launch this app
         </LothlorienButton>
       </a>
     </div>

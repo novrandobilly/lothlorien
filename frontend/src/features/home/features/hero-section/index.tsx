@@ -28,7 +28,7 @@ export function HeroSection() {
   const currentPair = heroPairs[index];
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-20 md:pt-28 md:pb-24">
+    <section className="relative overflow-hidden pt-20 pb-20 md:pt-28 md:pb-24 bg-[#090b10]">
       {/* Dynamic rolling animations */}
       <style
         dangerouslySetInnerHTML={{
@@ -55,12 +55,6 @@ export function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-160 h-96 bg-radial from-emerald-500/10 via-amber-500/5 to-transparent blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8 text-left">
-        {/* Eyebrow / Professional Label */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121622]/90 border border-amber-500/25 text-amber-300/90 text-xs font-semibold tracking-[0.18em] uppercase mb-8 shadow-xs">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse" />
-          <span>Senior Frontend Engineer &amp; UX Architect</span>
-        </div>
-
         {/* Headline - Split into two stacked rows */}
         <div className="w-full">
           <h1 className="flex flex-col items-start gap-2.5 sm:gap-3.5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight font-serif text-stone-100 leading-tight">
@@ -90,13 +84,13 @@ export function HeroSection() {
 
         {/* Action Buttons: Main CTA + Link text */}
         <div className="mt-12 sm:mt-14 flex flex-wrap items-center justify-start gap-5 sm:gap-7">
-          <a href="#work">
+          <a href="#problem-solution">
             <LothlorienButton
               variant="primary"
               size="lg"
               rightIcon={<ArrowRight className="w-4.5 h-4.5" />}
             >
-              Explore Featured Works
+              Find Your Bottleneck
             </LothlorienButton>
           </a>
 
