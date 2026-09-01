@@ -32,6 +32,7 @@ export function CaseStudiesSection() {
                 description={item.description}
                 bullets={item.bullets}
                 url={item.url}
+                buttonText={item.buttonText}
               />
             </div>
           ))}

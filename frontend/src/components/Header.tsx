@@ -10,7 +10,7 @@ export function Header() {
       <div className="bg-[#0e121a]/85 backdrop-blur-xl border border-amber-500/20 shadow-lg shadow-black/40 rounded-full px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
         {/* Brand Logo & Title */}
         <Link
-          href="#"
+          href="/"
           className="flex items-center gap-2.5 text-stone-100 tracking-tight group"
           aria-label="Envien Studio Home"
         >
@@ -22,7 +22,7 @@ export function Header() {
 
         {/* Right side: Contact Button */}
         <div className="flex items-center gap-3 sm:gap-4">
-          <Link href="#contact">
+          <Link href="/#contact">
             <LothlorienButton
               variant="outline"
               size="sm"

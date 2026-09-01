@@ -3,6 +3,7 @@ export interface Project {
   description: string;
   bullets: string[];
   url: string;
+  buttonText?: string;
 }
 
 export const projects: Project[] = [
@@ -17,7 +18,8 @@ export const projects: Project[] = [
       "Live standings as you play",
       "Share results instantly",
     ],
-    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL}/projects/kickserve`,
+    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL || ""}/projects/kickserve`,
+    buttonText: "Launch this app",
   },
   {
     title: "Bagels PreOrder App",
@@ -26,7 +28,8 @@ export const projects: Project[] = [
       "Smooth multi-step checkout flow",
       "Provide QRIS payment methods",
     ],
-    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL}/projects/bagels`,
+    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL || ""}/projects/bagels`,
+    buttonText: "Launch this app",
   },
   // {
   //   title: "Online Psychological Test",
