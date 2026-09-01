@@ -1,119 +1,93 @@
-import { ProjectDetail } from "../../types";
+export interface GalleryTab {
+  id: string;
+  label: string;
+  title: string;
+  description: string;
+  highlights: string[];
+  placeholderLabel: string;
+}
 
-export const kickserveDetail: ProjectDetail = {
-  id: "kickserve",
+export interface KickserveData {
+  title: string;
+  badge: string;
+  description: string;
+  launchUrl: string;
+  buttonText: string;
+  whatCanYouManage: {
+    title: string;
+    description: string;
+  }[];
+  galleryTabs: GalleryTab[];
+}
+
+export const kickserveData: KickserveData = {
   title: "Kickserve App",
-  subtitle:
-    "An intuitive, zero-friction tournament and match management platform engineered for court-side racquet sports (Tennis, Padel, Badminton).",
-  category: "Web Application / Sports Management",
-  timeline: "2025 – Present",
-  role: "Lead Frontend Engineer & UX Architect",
-  demoUrl: "https://kickserve.envienstudio.com",
-  bullets: [
-    "Up to 32 players supported simultaneously",
-    "Singles & Doubles Americano / Mexicano formats",
-    "Smart, zero-repeat pairing & scheduling algorithm",
-    "Real-time court-side live standings and point differentials",
-    "Instant WhatsApp & high-res result card sharing",
-  ],
-  techStack: [
-    "Next.js (App Router)",
-    "TypeScript",
-    "Tailwind CSS",
-    "Local-First State Sync",
-    "Lucide Icons",
-  ],
-  metrics: [
+  badge: "Sports Tournament Manager",
+  description:
+    "An intuitive, zero-friction tournament and match management app for racquet sports (Tennis, Padel, Badminton). Built to handle social Americano rotations, eliminate manual spreadsheet calculations, and provide court-side live standings on any device.",
+  launchUrl: "https://kickserve.envienstudio.com",
+  buttonText: "Launch Kickserve",
+  whatCanYouManage: [
     {
-      label: "Player Capacity",
-      value: "2 – 32",
-      detail: "Doubles & Singles Americano",
+      title: "Up to 32 Players",
+      description: "Quick player addition, seed rankings, and seamless mid-session substitutions.",
     },
     {
-      label: "Setup Time",
-      value: "< 30s",
-      detail: "No login or backend required",
+      title: "Singles & Doubles Americano",
+      description: "Automated round-by-round partner and opponent rotations for balanced social play.",
     },
     {
-      label: "Offline Reliability",
-      value: "100%",
-      detail: "Zero court-side network dropouts",
+      title: "Smart No-Repeat Scheduling",
+      description: "Permutation algorithm ensuring everyone partners with different players before repeats.",
     },
     {
-      label: "Pairing Optimization",
-      value: "Zero-Repeat",
-      detail: "Balanced partner rotation matrix",
+      title: "Live Standings & Differentials",
+      description: "Real-time leaderboard updating instantly as scores are entered on each court.",
+    },
+    {
+      title: "Instant Result Sharing",
+      description: "One-tap export formatted specifically for WhatsApp group chats and social feeds.",
     },
   ],
-  overview: {
-    background:
-      "Racquet sports like Tennis, Padel, and Badminton are experiencing massive social growth. Weekly social tournaments ('Americano' format where partners rotate each round) are notoriously difficult to organize manually with clipboards or spreadsheets.",
-    problem:
-      "Most existing tournament software requires clunky player registration, mandatory accounts, stable internet connectivity, and complex manual schedule management that disrupts fast-paced 15-minute game rotations.",
-    solution:
-      "Kickserve provides a lightweight, instant-launch tournament companion. Organizers simply add player names, select courts and target points, and the smart scheduling matrix dynamically balances rounds, updates live standings, and exports beautiful shareable summary cards with zero lag.",
-  },
-  features: [
+  galleryTabs: [
     {
-      title: "Smart Americano Pairing Engine",
+      id: "custom-players",
+      label: "Custom Players",
+      title: "Player Roster & Court Allocation",
       description:
-        "Mathematically balanced round generation that pairs every player with different partners while minimizing repeat matchups across multiple courts.",
-      icon: "Cpu",
+        "Easily add, rename, and manage up to 32 players court-side. Save frequently playing groups to localStorage with zero sign-up required.",
       highlights: [
-        "Dynamic court allocation (1 to 8 courts)",
-        "Even partner distribution matrix",
-        "Seamless late-arrival & drop-in substitutions",
+        "Quick-add player names with instant validation",
+        "Drag-and-drop seeding & court distribution",
+        "Late arrival and drop-in substitution support",
       ],
+      placeholderLabel: "Custom Players Roster Interface Preview",
     },
     {
-      title: "Court-Side Rapid Score Entry",
+      id: "matchmaking",
+      label: "Matchmaking",
+      title: "Smart Americano Matchmaking Matrix",
       description:
-        "High-contrast, thumb-friendly point counters designed specifically for bright sunlight and quick inputs between sets.",
-      icon: "Trophy",
+        "Generates balanced round-by-round court pairings. Ensures dynamic partner rotations while minimizing repeat matchups across multiple courts.",
       highlights: [
-        "Big touch targets for mobile use",
-        "Instant score validation",
-        "Live aggregate points & tiebreaker calculations",
+        "Dynamic multi-court allocation (1 to 8 courts)",
+        "Zero-repeat partner permutation matrix",
+        "Simple quick-touch score inputs (+ / - buttons)",
       ],
+      placeholderLabel: "Matchmaking & Court Schedule Preview",
     },
     {
-      title: "Live Standings & Power Ranking",
+      id: "live-standings",
+      label: "Live Standings",
+      title: "Real-Time Leaderboard & Shareable Summary",
       description:
-        "Instant recalculation of tournament standings, showing total points scored, point differential (+/-), win-loss record, and active streaks.",
-      icon: "BarChart3",
+        "Tracks total points, win/loss differential (+/-), and podium positions as matches finish. Generates formatted summaries for instant WhatsApp sharing.",
       highlights: [
-        "Real-time podium leaderboard",
-        "Dynamic tie-break resolution",
-        "Round-by-round point progression chart",
+        "Auto-sorting podium leaderboard (1st, 2nd, 3rd)",
+        "Live point differential calculation for tie-breaking",
+        "One-click formatted WhatsApp text & graphic export",
       ],
-    },
-    {
-      title: "Instant Social & WhatsApp Share",
-      description:
-        "Export clean, beautifully formatted text summaries and high-res digital certificates ready to drop into WhatsApp community group chats.",
-      icon: "Share2",
-      highlights: [
-        "Pre-formatted WhatsApp group markdown",
-        "Clean graphic summary preview",
-        "Podium honors for 1st, 2nd, and 3rd place",
-      ],
-    },
-  ],
-  architecture: [
-    {
-      title: "1. Round-Robin & Americano Schedule Matrix",
-      description:
-        "The scheduler implements a modified Berger / round-robin permutation algorithm. In each round `k`, player indices are rotated around a fixed pivot point, ensuring every player partners with everyone else exactly once before repeats occur.",
-    },
-    {
-      title: "2. Offline-First Optimistic State Sync",
-      description:
-        "Tennis and padel courts often suffer from spotty cell coverage. Kickserve persists all active tournaments, player lists, and completed rounds into localStorage and IndexedDB with transaction-like rollback safety.",
-    },
-    {
-      title: "3. Ergonomic UI for Outdoor & Court-Side Environments",
-      description:
-        "Designed with deep contrast ratios, accessible font scaling, and minimum 48px touch targets to accommodate organizers handling mobile devices while on the court.",
+      placeholderLabel: "Live Standings & Leaderboard Preview",
     },
   ],
 };

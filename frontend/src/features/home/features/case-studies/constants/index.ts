@@ -18,7 +18,7 @@ export const projects: Project[] = [
       "Live standings as you play",
       "Share results instantly",
     ],
-    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL || ""}/projects/kickserve`,
+    url: "/projects/kickserve",
     buttonText: "Launch this app",
   },
   {

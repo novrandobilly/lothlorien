@@ -1,11 +1,7 @@
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { KickserveHero } from "./features/KickserveHero";
-import { KickserveInteractiveDemo } from "./features/KickserveInteractiveDemo";
-import { KickserveOverview } from "./features/KickserveOverview";
-import { KickserveFeatures } from "./features/KickserveFeatures";
-import { KickserveArchitecture } from "./features/KickserveArchitecture";
+import { KickserveManualCard } from "./features/KickserveManualCard";
 
 export function KickservePageFeature() {
   return (
@@ -13,13 +9,9 @@ export function KickservePageFeature() {
       {/* Navigation */}
       <Header />
 
-      {/* Main Content */}
+      {/* Main Content: Big Simple Manual Card Container */}
       <main className="flex-1">
-        <KickserveHero />
-        <KickserveInteractiveDemo />
-        <KickserveOverview />
-        <KickserveFeatures />
-        <KickserveArchitecture />
+        <KickserveManualCard />
       </main>
 
       {/* Footer */}

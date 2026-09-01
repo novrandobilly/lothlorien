@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
 
 interface CaseCardProps {
@@ -53,7 +53,13 @@ export function CaseCard({
           variant="outline"
           size="md"
           className="w-full justify-center text-xs sm:text-sm"
-          rightIcon={<ExternalLink className="w-4 h-4" />}
+          rightIcon={
+            isExternal ? (
+              <ExternalLink className="w-4 h-4" />
+            ) : (
+              <ArrowRight className="w-4 h-4" />
+            )
+          }
         >
           {buttonText}
         </LothlorienButton>
