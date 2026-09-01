@@ -51,11 +51,11 @@ export function KickserveManualCard() {
         </Link>
       </div>
 
-      {/* Obsidian Codex Manual Card Container */}
-      <div className="rounded-3xl bg-linear-to-b from-[#0e121b] via-[#090c14] to-[#070910] border border-stone-700/70 shadow-2xl shadow-black/80 ring-1 ring-white/5 p-7 sm:p-10 md:p-12 text-stone-100">
+      {/* Arcane Emerald Codex Manual Card Container */}
+      <div className="rounded-3xl bg-linear-to-b from-[#0e231c] via-[#091712] to-[#050c09] border border-emerald-500/35 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9),0_0_35px_-5px_rgba(16,185,129,0.15)] ring-1 ring-amber-400/20 p-7 sm:p-10 md:p-12 text-stone-100">
         {/* 1. Header & Title */}
         <div className="mb-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4 shadow-2xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/35 text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-4 shadow-2xs">
             <span>{kickserveData.badge}</span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-normal font-serif text-stone-100 tracking-tight leading-tight">
@@ -64,12 +64,12 @@ export function KickserveManualCard() {
         </div>
 
         {/* 2. Description */}
-        <p className="text-base sm:text-lg text-stone-400 font-sans leading-relaxed mb-8">
+        <p className="text-base sm:text-lg text-stone-300 font-sans leading-relaxed mb-8">
           {kickserveData.description}
         </p>
 
         {/* 3. "What can you manage?" session */}
-        <div className="mb-10 p-6 sm:p-8 rounded-2xl bg-[#080b12]/80 border border-stone-800/90 shadow-inner">
+        <div className="mb-10 p-6 sm:p-8 rounded-2xl bg-[#07130f]/85 border border-emerald-600/30 shadow-inner">
           <h2 className="text-xl sm:text-2xl font-serif text-stone-100 mb-6 font-normal">
             What can you manage?
           </h2>
@@ -113,8 +113,8 @@ export function KickserveManualCard() {
         </div>
 
         {/* 5. Line Divider */}
-        <div className="border-t border-stone-800/80 my-10 relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-[#131724] text-xs font-mono uppercase tracking-widest text-stone-300 border border-stone-800/90 rounded-full py-0.5 shadow-2xs font-semibold">
+        <div className="border-t border-emerald-800/60 my-10 relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-[#0a1e17] text-xs font-mono uppercase tracking-widest text-stone-300 border border-emerald-700/50 rounded-full py-0.5 shadow-2xs font-semibold">
             App Gallery
           </div>
         </div>
@@ -122,12 +122,12 @@ export function KickserveManualCard() {
         {/* 6. App Gallery (Portrait PWA Phone Mockup + Tabs Underneath) */}
         <div className="mt-8 flex flex-col items-center">
           {/* Portrait PWA Smartphone Mockup Frame */}
-          <div className="w-full max-w-72.5 sm:max-w-77.5 rounded-[38px] p-2.5 sm:p-3 bg-[#0a0d14] border-2 border-stone-800 shadow-2xl shadow-black ring-1 ring-white/5">
+          <div className="w-full max-w-72.5 sm:max-w-77.5 rounded-[38px] p-2.5 sm:p-3 bg-[#06100c] border-2 border-emerald-800/60 shadow-2xl shadow-black ring-1 ring-emerald-400/15">
             {/* Dynamic Island / Speaker Notch */}
             <div className="w-22 h-3.5 bg-stone-950 rounded-full mx-auto mb-2.5" />
 
             {/* Smartphone Screen Viewport */}
-            <div className="relative w-full rounded-t-0 rounded-b-[28px] overflow-hidden bg-[#070910] border border-stone-800/90 shadow-inner">
+            <div className="relative w-full rounded-t-0 rounded-b-[28px] overflow-hidden bg-[#070910] border border-emerald-950 shadow-inner">
               <Image
                 src={currentScreenshot.src}
                 alt={currentScreenshot.alt}
@@ -149,13 +149,13 @@ export function KickserveManualCard() {
                   onClick={() => setActiveTabId(tab.id)}
                   className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm cursor-pointer ${
                     isActive
-                      ? "bg-[#1a2233] text-amber-200 border border-amber-500/40 shadow-xs font-semibold"
-                      : "bg-[#131724] text-stone-400 border border-stone-800/90 font-medium"
+                      ? "bg-linear-to-r from-emerald-900 to-teal-900 text-amber-200 border border-amber-400/50 shadow-xs font-semibold"
+                      : "bg-[#091b15] text-stone-300 border border-emerald-800/60 font-medium"
                   }`}
                 >
                   <Icon
                     className={`w-3.5 h-3.5 ${
-                      isActive ? "text-amber-300" : "text-stone-500"
+                      isActive ? "text-amber-300" : "text-emerald-400"
                     }`}
                   />
                   <span>{tab.label}</span>
