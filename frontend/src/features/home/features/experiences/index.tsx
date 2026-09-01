@@ -25,7 +25,7 @@ export function ExperiencesSection() {
 
           {/* Right Column: Description & Book A Call CTA */}
           <div className="lg:col-span-5 flex flex-col justify-between pt-1">
-            <p className="text-stone-400 text-sm sm:text-base leading-relaxed">
+            <p className="text-stone-400 text-sm sm:text-base leading-relaxed font-sans">
               Over the past 6+ years, I&apos;ve engineered mission-critical web applications,
               scalable mobile apps, and robust design systems across fast-paced product environments.
             </p>

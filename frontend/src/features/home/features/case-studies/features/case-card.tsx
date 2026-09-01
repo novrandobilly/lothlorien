@@ -16,7 +16,7 @@ export function CaseCard({ title, description, bullets, url }: CaseCardProps) {
         <h3 className="text-xl sm:text-2xl font-normal font-serif text-stone-100 mb-3 group-hover:text-amber-200 transition-colors">
           {title}
         </h3>
-        <p className="text-sm sm:text-base text-stone-400 mb-6 leading-relaxed">
+        <p className="text-sm sm:text-base text-stone-400 mb-6 leading-relaxed font-sans">
           {description}
         </p>
         <ul className="space-y-2 mb-8 text-sm text-stone-300 font-sans">

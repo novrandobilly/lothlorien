@@ -28,7 +28,7 @@ export function ProofStripSection() {
             <div className="text-xl sm:text-2xl font-normal font-serif text-amber-200 tracking-tight">
               {item.value}
             </div>
-            <div className="text-xs sm:text-sm text-stone-400 font-normal leading-snug">
+            <div className="text-xs sm:text-sm text-stone-400 font-normal leading-snug font-sans">
               {item.label}
             </div>
           </div>

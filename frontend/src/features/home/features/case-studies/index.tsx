@@ -16,7 +16,7 @@ export function CaseStudiesSection() {
           <h2 className="text-3xl sm:text-4xl font-normal font-serif tracking-tight text-stone-100">
             Engineered Apps &amp; Products
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-stone-400 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-stone-400 leading-relaxed font-sans">
             Production-grade web &amp; mobile solutions designed for velocity, scalable state architectures, and refined UX.
           </p>
         </div>
