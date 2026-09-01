@@ -14,8 +14,7 @@ export function CaseStudiesSection() {
             Envien Studio Apps
           </h2>
           <p className="mt-3 text-base sm:text-lg text-stone-600">
-            A showcase of web applications built with high craftsmanship,
-            performance, and attention to detail.
+            
           </p>
         </div>
 

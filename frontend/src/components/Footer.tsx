@@ -6,25 +6,10 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-md bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">
-            L
+            E
           </div>
           <span className="font-semibold text-stone-200">Envien Studio</span>
-          <span>• Senior Frontend Engineering & UI Architecture</span>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <a href="#work" className="hover:text-stone-200 transition-colors">
-            Selected Work
-          </a>
-          <a
-            href="#services"
-            className="hover:text-stone-200 transition-colors"
-          >
-            Tiers
-          </a>
-          <a href="#contact" className="hover:text-stone-200 transition-colors">
-            Contact
-          </a>
+          <span>• Senior Frontend Engineering & UX Architect</span>
         </div>
 
         <div className="text-stone-500">
