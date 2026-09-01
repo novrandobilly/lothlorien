@@ -28,7 +28,8 @@ export const projects: Project[] = [
       "Smooth multi-step checkout flow",
       "Provide QRIS payment methods",
     ],
-    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL || ""}/projects/bagels`,
+    url: `https://bagels.envienstudio.com`,
+    // url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL || ""}/projects/bagels`,
     buttonText: "Launch this app",
   },
   // {
