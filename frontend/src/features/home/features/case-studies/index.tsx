@@ -6,7 +6,7 @@ export function CaseStudiesSection() {
   return (
     <section
       id="work"
-      className="py-24 relative bg-stone-100/70 border-y border-stone-200/60 backdrop-blur-xs"
+      className="py-16 relative bg-stone-100/70 border-y border-stone-200/60 backdrop-blur-xs"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
@@ -14,7 +14,8 @@ export function CaseStudiesSection() {
             Web Apps & Interactive Experiences
           </h2>
           <p className="mt-3 text-base sm:text-lg text-stone-600">
-            A showcase of web applications built with high craftsmanship, performance, and attention to detail.
+            A showcase of web applications built with high craftsmanship,
+            performance, and attention to detail.
           </p>
         </div>
 

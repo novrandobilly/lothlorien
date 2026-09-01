@@ -4,36 +4,11 @@ import React, { useState, useEffect } from "react";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
 import { ArrowRight, Calendar } from "lucide-react";
 import { ProofStripSection } from "./features/ProofStripSection";
-
-const heroPairs = [
-  {
-    asset: "master spreadsheet",
-    outcome: "a real-time dashboard",
-  },
-  {
-    asset: "consulting framework",
-    outcome: "a dedicated client portal",
-  },
-  {
-    asset: "scoring methodology",
-    outcome: "an interactive web engine",
-  },
-  {
-    asset: "manual admin workflow",
-    outcome: "a custom business system",
-  },
-];
-
-// Choose from: "emerald" | "gradient" | "highlight"
-const ACTIVE_OUTCOME_STYLE: "emerald" | "gradient" | "highlight" = "gradient";
-
-const OUTCOME_STYLES = {
-  emerald: "text-emerald-700 border-b-2 border-emerald-500 pb-0.5",
-  gradient:
-    "bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent border-b-2 border-emerald-500/70 pb-0.5 inline-block",
-  highlight:
-    "bg-emerald-50 text-emerald-900 px-2 py-0.5 rounded-md border border-emerald-100/80 shadow-2xs inline-block",
-};
+import {
+  heroPairs,
+  ACTIVE_OUTCOME_STYLE,
+  OUTCOME_STYLES,
+} from "./constants";
 
 export function HeroSection() {
   const [index, setIndex] = useState(0);
