@@ -17,7 +17,7 @@ export const projects: Project[] = [
       "Live standings as you play",
       "Share results instantly",
     ],
-    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL}/project/kickserve`,
+    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL}/projects/kickserve`,
   },
   {
     title: "Bagels PreOrder App",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "Smooth multi-step checkout flow",
       "Provide QRIS payment methods",
     ],
-    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL}/project/bagels`,
+    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL}/projects/bagels`,
   },
   // {
   //   title: "Online Psychological Test",
