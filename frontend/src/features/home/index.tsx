@@ -2,13 +2,14 @@ import React from "react";
 import { HeroSection } from "./features/hero-section";
 import { ProblemSolutionSection } from "./features/ProblemSolutionSection";
 import { CaseStudiesSection } from "./features/case-studies";
+import { ExperiencesSection } from "./features/experiences";
 import { ProcessSection } from "./features/ProcessSection";
 import { PricingTiersSection } from "./features/PricingTiersSection";
-import { AboutStudioSection } from "./features/AboutStudioSection";
 import { FaqSection } from "./features/FaqSection";
 import { ContactUsSection } from "./features/ContactUsSection";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { CoreTechnicalSection } from "./features/CoreTechnicalSection";
 
 export function HomePageFeature() {
   return (
@@ -22,10 +23,11 @@ export function HomePageFeature() {
 
         {/* <ProblemSolutionSection /> */}
         <CaseStudiesSection />
+        <ExperiencesSection />
         {/* <ProcessSection /> */}
         {/* <PricingTiersSection /> */}
-        {/* <AboutStudioSection /> */}
         {/* <FaqSection /> */}
+        {/* <CoreTechnicalSection /> */}
         <ContactUsSection />
       </main>
 
