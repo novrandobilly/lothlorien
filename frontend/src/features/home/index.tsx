@@ -6,7 +6,7 @@ import { ProcessSection } from "./features/ProcessSection";
 import { PricingTiersSection } from "./features/PricingTiersSection";
 import { AboutStudioSection } from "./features/AboutStudioSection";
 import { FaqSection } from "./features/FaqSection";
-import { CtaIntakeSection } from "./features/CtaIntakeSection";
+import { ContactUsSection } from "./features/ContactUsSection";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -26,7 +26,7 @@ export function HomePageFeature() {
         {/* <PricingTiersSection /> */}
         {/* <AboutStudioSection /> */}
         {/* <FaqSection /> */}
-        <CtaIntakeSection />
+        <ContactUsSection />
       </main>
 
       {/* Footer */}
