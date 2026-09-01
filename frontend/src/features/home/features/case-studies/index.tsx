@@ -11,7 +11,7 @@ export function CaseStudiesSection() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-stone-900">
-            Web Apps & Interactive Experiences
+            Envien Studio Apps
           </h2>
           <p className="mt-3 text-base sm:text-lg text-stone-600">
             A showcase of web applications built with high craftsmanship,
@@ -19,15 +19,19 @@ export function CaseStudiesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((item) => (
-            <CaseCard
+            <div
               key={item.title}
-              title={item.title}
-              description={item.description}
-              bullets={item.bullets}
-              url={item.url}
-            />
+              className="flex w-full md:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)] max-w-md"
+            >
+              <CaseCard
+                title={item.title}
+                description={item.description}
+                bullets={item.bullets}
+                url={item.url}
+              />
+            </div>
           ))}
         </div>
       </div>

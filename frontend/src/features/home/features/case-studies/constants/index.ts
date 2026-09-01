@@ -21,14 +21,10 @@ export const projects: Project[] = [
   },
   {
     title: "Bagels PreOrder App",
-    description:
-      "Pre-order bagels and schedule custom pickups at your favorite bakery",
+    description: "Pre-order bagels and salt bread for Envien Bagels",
     bullets: [
       "Smooth multi-step checkout flow",
-      "Interactive time-slot selector",
-      "Auto-saves progress on interrupt",
-      "Strict validation avoids order errors",
-      "Secure, offline-ready payment caches",
+      "Provide QRIS payment methods",
     ],
     url: `${process.env.NEXT_PUBLIC_DEMO_URL_KICKSERVE}/project/bagels`,
   },

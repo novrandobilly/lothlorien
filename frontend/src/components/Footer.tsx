@@ -8,9 +8,7 @@ export function Footer() {
           <div className="w-6 h-6 rounded-md bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">
             L
           </div>
-          <span className="font-semibold text-stone-200">
-            Lothlorien Studio
-          </span>
+          <span className="font-semibold text-stone-200">Envien Studio</span>
           <span>• Senior Frontend Engineering & UI Architecture</span>
         </div>
 
@@ -24,16 +22,13 @@ export function Footer() {
           >
             Tiers
           </a>
-          <a
-            href="#contact"
-            className="hover:text-stone-200 transition-colors"
-          >
+          <a href="#contact" className="hover:text-stone-200 transition-colors">
             Contact
           </a>
         </div>
 
         <div className="text-stone-500">
-          © {new Date().getFullYear()} Lothlorien. All rights reserved.
+          © {new Date().getFullYear()} Envien Studio. All rights reserved.
         </div>
       </div>
     </footer>

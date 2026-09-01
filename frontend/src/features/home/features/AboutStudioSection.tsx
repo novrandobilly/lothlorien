@@ -38,7 +38,7 @@ export function AboutStudioSection() {
           <div className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/70 text-emerald-900 text-xs font-semibold uppercase tracking-wider">
               <User className="w-3.5 h-3.5 text-emerald-700" />
-              The Engineer Behind Lothlorien
+              The Engineer Behind Envien Studio
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-stone-900">

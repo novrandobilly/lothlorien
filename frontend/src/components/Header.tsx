@@ -28,7 +28,7 @@ export function Header() {
           </div>
           <div className="flex items-baseline gap-2">
             <span className="text-base sm:text-lg font-bold tracking-tight text-stone-950 group-hover:text-emerald-950 transition-colors">
-              Lothlorien
+              Envien Studio
             </span>
           </div>
         </a>

@@ -18,9 +18,10 @@ export function FaqSection() {
         "Seamlessly. We establish clear API schemas (via Zod/OpenAPI/TypeScript) upfront so frontend and backend development can proceed in parallel. Communication happens via Slack/Discord, GitHub PRs, and async Loom video walkthroughs.",
     },
     {
-      question: "Why choose a Senior Fractional Engineer over a traditional agency?",
+      question:
+        "Why choose a Senior Fractional Engineer over a traditional agency?",
       answer:
-        "With Lothlorien, you work directly with a senior engineer and UI architect. There are no project managers acting as telephone games, no junior developers learning on your dime, and no bloated agency overhead. You get high craft and fast velocity.",
+        "With Envien Studio, you work directly with a senior engineer and UI architect. There are no project managers acting as telephone games, no junior developers learning on your dime, and no bloated agency overhead. You get high craft and fast velocity.",
     },
     {
       question: "Do you build mobile apps with React Native?",
@@ -55,7 +56,8 @@ export function FaqSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-3 text-base text-stone-600">
-            Everything you need to know about engagements, communication, and technical handoff.
+            Everything you need to know about engagements, communication, and
+            technical handoff.
           </p>
         </div>
 
@@ -84,7 +86,7 @@ export function FaqSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-0 text-sm text-stone-600 leading-relaxed border-t border-stone-100 mt-2 pt-4">
+                  <div className="px-6 pb-6 pt-0 text-sm text-stone-600 leading-relaxed border-t border-stone-100 mt-2">
                     {faq.answer}
                   </div>
                 )}
