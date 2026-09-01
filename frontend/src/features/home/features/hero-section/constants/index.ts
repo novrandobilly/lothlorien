@@ -29,7 +29,7 @@ export const OUTCOME_STYLES = {
   emerald:
     "text-emerald-400 border-b border-emerald-400/50 pb-0.5 inline-block font-serif italic",
   gradient:
-    "bg-linear-to-r from-amber-200 via-amber-300 to-emerald-300 bg-clip-text text-transparent border-b border-amber-400/50 pb-0.5 inline-block font-serif italic",
+    "text-[#e5c158] border-b border-[#c5a059]/70 pb-0.5 inline-block font-serif italic",
   highlight:
-    "bg-amber-950/40 text-amber-200 px-2.5 py-0.5 rounded-md border border-amber-500/30 inline-block font-serif italic",
+    "bg-amber-950/40 text-[#e5c158] px-2.5 py-0.5 rounded-md border border-amber-500/30 inline-block font-serif italic",
 };

@@ -47,7 +47,7 @@ export function ContactUsSection() {
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="rounded-3xl bg-white/2 backdrop-blur-xs border border-stone-700/60 p-8 sm:py-12 sm:px-12 text-center shadow-xl shadow-black/40 hover:border-amber-500/35 transition-all">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal font-serif text-stone-100 mb-2 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif tracking-tight text-stone-100 mb-3 leading-[1.15]">
             Send a Letter!
           </h2>
 

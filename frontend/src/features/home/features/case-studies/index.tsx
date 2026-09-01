@@ -10,7 +10,7 @@ export function CaseStudiesSection() {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-normal font-serif tracking-tight text-stone-100">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif tracking-tight text-stone-100 leading-[1.15]">
             Envien Studio Apps
           </h2>
           <p className="mt-3 text-base sm:text-lg text-stone-400 font-sans"></p>
