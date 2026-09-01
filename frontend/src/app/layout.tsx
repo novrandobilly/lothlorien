@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { AppProviders } from "@/components/providers/AppProviders";
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
+});
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -10,8 +18,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Envien Studio",
-  description: "Official personal site and digital space.",
+  title: "Envien Studio | Novrando Billy — Senior Frontend & UX Architect",
+  description:
+    "Official personal site and digital space of Novrando Billy (Envien Studio) — Senior Frontend Engineer & UX Architect.",
 };
 
 export default function RootLayout({
@@ -22,11 +31,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={plusJakartaSans.variable}
+      className={`${plusJakartaSans.variable} ${cormorantGaramond.variable} dark`}
       suppressHydrationWarning
     >
       <body
-        className="min-h-screen bg-stone-50 text-stone-900 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900"
+        className="min-h-screen bg-[#090b10] text-[#f5f2eb] font-sans antialiased selection:bg-amber-400/20 selection:text-amber-200"
         suppressHydrationWarning
       >
         <AppProviders>{children}</AppProviders>

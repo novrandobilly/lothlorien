@@ -5,16 +5,16 @@ import { ArrowUpRight } from "lucide-react";
 export function Header() {
   return (
     <header className="sticky top-4 sm:top-6 z-50 w-full max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-300">
-      <div className="bg-white/85 backdrop-blur-xl border border-stone-200/80 shadow-xs shadow-stone-200/50 rounded-full px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+      <div className="bg-[#0e121a]/85 backdrop-blur-xl border border-amber-500/20 shadow-lg shadow-black/40 rounded-full px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
         {/* Brand Logo & Title */}
         <a
           href="#"
-          className="flex items-center gap-3 text-stone-900 tracking-tight group"
+          className="flex items-center gap-3 text-stone-100 tracking-tight group"
         >
-          <div className="w-8 h-8 rounded-full bg-linear-to-br from-emerald-700 via-emerald-800 to-teal-900 text-amber-200 flex items-center justify-center shadow-xs ring-1 ring-emerald-600/30 group-hover:scale-105 transition-transform">
+          <div className="w-8 h-8 rounded-full bg-linear-to-br from-emerald-800 via-teal-900 to-emerald-950 text-amber-200 flex items-center justify-center shadow-sm ring-1 ring-amber-500/30 group-hover:ring-amber-400/60 group-hover:scale-105 transition-all">
             {/* Bespoke Leaf / Elven Emblem */}
             <svg
-              className="w-4 h-4 text-emerald-100"
+              className="w-4 h-4 text-emerald-200"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -27,22 +27,22 @@ export function Header() {
             </svg>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="text-base sm:text-lg font-bold tracking-tight text-stone-950 group-hover:text-emerald-950 transition-colors">
+            <span className="text-base sm:text-lg font-bold tracking-tight font-serif text-stone-100 group-hover:text-amber-200 transition-colors">
               Envien Studio
             </span>
           </div>
         </a>
 
-        {/* Right side: Status Indicator & Contact Button */}
+        {/* Right side: Contact Button */}
         <div className="flex items-center gap-3 sm:gap-4">
           <a href="#contact">
             <LothlorienButton
-              variant="primary"
+              variant="outline"
               size="sm"
-              className="rounded-full shadow-xs hover:shadow-sm"
+              className="shadow-xs hover:shadow-sm text-xs font-medium"
               rightIcon={<ArrowUpRight className="w-3.5 h-3.5" />}
             >
-              Contact Us
+              Contact
             </LothlorienButton>
           </a>
         </div>

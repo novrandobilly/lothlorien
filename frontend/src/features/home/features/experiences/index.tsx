@@ -11,12 +11,12 @@ export function ExperiencesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start justify-between">
           {/* Left Column: Pill Label & Title */}
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-2 text-stone-900 text-sm sm:text-base font-medium">
-              <span className="w-2.5 h-2.5 rounded-full bg-stone-900 inline-block" />
-              <span>Experiences</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121622] border border-amber-500/25 text-amber-300/90 text-xs font-semibold tracking-[0.2em] uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+              <span>Career Trajectory</span>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-stone-900 mt-4 leading-[1.12]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif tracking-tight text-stone-100 mt-5 leading-[1.15]">
               Explore My
               <br />
               Frontend Journey
@@ -25,26 +25,25 @@ export function ExperiencesSection() {
 
           {/* Right Column: Description & Book A Call CTA */}
           <div className="lg:col-span-5 flex flex-col justify-between pt-1">
-            <p className="text-stone-600 text-base sm:text-lg leading-relaxed">
-              Over the past 5+ years, I've had the privilege of working on a
-              diverse range of projects, from web-application, mobile apps, and
-              company landing pages.
+            <p className="text-stone-400 text-sm sm:text-base leading-relaxed">
+              Over the past 6+ years, I&apos;ve engineered mission-critical web applications,
+              scalable mobile apps, and robust design systems across fast-paced product environments.
             </p>
 
             <div className="mt-6">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-1.5 text-base font-medium text-stone-900 hover:text-emerald-700 underline underline-offset-4 decoration-stone-400 hover:decoration-emerald-700 transition-colors group"
+                className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-amber-200 hover:text-amber-100 underline underline-offset-4 decoration-amber-500/40 hover:decoration-amber-300 transition-colors group"
               >
                 <span>Book A Call</span>
-                <ArrowUpRight className="w-4.5 h-4.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Experience List */}
-        <div className="mt-14 sm:mt-18 border-t border-stone-200/80 divide-y divide-stone-200/80">
+        <div className="mt-12 sm:mt-16 border-t border-stone-800/80 divide-y divide-stone-800/80">
           {experiences.map((experience) => (
             <ExperienceRow key={experience.id} experience={experience} />
           ))}

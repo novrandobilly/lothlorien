@@ -26,9 +26,10 @@ export const heroPairs: HeroPair[] = [
 export const ACTIVE_OUTCOME_STYLE: "emerald" | "gradient" | "highlight" = "gradient";
 
 export const OUTCOME_STYLES = {
-  emerald: "text-emerald-700 border-b-2 border-emerald-500 pb-0.5",
+  emerald:
+    "text-emerald-400 border-b border-emerald-400/50 pb-0.5 inline-block font-serif italic",
   gradient:
-    "bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent border-b-2 border-emerald-500/70 pb-0.5 inline-block",
+    "bg-linear-to-r from-amber-200 via-amber-300 to-emerald-300 bg-clip-text text-transparent border-b border-amber-400/50 pb-0.5 inline-block font-serif italic",
   highlight:
-    "bg-emerald-50 text-emerald-900 px-2 py-0.5 rounded-md border border-emerald-100/80 shadow-2xs inline-block",
+    "bg-amber-950/40 text-amber-200 px-2.5 py-0.5 rounded-md border border-amber-500/30 inline-block font-serif italic",
 };

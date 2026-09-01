@@ -13,7 +13,7 @@ import { CoreTechnicalSection } from "./features/CoreTechnicalSection";
 
 export function HomePageFeature() {
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50 text-stone-900 selection:bg-emerald-100 selection:text-emerald-900">
+    <div className="min-h-screen flex flex-col bg-[#090b10] text-[#f5f2eb] selection:bg-amber-400/20 selection:text-amber-200">
       {/* Sticky Header / Navigation */}
       <Header />
 

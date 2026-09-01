@@ -16,21 +16,21 @@ export interface LothlorienButtonProps
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-emerald-700 text-white hover:bg-emerald-800 active:bg-emerald-900 shadow-sm border border-emerald-600/30",
+    "bg-linear-to-r from-emerald-900 via-emerald-800 to-teal-900 text-amber-100 hover:from-emerald-800 hover:via-emerald-700 hover:to-teal-800 active:from-emerald-950 active:to-teal-950 shadow-md shadow-emerald-950/40 border border-amber-500/40 hover:border-amber-400/70 hover:shadow-[0_0_20px_-3px_rgba(212,175,55,0.25)]",
   secondary:
-    "bg-stone-100 text-stone-900 hover:bg-stone-200 active:bg-stone-300 border border-stone-200",
+    "bg-[#131722]/90 text-stone-200 hover:bg-[#1a2030] hover:text-amber-100 active:bg-[#0f121a] border border-stone-800 hover:border-amber-500/40 shadow-xs",
   outline:
-    "border border-stone-300 bg-transparent text-stone-800 hover:bg-stone-100 active:bg-stone-200",
+    "border border-amber-500/35 bg-stone-900/30 text-amber-200/90 hover:bg-amber-500/10 hover:border-amber-400/65 hover:text-amber-100 active:bg-amber-500/20 backdrop-blur-xs",
   ghost:
-    "bg-transparent text-stone-700 hover:bg-stone-100 active:bg-stone-200",
+    "bg-transparent text-stone-300 hover:text-amber-200 hover:bg-stone-800/40 active:bg-stone-800/60",
   gold:
-    "bg-amber-600 text-white hover:bg-amber-700 active:bg-amber-800 shadow-sm border border-amber-500/40",
+    "bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 text-stone-950 font-semibold hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 active:from-amber-700 active:to-amber-600 shadow-md shadow-amber-950/40 border border-amber-300/60 hover:shadow-[0_0_20px_-3px_rgba(245,158,11,0.35)]",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: "text-xs px-3 py-1.5 rounded-md gap-1.5",
-  md: "text-sm px-4 py-2 rounded-lg gap-2",
-  lg: "text-base px-6 py-2.5 rounded-xl gap-2.5",
+  sm: "text-xs px-3.5 py-1.5 rounded-full gap-1.5",
+  md: "text-sm px-5 py-2 rounded-full gap-2",
+  lg: "text-base px-7 py-3 rounded-full gap-2.5",
 };
 
 export const LothlorienButton = forwardRef<HTMLButtonElement, LothlorienButtonProps>(

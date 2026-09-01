@@ -52,26 +52,32 @@ export function HeroSection() {
       />
 
       {/* Subtle Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-96 bg-emerald-100/60 blur-[130px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-160 h-96 bg-radial from-emerald-500/10 via-amber-500/5 to-transparent blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8 text-left">
+        {/* Eyebrow / Professional Label */}
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121622]/90 border border-amber-500/25 text-amber-300/90 text-xs font-semibold tracking-[0.18em] uppercase mb-8 shadow-xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse" />
+          <span>Senior Frontend Engineer &amp; UX Architect</span>
+        </div>
+
         {/* Headline - Split into two stacked rows */}
         <div className="w-full">
-          <h1 className="flex flex-col items-start gap-3 sm:gap-4 text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-normal tracking-tight text-stone-900 leading-snug">
+          <h1 className="flex flex-col items-start gap-2.5 sm:gap-3.5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight font-serif text-stone-100 leading-tight">
             <span className="text-left">
               You already have a great{" "}
               <span
-                className={`inline-block font-extrabold text-stone-900 border-b-2 border-emerald-500/30 pb-0.5 ${
+                className={`inline-block font-medium italic text-stone-100 border-b border-amber-500/40 pb-0.5 ${
                   isVisible ? "animate-roll-in" : "animate-roll-out"
                 }`}
               >
                 {currentPair.asset}
               </span>
             </span>
-            <span className="text-left lg:whitespace-nowrap text-stone-900">
+            <span className="text-left lg:whitespace-nowrap text-stone-100">
               Let&apos;s scale it into{" "}
               <span
-                className={`inline-block font-extrabold ${
+                className={`inline-block font-medium ${
                   isVisible ? "animate-roll-in" : "animate-roll-out"
                 } ${OUTCOME_STYLES[ACTIVE_OUTCOME_STYLE]}`}
               >
@@ -83,23 +89,23 @@ export function HeroSection() {
         </div>
 
         {/* Action Buttons: Main CTA + Link text */}
-        <div className="mt-16 flex flex-wrap items-center justify-start gap-6 sm:gap-8">
-          <a href="#problem-solution">
+        <div className="mt-12 sm:mt-14 flex flex-wrap items-center justify-start gap-5 sm:gap-7">
+          <a href="#work">
             <LothlorienButton
               variant="primary"
               size="lg"
-              rightIcon={<ArrowRight className="w-5 h-5" />}
+              rightIcon={<ArrowRight className="w-4.5 h-4.5" />}
             >
-              Find Your Bottleneck
+              Explore Featured Works
             </LothlorienButton>
           </a>
 
           <a
             href="#contact"
-            className="inline-flex items-center gap-2.5 text-base sm:text-lg font-semibold text-stone-700 hover:text-emerald-700 transition-colors group px-3 py-2"
+            className="inline-flex items-center gap-2.5 text-sm sm:text-base font-medium text-stone-300 hover:text-amber-200 transition-colors group px-2 py-2"
           >
-            <Calendar className="w-5 h-5 text-emerald-600 group-hover:scale-110 transition-transform" />
-            <span className="underline underline-offset-4 decoration-stone-300 group-hover:decoration-emerald-600">
+            <Calendar className="w-4.5 h-4.5 text-emerald-400 group-hover:scale-110 transition-transform" />
+            <span className="underline underline-offset-4 decoration-stone-700 group-hover:decoration-amber-400/70">
               Book a Call
             </span>
             <ArrowRight className="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />

@@ -11,32 +11,34 @@ interface CaseCardProps {
 
 export function CaseCard({ title, description, bullets, url }: CaseCardProps) {
   return (
-    <div className="flex flex-col w-full h-full justify-between p-8 sm:p-8 rounded-4xl bg-white/90 backdrop-blur-md border border-stone-200/90 hover:border-emerald-400/80 shadow-md hover:shadow-2xl hover:shadow-emerald-950/5 hover:-translate-y-1.5 transition-all duration-300">
+    <div className="flex flex-col w-full h-full justify-between p-7 sm:p-8 rounded-3xl bg-[#111520]/85 backdrop-blur-md border border-stone-800/90 hover:border-amber-500/40 shadow-lg shadow-black/40 hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.15)] hover:-translate-y-1.5 transition-all duration-300 group">
       <div>
-        <h3 className="text-xl font-bold text-stone-900 mb-3 group-hover:text-emerald-900 transition-colors">
+        <h3 className="text-xl sm:text-2xl font-normal font-serif text-stone-100 mb-3 group-hover:text-amber-200 transition-colors">
           {title}
         </h3>
-        <p className="text-sm sm:text-base text-stone-600 mb-5 leading-relaxed">
+        <p className="text-sm sm:text-base text-stone-400 mb-6 leading-relaxed">
           {description}
         </p>
-        <ul className="space-y-1.5 mb-8 text-sm text-stone-600 font-sans">
+        <ul className="space-y-2 mb-8 text-sm text-stone-300 font-sans">
           {bullets.map((bullet, idx) => (
             <li key={idx} className="flex items-start gap-2.5">
-              <span className="text-emerald-600 font-bold mt-1 text-xs">✓</span>
-              <span className="leading-relaxed">{bullet}</span>
+              <span className="text-emerald-400 font-semibold text-xs mt-0.5">◆</span>
+              <span className="leading-relaxed text-stone-300 text-xs sm:text-sm">{bullet}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      <LothlorienButton
-        variant="outline"
-        size="lg"
-        className="w-full justify-center group-hover:border-emerald-500 group-hover:bg-emerald-50/50 group-hover:text-emerald-900"
-        rightIcon={<ExternalLink className="w-4.5 h-4.5" />}
-      >
-        Launch this app
-      </LothlorienButton>
+      <a href={url} target="_blank" rel="noopener noreferrer" className="block w-full">
+        <LothlorienButton
+          variant="outline"
+          size="md"
+          className="w-full justify-center text-xs sm:text-sm"
+          rightIcon={<ExternalLink className="w-4 h-4" />}
+        >
+          Launch App
+        </LothlorienButton>
+      </a>
     </div>
   );
 }
