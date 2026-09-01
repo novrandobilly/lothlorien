@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   title: "Envien Studio | Novrando Billy — Senior Frontend & UX Architect",
   description:
     "Official personal site and digital space of Novrando Billy (Envien Studio) — Senior Frontend Engineer & UX Architect.",
+  icons: {
+    icon: [
+      { url: "/envienstudio-logo-black.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/envienstudio-logo-black.svg",
+    apple: "/envienstudio-logo-black.svg",
+  },
 };
 
 export default function RootLayout({

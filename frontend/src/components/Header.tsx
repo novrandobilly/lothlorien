@@ -1,5 +1,6 @@
 import React from "react";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
+import { EnvienLogo } from "@/components/ui/EnvienLogo";
 import { ArrowUpRight } from "lucide-react";
 
 export function Header() {
@@ -9,28 +10,13 @@ export function Header() {
         {/* Brand Logo & Title */}
         <a
           href="#"
-          className="flex items-center gap-3 text-stone-100 tracking-tight group"
+          className="flex items-center gap-2.5 text-stone-100 tracking-tight group"
+          aria-label="Envien Studio Home"
         >
-          <div className="w-8 h-8 rounded-full bg-linear-to-br from-emerald-800 via-teal-900 to-emerald-950 text-amber-200 flex items-center justify-center shadow-sm ring-1 ring-amber-500/30 group-hover:ring-amber-400/60 group-hover:scale-105 transition-all">
-            {/* Bespoke Leaf / Elven Emblem */}
-            <svg
-              className="w-4 h-4 text-emerald-200"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-            </svg>
-          </div>
-          <div className="flex items-baseline gap-2">
-            <span className="text-base sm:text-lg font-bold tracking-tight font-serif text-stone-100 group-hover:text-amber-200 transition-colors">
-              Envien Studio
-            </span>
-          </div>
+          <EnvienLogo className="h-4 sm:h-4.5 w-auto text-stone-100 group-hover:text-amber-200 transition-colors" />
+          <span className="text-base sm:text-lg font-bold tracking-tight font-serif text-stone-100 group-hover:text-amber-200 transition-colors">
+            Envien Studio
+          </span>
         </a>
 
         {/* Right side: Contact Button */}
