@@ -44,11 +44,11 @@ export function ContactUsSection() {
     <section id="contact" className="py-8 sm:py-10 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="rounded-2xl sm:rounded-3xl bg-white/90 backdrop-blur-md border border-stone-300/70 p-6 sm:py-8 sm:px-10 text-center shadow-xs hover:shadow-md transition-shadow">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-stone-900 mb-2 tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-bold text-stone-900 mb-2 tracking-tight">
             Send a Letter!
           </h2>
 
-          <p className="text-stone-600 text-sm sm:text-base mb-6 max-w-3xl mx-auto font-sans leading-relaxed">
+          <p className="text-stone-600 text-sm sm:text-base mb-6 max-w-3xl mx-auto leading-relaxed">
             Got questions, feedback, or just want to say hi? Drop a message in
             my mailbox.
           </p>

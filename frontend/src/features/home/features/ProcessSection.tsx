@@ -44,7 +44,7 @@ export function ProcessSection() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/70 text-emerald-900 text-xs font-semibold uppercase tracking-wider mb-4">
             Execution Roadmap
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-stone-900">
             Demystifying the build from 0 to 1.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-stone-600">

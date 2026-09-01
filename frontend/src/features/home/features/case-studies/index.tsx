@@ -1,67 +1,20 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
 import { CaseCard } from "./features/case-card";
+import { projects } from "./constants";
 
 export function CaseStudiesSection() {
-  const projects = [
-    {
-      title: "Kickserve App",
-      description:
-        "Manage your session and players freely (Tennis, Padel, even Badminton)",
-      bullets: [
-        "Up to 32 players",
-        "Singles & Doubles Americano",
-        "Smart, no-repeat scheduling",
-        "Live standings as you play",
-        "Share results instantly",
-      ],
-      url: `${process.env.NEXT_PUBLIC_DEMO_URL_KICKSERVE}/project/kickserve`,
-    },
-    {
-      title: "Bagels PreOrder App",
-      description:
-        "Pre-order bagels and schedule custom pickups at your favorite bakery",
-      bullets: [
-        "Smooth multi-step checkout flow",
-        "Interactive time-slot selector",
-        "Auto-saves progress on interrupt",
-        "Strict validation avoids order errors",
-        "Secure, offline-ready payment caches",
-      ],
-      url: `${process.env.NEXT_PUBLIC_DEMO_URL_KICKSERVE}/project/bagels`,
-    },
-    {
-      title: "Online Psychological Test",
-      description:
-        "Take assessments and view results anywhere, even with poor connection",
-      bullets: [
-        "Full offline support and automatic sync",
-        "Instant response with zero latency",
-        "Secure local data encryption",
-        "Auto-retries on unstable connection",
-        "Export and share PDF results instantly",
-      ],
-      url: `${process.env.NEXT_PUBLIC_DEMO_URL_KICKSERVE}/project/psikotes`,
-    },
-  ];
-
   return (
     <section
       id="work"
       className="py-24 relative bg-stone-100/70 border-y border-stone-200/60 backdrop-blur-xs"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/70 border border-emerald-200 text-emerald-900 text-xs font-semibold uppercase tracking-wider mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
-            Selected Work
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-serif font-semibold tracking-tight text-stone-900">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-stone-900">
             Web Apps & Interactive Experiences
           </h2>
-          <p className="mt-4 text-lg sm:text-xl text-stone-600 font-sans">
-            A showcase of web applications built with high craftsmanship,
-            performance, and attention to detail.
+          <p className="mt-3 text-base sm:text-lg text-stone-600">
+            A showcase of web applications built with high craftsmanship, performance, and attention to detail.
           </p>
         </div>
 

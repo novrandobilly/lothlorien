@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { AppProviders } from "@/components/providers/AppProviders";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Lothlorien | Personal Brand",
@@ -13,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={plusJakartaSans.variable} suppressHydrationWarning>
       <body
-        className="min-h-screen bg-stone-50 text-stone-900 antialiased selection:bg-emerald-100 selection:text-emerald-900"
+        className="min-h-screen bg-stone-50 text-stone-900 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900"
         suppressHydrationWarning
       >
         <AppProviders>{children}</AppProviders>

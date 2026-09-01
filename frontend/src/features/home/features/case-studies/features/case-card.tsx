@@ -13,10 +13,10 @@ export function CaseCard({ title, description, bullets, url }: CaseCardProps) {
   return (
     <div className="flex flex-col max-w-md justify-between p-10 sm:p-8 rounded-4xl bg-white/90 backdrop-blur-md border border-stone-200/90 hover:border-emerald-400/80 shadow-md hover:shadow-2xl hover:shadow-emerald-950/5 hover:-translate-y-1.5 transition-all duration-300">
       <div>
-        <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4 group-hover:text-emerald-900 transition-colors">
+        <h3 className="text-xl font-bold text-stone-900 mb-3 group-hover:text-emerald-900 transition-colors">
           {title}
         </h3>
-        <p className="text-base text-stone-600 mb-6 leading-relaxed font-sans">
+        <p className="text-sm sm:text-base text-stone-600 mb-5 leading-relaxed">
           {description}
         </p>
         <ul className="space-y-3.5 mb-8 text-sm text-stone-600 font-sans">

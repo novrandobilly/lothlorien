@@ -65,7 +65,7 @@ export function PricingTiersSection() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-4">
             Transparent Engagements
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-stone-900">
             Straightforward pricing. Zero agency overhead.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-stone-600">

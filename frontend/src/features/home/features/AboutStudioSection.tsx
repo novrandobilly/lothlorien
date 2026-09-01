@@ -41,7 +41,7 @@ export function AboutStudioSection() {
               The Engineer Behind Lothlorien
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-stone-900">
               High-craft engineering designed to outlast short-term trends.
             </h2>
 

@@ -27,7 +27,7 @@ export function Header() {
             </svg>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="font-serif text-lg tracking-normal font-semibold text-stone-950 group-hover:text-emerald-950 transition-colors">
+            <span className="text-base sm:text-lg font-bold tracking-tight text-stone-950 group-hover:text-emerald-950 transition-colors">
               Lothlorien
             </span>
           </div>
