@@ -1,9 +1,6 @@
 export interface GalleryTab {
   id: string;
   label: string;
-  title: string;
-  description: string;
-  highlights: string[];
   placeholderLabel: string;
 }
 
@@ -24,70 +21,51 @@ export const kickserveData: KickserveData = {
   title: "Kickserve App",
   badge: "Sports Tournament Manager",
   description:
-    "An intuitive, zero-friction tournament and match management app for racquet sports (Tennis, Padel, Badminton). Built to handle social Americano rotations, eliminate manual spreadsheet calculations, and provide court-side live standings on any device.",
+    "A lightweight tournament and Americano session manager built for racquet sports (Tennis, Padel, Badminton). It eliminates manual spreadsheets by automating partner rotations, court allocations, and live court-side standings on any mobile device.",
   launchUrl: "https://kickserve.envienstudio.com",
   buttonText: "Launch Kickserve",
   whatCanYouManage: [
     {
-      title: "Up to 32 Players",
-      description: "Quick player addition, seed rankings, and seamless mid-session substitutions.",
+      title: "Player Rosters (Up to 32)",
+      description:
+        "Easily register players, assign skill seeds, and handle substitutions mid-session.",
     },
     {
-      title: "Singles & Doubles Americano",
-      description: "Automated round-by-round partner and opponent rotations for balanced social play.",
+      title: "Americano & Mexicano Rotations",
+      description:
+        "Generate balanced rounds with automated partner and opponent pairings across all active courts.",
     },
     {
       title: "Smart No-Repeat Scheduling",
-      description: "Permutation algorithm ensuring everyone partners with different players before repeats.",
+      description:
+        "Deterministic pairing algorithm guarantees players do not partner with the same person twice.",
     },
     {
       title: "Live Standings & Differentials",
-      description: "Real-time leaderboard updating instantly as scores are entered on each court.",
+      description:
+        "Enter match scores directly court-side to calculate total points, win/loss stats, and podium rankings in real time.",
     },
     {
-      title: "Instant Result Sharing",
-      description: "One-tap export formatted specifically for WhatsApp group chats and social feeds.",
+      title: "One-Tap WhatsApp Share",
+      description:
+        "Export clean, formatted result summaries and podium standings directly to your community group chat.",
     },
   ],
   galleryTabs: [
     {
       id: "custom-players",
       label: "Custom Players",
-      title: "Player Roster & Court Allocation",
-      description:
-        "Easily add, rename, and manage up to 32 players court-side. Save frequently playing groups to localStorage with zero sign-up required.",
-      highlights: [
-        "Quick-add player names with instant validation",
-        "Drag-and-drop seeding & court distribution",
-        "Late arrival and drop-in substitution support",
-      ],
-      placeholderLabel: "Custom Players Roster Interface Preview",
+      placeholderLabel: "Custom Players Roster",
     },
     {
       id: "matchmaking",
       label: "Matchmaking",
-      title: "Smart Americano Matchmaking Matrix",
-      description:
-        "Generates balanced round-by-round court pairings. Ensures dynamic partner rotations while minimizing repeat matchups across multiple courts.",
-      highlights: [
-        "Dynamic multi-court allocation (1 to 8 courts)",
-        "Zero-repeat partner permutation matrix",
-        "Simple quick-touch score inputs (+ / - buttons)",
-      ],
-      placeholderLabel: "Matchmaking & Court Schedule Preview",
+      placeholderLabel: "Court Matchmaking Matrix",
     },
     {
       id: "live-standings",
       label: "Live Standings",
-      title: "Real-Time Leaderboard & Shareable Summary",
-      description:
-        "Tracks total points, win/loss differential (+/-), and podium positions as matches finish. Generates formatted summaries for instant WhatsApp sharing.",
-      highlights: [
-        "Auto-sorting podium leaderboard (1st, 2nd, 3rd)",
-        "Live point differential calculation for tie-breaking",
-        "One-click formatted WhatsApp text & graphic export",
-      ],
-      placeholderLabel: "Live Standings & Leaderboard Preview",
+      placeholderLabel: "Live Standings & Leaderboard",
     },
   ],
 };
