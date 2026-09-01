@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
 import { ArrowRight, Calendar } from "lucide-react";
 import { ProofStripSection } from "./features/ProofStripSection";
@@ -84,7 +85,7 @@ export function HeroSection() {
 
         {/* Action Buttons: Main CTA + Link text */}
         <div className="mt-12 sm:mt-14 flex flex-wrap items-center justify-start gap-5 sm:gap-7">
-          <a href="#problem-solution">
+          <Link href="#problem-solution">
             <LothlorienButton
               variant="primary"
               size="lg"
@@ -92,9 +93,9 @@ export function HeroSection() {
             >
               Find Your Bottleneck
             </LothlorienButton>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="#contact"
             className="inline-flex items-center gap-2.5 text-sm sm:text-base font-medium text-stone-300 hover:text-amber-200 transition-colors group px-2 py-2"
           >
@@ -103,7 +104,7 @@ export function HeroSection() {
               Book a Call
             </span>
             <ArrowRight className="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
-          </a>
+          </Link>
         </div>
 
         <ProofStripSection />

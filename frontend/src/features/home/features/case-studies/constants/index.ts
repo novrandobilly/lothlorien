@@ -9,7 +9,7 @@ export const projects: Project[] = [
   {
     title: "Kickserve App",
     description:
-      "Manage your session and players freely (Tennis, Padel, even Badminton)",
+      "App to manage tennis session and players freely (or padel, even badminton)",
     bullets: [
       "Up to 32 players",
       "Singles & Doubles Americano",
@@ -17,16 +17,16 @@ export const projects: Project[] = [
       "Live standings as you play",
       "Share results instantly",
     ],
-    url: `${process.env.NEXT_PUBLIC_DEMO_URL_KICKSERVE}/project/kickserve`,
+    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL}/project/kickserve`,
   },
   {
     title: "Bagels PreOrder App",
-    description: "Pre-order bagels and salt bread for Envien Bagels",
+    description: "App to pre-order my bagels and salt bread",
     bullets: [
       "Smooth multi-step checkout flow",
       "Provide QRIS payment methods",
     ],
-    url: `${process.env.NEXT_PUBLIC_DEMO_URL_KICKSERVE}/project/bagels`,
+    url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL}/project/bagels`,
   },
   // {
   //   title: "Online Psychological Test",

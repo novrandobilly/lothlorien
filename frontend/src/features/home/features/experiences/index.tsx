@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { experiences } from "./constants";
 import { ExperienceRow } from "./features/experience-row";
@@ -27,13 +28,13 @@ export function ExperiencesSection() {
             </p>
 
             <div className="mt-6">
-              <a
+              <Link
                 href="#contact"
                 className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-amber-200 hover:text-amber-100 underline underline-offset-4 decoration-amber-500/40 hover:decoration-amber-300 transition-colors group"
               >
                 <span>Book A Call</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

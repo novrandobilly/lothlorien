@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Check, Sparkles, ArrowRight } from "lucide-react";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
 
@@ -156,7 +157,7 @@ export function PricingTiersSection() {
               </div>
 
               <div className="pt-8 mt-6">
-                <a href="#contact" className="block w-full">
+                <Link href="#contact" className="block w-full">
                   <LothlorienButton
                     variant={tier.isPopular ? "gold" : "primary"}
                     size="lg"
@@ -165,7 +166,7 @@ export function PricingTiersSection() {
                   >
                     {tier.ctaText}
                   </LothlorienButton>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

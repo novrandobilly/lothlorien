@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Mail, Linkedin, Instagram, Github } from "lucide-react";
 
 function WhatsAppIcon({ className = "w-4.5 h-4.5" }: { className?: string }) {
@@ -58,13 +59,13 @@ export function ContactUsSection() {
 
           {/* Email CTA Pill Button */}
           <div className="flex justify-center mb-8">
-            <a
+            <Link
               href={`mailto:${email}`}
               className="inline-flex items-center gap-3 bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 text-stone-950 font-semibold px-8 py-3.5 rounded-full text-sm sm:text-base shadow-lg shadow-amber-950/60 border border-amber-300/80 hover:shadow-[0_0_25px_-3px_rgba(245,158,11,0.4)] hover:-translate-y-0.5 transition-all group cursor-pointer font-sans"
             >
               <Mail className="w-5 h-5 text-stone-950 group-hover:scale-110 transition-transform" />
               <span>{email}</span>
-            </a>
+            </Link>
           </div>
 
           {/* Social Links */}
@@ -75,7 +76,7 @@ export function ContactUsSection() {
             {socialLinks.map((item) => {
               const Icon = item.icon;
               return (
-                <a
+                <Link
                   key={item.name}
                   href={item.url}
                   target="_blank"
@@ -84,7 +85,7 @@ export function ContactUsSection() {
                   className="flex items-center justify-center w-9 h-9 rounded-full bg-[#131724] text-stone-300 hover:text-amber-200 hover:bg-stone-800 hover:border-amber-500/40 hover:scale-110 transition-all border border-stone-800/90 shadow-xs"
                 >
                   <Icon className="w-4 h-4" />
-                </a>
+                </Link>
               );
             })}
           </div>

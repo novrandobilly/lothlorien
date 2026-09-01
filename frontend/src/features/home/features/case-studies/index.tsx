@@ -13,7 +13,12 @@ export function CaseStudiesSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif tracking-tight text-stone-100 leading-[1.15]">
             Envien Studio Apps
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-stone-400 font-sans"></p>
+          <p className="mt-3 text-base sm:text-lg text-stone-400 font-sans">
+            Here's a selection of my recent projects with the mindset of
+          </p>
+          <p className="text-base sm:text-lg text-stone-400 font-sans font-bold">
+            "creating an app that I'm actually going to use myself."
+          </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">
