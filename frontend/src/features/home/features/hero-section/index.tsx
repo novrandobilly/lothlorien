@@ -25,7 +25,7 @@ export function HeroSection() {
   const currentPair = heroPairs[index];
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-20 md:pt-28 md:pb-24 bg-[#090b10]">
+    <section className="relative overflow-hidden pt-10 pb-10 sm:pt-14 sm:pb-14 md:pt-16 md:pb-14 bg-[#090b10]">
       {/* Dynamic rolling animations */}
       <style
         dangerouslySetInnerHTML={{
@@ -52,35 +52,43 @@ export function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-160 h-96 bg-radial from-emerald-500/10 via-amber-500/5 to-transparent blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8 text-left">
-        {/* Headline - Split into two stacked rows */}
+        {/* Headline - Responsive: Stacked column on small screens, inline on md+ */}
         <div className="w-full">
-          <h1 className="flex flex-col items-start gap-2.5 sm:gap-3.5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight font-serif text-stone-100 leading-tight">
-            <span className="text-left">
-              You already have a great{" "}
+          <h1 className="flex flex-col items-start gap-4.5 sm:gap-5 md:gap-3.5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight font-serif text-stone-100 leading-tight">
+            {/* Sentence 1 */}
+            <div className="flex flex-col md:inline-block text-left">
+              <span className="text-left text-stone-100">
+                You already have a great{" "}
+              </span>
               <span
-                className={`inline-block font-medium italic text-stone-100 border-b border-amber-500/40 pb-0.5 ${
+                className={`inline-block font-medium italic text-stone-100 border-b border-amber-500/40 pb-0.5 mt-0.5 md:mt-0 ${
                   isVisible ? "animate-roll-in" : "animate-roll-out"
                 }`}
               >
                 {currentPair.asset}
               </span>
-            </span>
-            <span className="text-left lg:whitespace-nowrap text-stone-100">
-              Let&apos;s scale it into{" "}
-              <span
-                className={`inline-block font-medium ${
-                  isVisible ? "animate-roll-in" : "animate-roll-out"
-                } ${OUTCOME_STYLES[ACTIVE_OUTCOME_STYLE]}`}
-              >
-                {currentPair.outcome}
+            </div>
+
+            {/* Sentence 2 */}
+            <div className="flex flex-col md:inline-block text-left">
+              <span className="text-left text-stone-100">
+                Let&apos;s scale it into{" "}
               </span>
-              .
-            </span>
+              <span className="inline-block whitespace-nowrap mt-0.5 md:mt-0">
+                <span
+                  className={`font-medium ${
+                    isVisible ? "animate-roll-in" : "animate-roll-out"
+                  } ${OUTCOME_STYLES[ACTIVE_OUTCOME_STYLE]}`}
+                >
+                  {currentPair.outcome}
+                </span>
+              </span>
+            </div>
           </h1>
         </div>
 
         {/* Action Buttons: Main CTA + Link text */}
-        <div className="mt-12 sm:mt-14 flex flex-wrap items-center justify-start gap-5 sm:gap-7">
+        <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-start gap-5 sm:gap-7">
           <Link href="#problem-solution">
             <LothlorienButton
               variant="primary"

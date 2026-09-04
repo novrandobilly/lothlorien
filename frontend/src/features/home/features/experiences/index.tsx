@@ -6,7 +6,7 @@ import { ExperienceRow } from "./features/experience-row";
 
 export function ExperiencesSection() {
   return (
-    <section id="experiences" className="py-24 sm:py-28 relative bg-[#090b10]">
+    <section id="experiences" className="py-12 sm:py-14 relative bg-[#090b10]">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start justify-between">
@@ -30,7 +30,7 @@ export function ExperiencesSection() {
         </div>
 
         {/* Experience List */}
-        <div className="mt-12 sm:mt-16 border-t border-stone-800/80 divide-y divide-stone-800/80">
+        <div className="mt-8 sm:mt-10 border-t border-stone-800/80 divide-y divide-stone-800/80">
           {experiences.map((experience) => (
             <ExperienceRow key={experience.id} experience={experience} />
           ))}

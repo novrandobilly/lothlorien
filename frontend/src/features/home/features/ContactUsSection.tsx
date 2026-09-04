@@ -51,12 +51,12 @@ export function ContactUsSection({
   return (
     <section
       id="contact"
-      className="py-20 sm:py-24 relative bg-[#131825] border-t border-stone-800/90"
+      className="scroll-mt-24 sm:scroll-mt-28 py-10 sm:py-12 relative bg-[#131825] border-t border-stone-800/90"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="rounded-3xl bg-white/2 backdrop-blur-xs border border-stone-700/60 p-8 sm:p-10 md:p-12 shadow-xl shadow-black/40 hover:border-amber-500/35 transition-all">
+        <div className="rounded-3xl bg-white/2 backdrop-blur-xs border border-stone-700/60 p-6 sm:p-8 md:p-10 shadow-xl shadow-black/40 hover:border-amber-500/35 transition-all">
           {/* Main Content Area: Flex row on tablet/desktop, stacked on mobile */}
-          <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-8 md:gap-12 text-center md:text-left mb-10 sm:mb-12">
+          <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-6 md:gap-10 text-center md:text-left mb-6 sm:mb-8">
             {/* Photo / Avatar Column */}
             <div className="shrink-0 flex flex-col items-center md:items-start">
               <div className="relative group/avatar cursor-pointer">
@@ -117,26 +117,28 @@ export function ContactUsSection({
             </div>
           </div>
 
-          {/* Social Links: Kept the same at the bottom */}
-          <div className="pt-6 border-t border-stone-800/80 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 mr-1 font-sans">
+          {/* Social Links */}
+          <div className="pt-6 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 font-sans">
               Connect elsewhere:
             </span>
-            {socialLinks.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.name}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.name}
-                  className="flex items-center justify-center w-9 h-9 rounded-full bg-[#131724] text-stone-300 hover:text-amber-200 hover:bg-stone-800 hover:border-amber-500/40 hover:scale-110 transition-all border border-stone-800/90 shadow-xs"
-                >
-                  <Icon className="w-4 h-4" />
-                </Link>
-              );
-            })}
+            <div className="flex items-center justify-center gap-3 sm:gap-4">
+              {socialLinks.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={item.name}
+                    className="flex items-center justify-center w-9 h-9 rounded-full bg-[#131724] text-stone-300 hover:text-amber-200 hover:bg-stone-800 hover:border-amber-500/40 hover:scale-110 transition-all border border-stone-800/90 shadow-xs"
+                  >
+                    <Icon className="w-4 h-4" />
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

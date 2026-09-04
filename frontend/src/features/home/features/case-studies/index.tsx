@@ -6,10 +6,10 @@ export function CaseStudiesSection() {
   return (
     <section
       id="work"
-      className="py-24 sm:py-28 relative bg-[#131825] border-y border-stone-800/90"
+      className="py-12 sm:py-14 relative bg-[#131825] border-y border-stone-800/90"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif tracking-tight text-stone-100 leading-[1.15]">
             Envien Studio Apps
           </h2>

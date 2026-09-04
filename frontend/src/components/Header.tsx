@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
 import { EnvienLogo } from "@/components/ui/EnvienLogo";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 export function Header() {
   return (
@@ -22,12 +22,12 @@ export function Header() {
 
         {/* Right side: Contact Button */}
         <div className="flex items-center gap-3 sm:gap-4">
-          <Link href="/#contact">
+          <Link href="/#contact" scroll={true}>
             <LothlorienButton
               variant="outline"
               size="sm"
               className="shadow-xs hover:shadow-sm text-xs font-medium"
-              rightIcon={<ArrowUpRight className="w-3.5 h-3.5" />}
+              rightIcon={<ArrowDown className="w-3.5 h-3.5 text-amber-300" />}
             >
               Contact
             </LothlorienButton>
