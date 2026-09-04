@@ -1,15 +1,9 @@
-import React from "react";
-import { HeroSection } from "./features/hero-section";
-import { ProblemSolutionSection } from "./features/ProblemSolutionSection";
-import { CaseStudiesSection } from "./features/case-studies";
-import { ExperiencesSection } from "./features/experiences";
-import { ProcessSection } from "./features/ProcessSection";
-import { PricingTiersSection } from "./features/PricingTiersSection";
-import { FaqSection } from "./features/FaqSection";
-import { ContactUsSection } from "./features/ContactUsSection";
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { CoreTechnicalSection } from "./features/CoreTechnicalSection";
+import { Header } from "@/components/Header";
+import { CaseStudiesSection } from "./features/case-studies";
+import { ContactUsSection } from "./features/ContactUsSection";
+import { ExperiencesSection } from "./features/experiences";
+import { HeroSection } from "./features/hero-section";
 
 export function HomePageFeature() {
   return (
@@ -20,14 +14,8 @@ export function HomePageFeature() {
       {/* Main Content: 9 Modular Sections */}
       <main className="flex-1">
         <HeroSection />
-
-        {/* <ProblemSolutionSection /> */}
         <CaseStudiesSection />
         <ExperiencesSection />
-        {/* <ProcessSection /> */}
-        {/* <PricingTiersSection /> */}
-        {/* <FaqSection /> */}
-        {/* <CoreTechnicalSection /> */}
         <ContactUsSection />
       </main>
 
