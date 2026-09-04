@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Mail, Linkedin, Instagram, Github } from "lucide-react";
+import Image from "next/image";
+import { Mail, Linkedin, Instagram, Github, User } from "lucide-react";
 
 function WhatsAppIcon({ className = "w-4.5 h-4.5" }: { className?: string }) {
   return (
@@ -15,7 +16,13 @@ function WhatsAppIcon({ className = "w-4.5 h-4.5" }: { className?: string }) {
   );
 }
 
-export function ContactUsSection() {
+interface ContactUsSectionProps {
+  avatarSrc?: string;
+}
+
+export function ContactUsSection({
+  avatarSrc = "/envien-contact.webp",
+}: ContactUsSectionProps) {
   const email = "novrandobilly@gmail.com";
 
   const socialLinks = [
@@ -47,28 +54,70 @@ export function ContactUsSection() {
       className="py-20 sm:py-24 relative bg-[#131825] border-t border-stone-800/90"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="rounded-3xl bg-white/2 backdrop-blur-xs border border-stone-700/60 p-8 sm:py-12 sm:px-12 text-center shadow-xl shadow-black/40 hover:border-amber-500/35 transition-all">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif tracking-tight text-stone-100 mb-3 leading-[1.15]">
-            Send a Letter!
-          </h2>
+        <div className="rounded-3xl bg-white/2 backdrop-blur-xs border border-stone-700/60 p-8 sm:p-10 md:p-12 shadow-xl shadow-black/40 hover:border-amber-500/35 transition-all">
+          {/* Main Content Area: Flex row on tablet/desktop, stacked on mobile */}
+          <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-8 md:gap-12 text-center md:text-left mb-10 sm:mb-12">
+            {/* Photo / Avatar Column */}
+            <div className="shrink-0 flex flex-col items-center md:items-start">
+              <div className="relative group/avatar cursor-pointer">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden border border-stone-700/70 bg-stone-900 shadow-md shadow-black/40 flex items-center justify-center relative">
+                  {avatarSrc ? (
+                    <Image
+                      src={avatarSrc}
+                      alt="Novrando Billy"
+                      fill
+                      className="object-cover object-top"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-linear-to-b from-stone-800 to-stone-900 text-stone-500">
+                      <User className="w-12 h-12 stroke-[1.3]" />
+                    </div>
+                  )}
+                </div>
 
-          <p className="text-stone-400 text-sm sm:text-base mb-8 max-w-2xl mx-auto leading-relaxed font-sans">
-            Got questions, feedback, or just want to say hi? Drop a message in
-            my mailbox.
-          </p>
+                {/* Online Indicator Dot */}
+                <span
+                  className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5"
+                  title="Active & responding"
+                >
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-[#131825]" />
+                </span>
+              </div>
 
-          {/* Email CTA Pill Button */}
-          <div className="flex justify-center mb-8">
-            <Link
-              href={`mailto:${email}`}
-              className="inline-flex items-center gap-3 bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 text-stone-950 font-semibold px-8 py-3.5 rounded-full text-sm sm:text-base shadow-lg shadow-amber-950/60 border border-amber-300/80 hover:shadow-[0_0_25px_-3px_rgba(245,158,11,0.4)] hover:-translate-y-0.5 transition-all group cursor-pointer font-sans"
-            >
-              <Mail className="w-5 h-5 text-stone-950 group-hover:scale-110 transition-transform" />
-              <span>{email}</span>
-            </Link>
+              <div className="mt-3 text-center md:text-left">
+                <div className="text-sm font-serif font-semibold text-stone-200">
+                  Novrando Billy
+                </div>
+                <div className="text-xs text-amber-200/90 font-sans">
+                  Envien Studio
+                </div>
+              </div>
+            </div>
+
+            {/* Text & Action Column */}
+            <div className="flex-1 flex flex-col items-center md:items-start">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif tracking-tight text-stone-100 mb-3 leading-[1.15]">
+                Send a Letter!
+              </h2>
+
+              <p className="text-stone-400 text-sm sm:text-base mb-6 max-w-xl leading-relaxed font-sans">
+                Got questions, feedback, or just want to say hi? Drop a message
+                in my mailbox.
+              </p>
+
+              {/* Email CTA Pill Button */}
+              <Link
+                href={`mailto:${email}`}
+                className="inline-flex items-center gap-3 bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 text-stone-950 font-semibold px-7 py-3 rounded-full text-sm sm:text-base shadow-lg shadow-amber-950/60 border border-amber-300/80 hover:shadow-[0_0_25px_-3px_rgba(245,158,11,0.4)] hover:-translate-y-0.5 transition-all group cursor-pointer font-sans"
+              >
+                <Mail className="w-4.5 h-4.5 text-stone-950 group-hover:scale-110 transition-transform" />
+                <span>{email}</span>
+              </Link>
+            </div>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links: Kept the same at the bottom */}
           <div className="pt-6 border-t border-stone-800/80 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 mr-1 font-sans">
               Connect elsewhere:

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
 import { ArrowRight, Calendar } from "lucide-react";
 import { ProofStripSection } from "./features/ProofStripSection";
+import { HeroPortrait } from "./features/HeroPortrait";
 import {
   heroPairs,
   ACTIVE_OUTCOME_STYLE,
@@ -29,7 +30,7 @@ export function HeroSection() {
   const currentPair = heroPairs[index];
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-20 md:pt-28 md:pb-24 bg-[#090b10]">
+    <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-24 bg-[#090b10]">
       {/* Dynamic rolling animations */}
       <style
         dangerouslySetInnerHTML={{
@@ -55,56 +56,65 @@ export function HeroSection() {
       {/* Subtle Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-160 h-96 bg-radial from-emerald-500/10 via-amber-500/5 to-transparent blur-[120px] rounded-full pointer-events-none -z-10" />
 
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 text-left">
-        {/* Headline - Split into two stacked rows */}
-        <div className="w-full">
-          <h1 className="flex flex-col items-start gap-2.5 sm:gap-3.5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight font-serif text-stone-100 leading-tight">
-            <span className="text-left">
-              You already have a great{" "}
-              <span
-                className={`inline-block font-medium italic text-stone-100 border-b border-amber-500/40 pb-0.5 ${
-                  isVisible ? "animate-roll-in" : "animate-roll-out"
-                }`}
-              >
-                {currentPair.asset}
-              </span>
-            </span>
-            <span className="text-left lg:whitespace-nowrap text-stone-100">
-              Let&apos;s scale it into{" "}
-              <span
-                className={`inline-block font-medium ${
-                  isVisible ? "animate-roll-in" : "animate-roll-out"
-                } ${OUTCOME_STYLES[ACTIVE_OUTCOME_STYLE]}`}
-              >
-                {currentPair.outcome}
-              </span>
-              .
-            </span>
-          </h1>
-        </div>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          {/* Left Column: Headline & CTAs */}
+          <div className="lg:col-span-7 text-left">
+            <div className="w-full">
+              <h1 className="flex flex-col items-start gap-2.5 sm:gap-3.5 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-5xl font-normal tracking-tight font-serif text-stone-100 leading-tight">
+                <span className="text-left">
+                  You already have a great{" "}
+                  <span
+                    className={`inline-block font-medium italic text-stone-100 border-b border-amber-500/40 pb-0.5 ${
+                      isVisible ? "animate-roll-in" : "animate-roll-out"
+                    }`}
+                  >
+                    {currentPair.asset}
+                  </span>
+                </span>
+                <span className="text-left text-stone-100">
+                  Let&apos;s scale it into{" "}
+                  <span
+                    className={`inline-block font-medium ${
+                      isVisible ? "animate-roll-in" : "animate-roll-out"
+                    } ${OUTCOME_STYLES[ACTIVE_OUTCOME_STYLE]}`}
+                  >
+                    {currentPair.outcome}
+                  </span>
+                  .
+                </span>
+              </h1>
+            </div>
 
-        {/* Action Buttons: Main CTA + Link text */}
-        <div className="mt-12 sm:mt-14 flex flex-wrap items-center justify-start gap-5 sm:gap-7">
-          <Link href="#problem-solution">
-            <LothlorienButton
-              variant="primary"
-              size="lg"
-              rightIcon={<ArrowRight className="w-4.5 h-4.5" />}
-            >
-              Find Your Bottleneck
-            </LothlorienButton>
-          </Link>
+            {/* Action Buttons: Main CTA + Link text */}
+            <div className="mt-10 sm:mt-12 flex flex-wrap items-center justify-start gap-5 sm:gap-7">
+              <Link href="#problem-solution">
+                <LothlorienButton
+                  variant="primary"
+                  size="lg"
+                  rightIcon={<ArrowRight className="w-4.5 h-4.5" />}
+                >
+                  Find Your Bottleneck
+                </LothlorienButton>
+              </Link>
 
-          <Link
-            href="#contact"
-            className="inline-flex items-center gap-2.5 text-sm sm:text-base font-medium text-stone-300 hover:text-amber-200 transition-colors group px-2 py-2"
-          >
-            <Calendar className="w-4.5 h-4.5 text-emerald-400 group-hover:scale-110 transition-transform" />
-            <span className="underline underline-offset-4 decoration-stone-700 group-hover:decoration-amber-400/70">
-              Book a Call
-            </span>
-            <ArrowRight className="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
-          </Link>
+              <Link
+                href="#contact"
+                className="inline-flex items-center gap-2.5 text-sm sm:text-base font-medium text-stone-300 hover:text-amber-200 transition-colors group px-2 py-2"
+              >
+                <Calendar className="w-4.5 h-4.5 text-emerald-400 group-hover:scale-110 transition-transform" />
+                <span className="underline underline-offset-4 decoration-stone-700 group-hover:decoration-amber-400/70">
+                  Book a Call
+                </span>
+                <ArrowRight className="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column: Hero Portrait Placeholder */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <HeroPortrait imageSrc="/envien-hero.webp" />
+          </div>
         </div>
 
         <ProofStripSection />

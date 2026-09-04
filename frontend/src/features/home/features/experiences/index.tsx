@@ -22,20 +22,10 @@ export function ExperiencesSection() {
           {/* Right Column: Description & Book A Call CTA */}
           <div className="lg:col-span-5 flex flex-col justify-between pt-1">
             <p className="text-stone-400 text-sm sm:text-base leading-relaxed font-sans">
-              Over the past 5+ years, I&apos;ve had the privilege of working on a
-              diverse range of projects, from web-application, mobile apps, and
-              company landing pages.
+              Over the past 5+ years, I&apos;ve had the privilege of working on
+              a diverse range of projects, from web-application, mobile apps,
+              and company landing pages.
             </p>
-
-            <div className="mt-6">
-              <Link
-                href="#contact"
-                className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-amber-200 hover:text-amber-100 underline underline-offset-4 decoration-amber-500/40 hover:decoration-amber-300 transition-colors group"
-              >
-                <span>Book A Call</span>
-                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            </div>
           </div>
         </div>
 
