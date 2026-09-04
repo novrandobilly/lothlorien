@@ -52,7 +52,7 @@ export function KickserveManualCard() {
       </div>
 
       {/* Arcane Emerald Codex Manual Card Container */}
-      <div className="rounded-3xl bg-linear-to-b from-[#0e231c] via-[#091712] to-[#050c09] border border-emerald-500/35 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9),0_0_35px_-5px_rgba(16,185,129,0.15)] ring-1 ring-amber-400/20 p-7 sm:p-10 md:p-12 text-stone-100">
+      <div className="rounded-3xl bg-linear-to-b from-[#09100d]  to-[#084028] border border-emerald-500/35 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9),0_0_35px_-5px_rgba(16,185,129,0.15)] ring-1 ring-amber-400/20 p-7 sm:p-10 md:p-12 text-stone-100">
         {/* 1. Header & Title */}
         <div className="mb-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/35 text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-4 shadow-2xs">

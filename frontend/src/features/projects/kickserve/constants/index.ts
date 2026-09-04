@@ -21,34 +21,32 @@ export const kickserveData: KickserveData = {
   title: "Kickserve App",
   badge: "Sports Tournament Manager",
   description:
-    "A lightweight tournament and Americano session manager built for racquet sports (Tennis, Padel, Badminton). It eliminates manual spreadsheets by automating partner rotations, court allocations, and live court-side standings on any mobile device.",
+    "A lightweight session manager built for racquet sports (Tennis, Padel, Badminton).",
   launchUrl: "https://kickserve.envienstudio.com",
   buttonText: "Launch Kickserve",
   whatCanYouManage: [
     {
-      title: "Player Rosters (Up to 32)",
+      title: "Up to 32 Players",
       description:
-        "Easily register players, assign skill seeds, and handle substitutions mid-session.",
+        "Easily register players and handle substitutions mid-session.",
     },
     {
-      title: "Americano & Mexicano Rotations",
-      description:
-        "Generate balanced rounds with automated partner and opponent pairings across all active courts.",
+      title: "Americano Rotations",
+      description: "Generate balanced rounds with automated pairings.",
     },
     {
       title: "Smart No-Repeat Scheduling",
       description:
-        "Deterministic pairing algorithm guarantees players do not partner with the same person twice.",
+        "Deterministic pairing algorithm to make equal playtime among the players.",
     },
     {
       title: "Live Standings & Differentials",
       description:
-        "Enter match scores directly court-side to calculate total points, win/loss stats, and podium rankings in real time.",
+        "Calculate total points, win/loss stats, and podium rankings in real time, automatically.",
     },
     {
-      title: "One-Tap WhatsApp Share",
-      description:
-        "Export clean, formatted result summaries and podium standings directly to your community group chat.",
+      title: "One-Tap Share",
+      description: "Share with the world of how fun your session was!",
     },
   ],
   galleryTabs: [

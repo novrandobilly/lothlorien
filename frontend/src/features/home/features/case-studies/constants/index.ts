@@ -19,7 +19,7 @@ export const projects: Project[] = [
       "Share results instantly",
     ],
     url: "/projects/kickserve",
-    buttonText: "Launch this app",
+    buttonText: "Open Kickserve",
   },
   {
     title: "Bagels PreOrder App",
@@ -29,8 +29,7 @@ export const projects: Project[] = [
       "Provide QRIS payment methods",
     ],
     url: `https://bagels.envienstudio.com`,
-    // url: `${process.env.NEXT_PUBLIC_LOTHLORIEN_BASE_URL || ""}/projects/bagels`,
-    buttonText: "Launch this app",
+    buttonText: "Open Bagels PreOrder",
   },
   // {
   //   title: "Online Psychological Test",
