@@ -56,12 +56,12 @@ export function HeroSection() {
         <div className="w-full">
           <h1 className="flex flex-col items-start gap-4.5 sm:gap-5 md:gap-3.5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight font-serif text-stone-100 leading-tight">
             {/* Sentence 1 */}
-            <div className="flex flex-col md:inline-block text-left">
+            <div className="flex flex-col items-start md:inline-block text-left">
               <span className="text-left text-stone-100">
                 You already have a great{" "}
               </span>
               <span
-                className={`inline-block font-medium italic text-stone-100 border-b border-amber-500/40 pb-0.5 mt-0.5 md:mt-0 ${
+                className={`w-fit self-start inline-block font-medium italic text-stone-100 border-b border-amber-500/40 pb-0.5 mt-0.5 md:mt-0 ${
                   isVisible ? "animate-roll-in" : "animate-roll-out"
                 }`}
               >
@@ -70,11 +70,11 @@ export function HeroSection() {
             </div>
 
             {/* Sentence 2 */}
-            <div className="flex flex-col md:inline-block text-left">
+            <div className="flex flex-col items-start md:inline-block text-left">
               <span className="text-left text-stone-100">
                 Let&apos;s scale it into{" "}
               </span>
-              <span className="inline-block whitespace-nowrap mt-0.5 md:mt-0">
+              <span className="w-fit self-start inline-block whitespace-nowrap mt-0.5 md:mt-0">
                 <span
                   className={`font-medium ${
                     isVisible ? "animate-roll-in" : "animate-roll-out"
@@ -82,6 +82,7 @@ export function HeroSection() {
                 >
                   {currentPair.outcome}
                 </span>
+                <span className="text-stone-100 font-serif">.</span>
               </span>
             </div>
           </h1>
