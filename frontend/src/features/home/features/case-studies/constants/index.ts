@@ -1,9 +1,13 @@
+import React from "react";
+import { TennisIcon, BagelIcon } from "../icons";
+
 export interface Project {
   title: string;
   description: string;
   bullets: string[];
   url: string;
   buttonText?: string;
+  icon?: React.ComponentType<{ className?: string }>;
 }
 
 export const projects: Project[] = [
@@ -20,6 +24,7 @@ export const projects: Project[] = [
     ],
     url: "/projects/kickserve",
     buttonText: "Open Kickserve",
+    icon: TennisIcon,
   },
   {
     title: "Bagels PreOrder App",
@@ -30,6 +35,7 @@ export const projects: Project[] = [
     ],
     url: `https://bagels.envienstudio.com`,
     buttonText: "Open Bagels PreOrder",
+    icon: BagelIcon,
   },
   // {
   //   title: "Online Psychological Test",

@@ -25,7 +25,7 @@ export function HeroSection() {
   const currentPair = heroPairs[index];
 
   return (
-    <section className="relative overflow-hidden pt-10 pb-10 sm:pt-14 sm:pb-14 md:pt-16 md:pb-14 bg-[#090b10]">
+    <section className="relative overflow-hidden pt-20 pb-20 sm:pt-24 sm:pb-24 md:pt-28 md:pb-24 bg-[#090b10]">
       {/* Dynamic rolling animations */}
       <style
         dangerouslySetInnerHTML={{
@@ -89,26 +89,25 @@ export function HeroSection() {
         </div>
 
         {/* Action Buttons: Main CTA + Link text */}
-        <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-start gap-5 sm:gap-7">
-          <Link href="#problem-solution">
+        <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-start gap-4 sm:gap-7">
+          <Link href="#work">
             <LothlorienButton
               variant="primary"
-              size="lg"
-              rightIcon={<ArrowRight className="w-4.5 h-4.5" />}
+              className="text-sm px-5 py-2.5 sm:text-base sm:px-7 sm:py-3"
+              rightIcon={<ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5" />}
             >
-              Find Your Bottleneck
+              See My Apps
             </LothlorienButton>
           </Link>
 
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2.5 text-sm sm:text-base font-medium text-stone-300 hover:text-amber-200 transition-colors group px-2 py-2"
+            className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-stone-300 hover:text-amber-200 transition-colors group px-2 py-2"
           >
             <Calendar className="w-4.5 h-4.5 text-emerald-400 group-hover:scale-110 transition-transform" />
             <span className="underline underline-offset-4 decoration-stone-700 group-hover:decoration-amber-400/70">
               Book a Call
             </span>
-            <ArrowRight className="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
           </Link>
         </div>
 

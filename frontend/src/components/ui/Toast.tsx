@@ -55,7 +55,7 @@ export function ToastContainer({
           <div
             key={toast.id}
             className={cn(
-              "pointer-events-auto flex items-start gap-3 p-4 rounded-xl border shadow-lg transition-all duration-200 animate-in fade-in slide-in-from-bottom-3",
+              "pointer-events-auto flex items-start gap-3 p-4 rounded-xl border shadow-xl transition-all duration-300 animate-toast-in",
               config.bg,
               config.border
             )}

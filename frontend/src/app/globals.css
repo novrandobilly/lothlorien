@@ -24,3 +24,22 @@ body {
     radial-gradient(ellipse 70% 50% at 50% 90%, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
   background-attachment: fixed;
 }
+
+@keyframes toastSlideIn {
+  0% {
+    transform: translateY(28px) scale(0.92);
+    opacity: 0;
+  }
+  65% {
+    transform: translateY(-3px) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-toast-in {
+  animation: toastSlideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

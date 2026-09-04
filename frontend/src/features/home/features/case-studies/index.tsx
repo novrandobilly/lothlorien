@@ -6,7 +6,7 @@ export function CaseStudiesSection() {
   return (
     <section
       id="work"
-      className="py-12 sm:py-14 relative bg-[#131825] border-y border-stone-800/90"
+      className="scroll-mt-20 sm:scroll-mt-24 py-12 sm:py-14 relative bg-[#131825] border-y border-stone-800/90"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
@@ -33,6 +33,7 @@ export function CaseStudiesSection() {
                 bullets={item.bullets}
                 url={item.url}
                 buttonText={item.buttonText}
+                icon={item.icon}
               />
             </div>
           ))}

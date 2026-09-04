@@ -21,7 +21,7 @@ export function ProofStripSection() {
   ];
 
   return (
-    <div className="mt-8 md:mt-10 pt-6 border-t border-stone-800/80">
+    <div className="relative mt-10 md:mt-12 pt-7 md:pt-8 border-t border-amber-500/40">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-5 md:gap-10">
         {metrics.map((item) => (
           <div key={item.label} className="space-y-1">

@@ -1,7 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Linkedin, Instagram, Github, User } from "lucide-react";
+import { Mail, Check, Copy, Linkedin, Instagram, Github, User } from "lucide-react";
+import { useToast } from "@/context/ToastContext";
 
 function WhatsAppIcon({ className = "w-4.5 h-4.5" }: { className?: string }) {
   return (
@@ -24,6 +27,16 @@ export function ContactUsSection({
   avatarSrc = "/envien-contact.webp",
 }: ContactUsSectionProps) {
   const email = "novrandobilly@gmail.com";
+  const { toast } = useToast();
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      toast.success("Email address copied to clipboard!");
+    } catch {
+      toast.error("Failed to copy email to clipboard");
+    }
+  };
 
   const socialLinks = [
     {
@@ -44,7 +57,7 @@ export function ContactUsSection({
     {
       name: "WhatsApp",
       icon: WhatsAppIcon,
-      url: "https://wa.me/082130006695",
+      url: "https://wa.me/+6282130006695",
     },
   ];
 
@@ -101,19 +114,21 @@ export function ContactUsSection({
                 Send a Letter!
               </h2>
 
-              <p className="text-stone-400 text-sm sm:text-base mb-6 max-w-xl leading-relaxed font-sans">
+              <p className="text-stone-400 text-sm sm:text-base mb-6 max-w-2xl leading-relaxed font-sans">
                 Got questions, feedback, or just want to say hi? Drop a message
                 in my mailbox.
               </p>
 
-              {/* Email CTA Pill Button */}
-              <Link
-                href={`mailto:${email}`}
+              {/* Email CTA Button (copies email & triggers toast) */}
+              <button
+                type="button"
+                onClick={handleCopyEmail}
                 className="inline-flex items-center gap-3 bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 text-stone-950 font-semibold px-7 py-3 rounded-full text-sm sm:text-base shadow-lg shadow-amber-950/60 border border-amber-300/80 hover:shadow-[0_0_25px_-3px_rgba(245,158,11,0.4)] hover:-translate-y-0.5 transition-all group cursor-pointer font-sans"
+                aria-label="Copy email address"
               >
                 <Mail className="w-4.5 h-4.5 text-stone-950 group-hover:scale-110 transition-transform" />
                 <span>{email}</span>
-              </Link>
+              </button>
             </div>
           </div>
 
