@@ -79,6 +79,7 @@ export function ContactUsSection({
                       src={avatarSrc}
                       alt="Novrando Billy"
                       fill
+                      sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                       className="object-cover object-top"
                     />
                   ) : (

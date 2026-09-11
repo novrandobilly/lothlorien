@@ -1,5 +1,5 @@
 import React from "react";
-import { TennisIcon, BagelIcon } from "../icons";
+import { TennisIcon, BagelIcon, AssessmentIcon } from "../icons";
 
 export interface Project {
   title: string;
@@ -32,22 +32,27 @@ export const projects: Project[] = [
     bullets: [
       "Smooth multi-step checkout flow",
       "Provide QRIS payment methods",
+      "Live batch slot reservation",
+      "Automated order confirmation",
     ],
-    url: `https://bagels.envienstudio.com`,
+    url: "/projects/bagels",
     buttonText: "Open Bagels PreOrder",
     icon: BagelIcon,
   },
-  // {
-  //   title: "Online Psychological Test",
-  //   description:
-  //     "Take assessments and view results anywhere, even with poor connection",
-  //   bullets: [
-  //     "Full offline support and automatic sync",
-  //     "Instant response with zero latency",
-  //     "Secure local data encryption",
-  //     "Auto-retries on unstable connection",
-  //     "Export and share PDF results instantly",
-  //   ],
-  //   url: `${process.env.NEXT_PUBLIC_DEMO_URL_KICKSERVE}/project/psikotes`,
-  // },
+  {
+    title: "Online Assessment",
+    description:
+      "Take assessments and view results anywhere, even with poor connection",
+    bullets: [
+      "Full offline support and automatic sync",
+      "Instant response with zero latency",
+      "Secure local data encryption",
+      "Auto-retries on unstable connection",
+      "Export and share PDF results instantly",
+    ],
+    url: "/projects/online-assessment",
+    buttonText: "Open Online Assessment",
+    icon: AssessmentIcon,
+  },
 ];
+

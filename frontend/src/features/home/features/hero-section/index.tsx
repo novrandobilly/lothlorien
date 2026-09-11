@@ -90,14 +90,12 @@ export function HeroSection() {
 
         {/* Action Buttons: Main CTA + Link text */}
         <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-start gap-4 sm:gap-7">
-          <Link href="#work">
-            <LothlorienButton
-              variant="primary"
-              className="text-sm px-5 py-2.5 sm:text-base sm:px-7 sm:py-3"
-              rightIcon={<ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5" />}
-            >
-              See My Apps
-            </LothlorienButton>
+          <Link
+            href="#work"
+            className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 sm:text-base sm:px-7 sm:py-3 rounded-full font-medium transition-all duration-150 focus:outline-none cursor-pointer select-none bg-linear-to-r from-emerald-900 via-emerald-800 to-teal-900 text-amber-100 hover:from-emerald-800 hover:via-emerald-700 hover:to-teal-800 active:from-emerald-950 active:to-teal-950 shadow-md shadow-emerald-950/40 border border-amber-500/40 hover:border-amber-400/70 hover:shadow-[0_0_20px_-3px_rgba(212,175,55,0.25)]"
+          >
+            <span>See My Apps</span>
+            <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 shrink-0" />
           </Link>
 
           <Link

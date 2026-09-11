@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { LothlorienButton } from "@/components/ui/LothlorienButton";
 
 interface CaseCardProps {
   title: string;
@@ -56,22 +55,14 @@ export function CaseCard({
         href={url}
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? "noopener noreferrer" : undefined}
-        className="block w-full"
+        className="inline-flex items-center justify-center gap-2 w-full text-xs sm:text-sm font-medium transition-all duration-150 rounded-full px-5 py-2 border border-amber-500/35 bg-stone-900/30 text-amber-200/90 hover:bg-amber-500/10 hover:border-amber-400/65 hover:text-amber-100 active:bg-amber-500/20 backdrop-blur-xs shadow-xs hover:shadow-sm"
       >
-        <LothlorienButton
-          variant="outline"
-          size="md"
-          className="w-full justify-center text-xs sm:text-sm"
-          rightIcon={
-            isExternal ? (
-              <ExternalLink className="w-4 h-4" />
-            ) : (
-              <ArrowRight className="w-4 h-4" />
-            )
-          }
-        >
-          {buttonText}
-        </LothlorienButton>
+        <span>{buttonText}</span>
+        {isExternal ? (
+          <ExternalLink className="w-4 h-4 shrink-0" />
+        ) : (
+          <ArrowRight className="w-4 h-4 shrink-0" />
+        )}
       </Link>
     </div>
   );

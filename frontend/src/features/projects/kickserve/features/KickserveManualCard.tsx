@@ -95,21 +95,15 @@ export function KickserveManualCard() {
 
         {/* 4. "Launch Kickserve" CTA Button (Centered) */}
         <div className="flex justify-center mb-10">
-          <Link
+          <a
             href={kickserveData.launchUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-sm sm:text-base font-semibold shadow-lg shadow-amber-950/60 cursor-pointer text-stone-950 bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 border border-amber-300/90 hover:shadow-[0_0_20px_-3px_rgba(245,158,11,0.35)] transition-all group"
           >
-            <LothlorienButton
-              variant="gold"
-              size="lg"
-              className="px-8 py-3.5 text-sm sm:text-base font-semibold shadow-lg shadow-amber-950/60 cursor-pointer text-stone-950 bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 border border-amber-300/90"
-              rightIcon={<ExternalLink className="w-4.5 h-4.5" />}
-            >
-              {kickserveData.buttonText}
-            </LothlorienButton>
-          </Link>
+            <span>{kickserveData.buttonText}</span>
+            <ExternalLink className="w-4.5 h-4.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
+          </a>
         </div>
 
         {/* 5. Line Divider */}

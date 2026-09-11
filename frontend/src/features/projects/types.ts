@@ -26,3 +26,20 @@ export interface ProjectDetail {
     codeSnippet?: string;
   }[];
 }
+
+export interface CaseStudyTopic {
+  title: string;
+  content: string;
+  bullets?: string[];
+}
+
+export interface CaseStudyData {
+  title: string;
+  badge: string;
+  description: string;
+  launchUrl: string;
+  buttonText: string;
+  topics: CaseStudyTopic[];
+}
+
+

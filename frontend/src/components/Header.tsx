@@ -28,15 +28,13 @@ export function Header() {
 
           {/* Right side: Contact Button */}
           <div className="flex items-center gap-3 sm:gap-4">
-            <Link href="/#contact" scroll={true}>
-              <LothlorienButton
-                variant="outline"
-                size="sm"
-                className="shadow-xs hover:shadow-sm text-xs font-medium border-amber-500/40 hover:border-amber-400/80"
-                rightIcon={<Send className="w-3 h-3 text-amber-200/90" />}
-              >
-                Contact
-              </LothlorienButton>
+            <Link
+              href="/#contact"
+              scroll={true}
+              className="inline-flex items-center justify-center gap-1.5 text-xs font-medium rounded-full px-3.5 py-1.5 border border-amber-500/40 hover:border-amber-400/80 bg-stone-900/30 text-amber-200/90 hover:bg-amber-500/10 hover:text-amber-100 shadow-xs hover:shadow-sm transition-all backdrop-blur-xs"
+            >
+              <span>Contact</span>
+              <Send className="w-3 h-3 text-amber-200/90 shrink-0" />
             </Link>
           </div>
         </div>
