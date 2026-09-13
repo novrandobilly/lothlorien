@@ -35,11 +35,11 @@ function VisualCard({
 
   // Height ratio: 2 -> aspect-square (1:1), 1 -> aspect-[2/1] (2:1 width to height)
   // Both have identical width, so height ratio is exactly 2:1
-  const aspectClass = heightRatio === 2 ? "aspect-square" : "aspect-[2/1]";
+  const aspectClass = heightRatio === 2 ? "aspect-[3/4]" : "aspect-[3/2]";
 
   return (
     <div
-      className={`relative w-full ${aspectClass} ${bgClass} ${borderClass ?? defaultBorder} rounded-[18px] sm:rounded-[22px] overflow-hidden transition-transform duration-200 hover:scale-[1.01] select-none group`}
+      className={`relative w-full ${aspectClass} ${bgClass} ${borderClass ?? defaultBorder} rounded-xl overflow-hidden transition-transform duration-200 hover:scale-[1.01] select-none group`}
     >
       {imageUrl ? (
         <img
@@ -105,13 +105,13 @@ function VisualCard({
 
 export function HeroSection() {
   return (
-    <section className="relative bg-[#fafaf9] pt-6 sm:pt-10 lg:pt-14 pb-14 sm:pb-20">
+    <section className="relative bg-[#fafaf9]  pb-14 sm:pb-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 xl:gap-14 items-start">
           {/* =========================================================
               1. LEFT COLUMN: TYPOGRAPHY, CAPTION & ACTION BUTTONS
              ========================================================= */}
-          <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center text-left pt-2">
+          <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center text-left pt-24">
             {/* Main Headline (Sans-serif, bold, 3 lines matching screenshot) */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[68px] font-bold tracking-[-0.035em] text-stone-950 leading-[1.06] font-sans">
               From Idea to <br />
@@ -151,7 +151,7 @@ export function HeroSection() {
               Column 1: Slot 1 (2) + Slot 2 (1) + Slot 3 (2) = 5 units
               Column 2: Slot 4 (2) + Slot 5 (2) + Slot 6 (1) = 5 units
              ========================================================= */}
-          <div className="lg:col-span-6 xl:col-span-6 relative border-2 border-red-600 rounded-xl">
+          <div className="col-span-5 relative rounded-xl">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {/* --- Column 1 (Slots 1, 2, 3 -> Ratios: 2, 1, 2) --- */}
               <div className="flex flex-col gap-3 sm:gap-4">
