@@ -151,7 +151,7 @@ export function HeroSection() {
               Column 1: Slot 1 (2) + Slot 2 (1) + Slot 3 (2) = 5 units
               Column 2: Slot 4 (2) + Slot 5 (2) + Slot 6 (1) = 5 units
              ========================================================= */}
-          <div className="col-span-5 relative rounded-xl">
+          <div className="col-span-5 relative rounded-xl mask-[linear-gradient(to_bottom,transparent_0%,black_12%,black_88%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_12%,black_88%,transparent_100%)]">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {/* --- Column 1 (Slots 1, 2, 3 -> Ratios: 2, 1, 2) --- */}
               <div className="flex flex-col gap-3 sm:gap-4">
