@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
 import { ProofStripSection } from "./features/ProofStripSection";
 import { VisualCard } from "./features/VisualCard";
+import { visualCardsColumn1, visualCardsColumn2 } from "./constants";
 
 export function HeroSection() {
   return (
@@ -55,84 +56,18 @@ export function HeroSection() {
              ========================================================= */}
           <div className="w-full lg:col-span-5 relative rounded-xl lg:mask-[linear-gradient(to_bottom,transparent_0%,black_12%,black_88%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_12%,black_88%,transparent_100%)]">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {/* --- Column 1 (Slots 1, 2, 3 -> Ratios: 2, 1, 2) --- */}
+              {/* --- Column 1 (Slots 1, 2, 3 -> Ratios: 2, 2, 1) --- */}
               <div className="flex flex-col gap-3 sm:gap-4">
-                {/* 1st Card: Height Ratio 2 */}
-                <VisualCard
-                  id="slot-1"
-                  slotNumber="01"
-                  title="Brand Architecture"
-                  subtitle="Warm Sand • Ratio 2"
-                  heightRatio={2}
-                  bgClass="bg-[#f3ebe1]"
-                />
-
-                {/* 2nd Card: Height Ratio 1 */}
-                <VisualCard
-                  id="slot-2"
-                  slotNumber="02"
-                  title="Enterprise Systems"
-                  subtitle="Noir Monochrome • Ratio 1"
-                  heightRatio={2}
-                  bgClass="bg-[#121316]"
-                  isDark={true}
-                  accentElement={
-                    <div className="absolute inset-x-6 top-1/2 h-px bg-white/10" />
-                  }
-                />
-
-                {/* 3rd Card: Height Ratio 2 */}
-                <VisualCard
-                  id="slot-3"
-                  slotNumber="03"
-                  title="System Visuals"
-                  subtitle="Deep Obsidian • Ratio 2"
-                  heightRatio={1}
-                  bgClass="bg-[#0a0a0c]"
-                  isDark={true}
-                />
+                {visualCardsColumn1.map((card) => (
+                  <VisualCard key={card.id} {...card} />
+                ))}
               </div>
 
-              {/* --- Column 2 (Slots 4, 5, 6 -> Ratios: 2, 2, 1) --- */}
+              {/* --- Column 2 (Slots 4, 5, 6 -> Ratios: 1, 2, 2) --- */}
               <div className="flex flex-col gap-3 sm:gap-4">
-                {/* 4th Card: Height Ratio 2 */}
-                <VisualCard
-                  id="slot-4"
-                  slotNumber="04"
-                  title="Product Experience"
-                  subtitle="Organic Sage • Ratio 2"
-                  heightRatio={1}
-                  bgClass="bg-[#e4ece5]"
-                />
-
-                {/* 5th Card: Height Ratio 2 */}
-                <VisualCard
-                  id="slot-5"
-                  slotNumber="05"
-                  title="Core Interfaces"
-                  subtitle="Cyan & Amber • Ratio 2"
-                  heightRatio={2}
-                  bgClass="bg-gradient-to-b from-[#328ebc] 50% to-[#e09819] 50%"
-                  isDark={true}
-                  accentElement={
-                    <div className="absolute right-6 inset-y-0 w-8 flex flex-col justify-around py-3 opacity-30">
-                      <div className="w-full h-1 bg-white rounded-full" />
-                      <div className="w-full h-1 bg-white rounded-full" />
-                      <div className="w-full h-1 bg-white rounded-full" />
-                      <div className="w-full h-1 bg-white rounded-full" />
-                    </div>
-                  }
-                />
-
-                {/* 6th Card: Height Ratio 1 */}
-                <VisualCard
-                  id="slot-6"
-                  slotNumber="06"
-                  title="Studio Showcase"
-                  subtitle="Ceramic Tone • Ratio 1"
-                  heightRatio={2}
-                  bgClass="bg-[#eae4dc]"
-                />
+                {visualCardsColumn2.map((card) => (
+                  <VisualCard key={card.id} {...card} />
+                ))}
               </div>
             </div>
           </div>

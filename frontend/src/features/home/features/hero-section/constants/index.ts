@@ -33,3 +33,6 @@ export const OUTCOME_STYLES = {
   highlight:
     "bg-amber-100 text-amber-900 px-2.5 py-0.5 rounded-md border border-amber-300 inline-block font-sans font-bold italic",
 };
+
+export * from "./visual-cards";
+
