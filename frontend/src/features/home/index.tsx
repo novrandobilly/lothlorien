@@ -14,9 +14,9 @@ export function HomePageFeature() {
       {/* Main Content: Hero -> Featured Clients & Enterprise Systems -> Envien Studio Labs -> Contact */}
       <main className="flex-1">
         <HeroSection />
-        <FeaturedClientsSection />
+        {/* <FeaturedClientsSection />
         <EnvienLabsSection />
-        <ContactUsSection />
+        <ContactUsSection /> */}
       </main>
 
       {/* Footer */}

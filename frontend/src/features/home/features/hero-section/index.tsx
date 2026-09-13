@@ -1,124 +1,245 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import { ArrowRight, Calendar, FlaskConical } from "lucide-react";
+import { ArrowRight, Calendar, Image as ImageIcon } from "lucide-react";
 import { ProofStripSection } from "./features/ProofStripSection";
-import { heroPairs, ACTIVE_OUTCOME_STYLE, OUTCOME_STYLES } from "./constants";
 
-export function HeroSection() {
-  const [index, setIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+interface VisualSlotProps {
+  id: string;
+  slotNumber: string;
+  title: string;
+  subtitle: string;
+  heightRatio: 1 | 2;
+  bgClass: string;
+  borderClass?: string;
+  isDark?: boolean;
+  imageUrl?: string; // Easy slot for user to plug real images later
+  accentElement?: React.ReactNode;
+}
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible(false);
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % heroPairs.length);
-        setIsVisible(true);
-      }, 300);
-    }, 2800);
-    return () => clearInterval(interval);
-  }, []);
+function VisualCard({
+  slotNumber,
+  title,
+  subtitle,
+  heightRatio,
+  bgClass,
+  borderClass,
+  isDark = false,
+  imageUrl,
+  accentElement,
+}: VisualSlotProps) {
+  const defaultBorder = isDark
+    ? "border border-stone-800"
+    : "border border-stone-200/80";
 
-  const currentPair = heroPairs[index];
+  // Height ratio: 2 -> aspect-square (1:1), 1 -> aspect-[2/1] (2:1 width to height)
+  // Both have identical width, so height ratio is exactly 2:1
+  const aspectClass = heightRatio === 2 ? "aspect-square" : "aspect-[2/1]";
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-20 sm:pt-24 sm:pb-24 md:pt-28 md:pb-24 bg-[#fafaf9]">
-      {/* Dynamic rolling animations */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        @keyframes rollOut {
-          0% { transform: translateY(0); opacity: 1; }
-          100% { transform: translateY(8px); opacity: 0; }
-        }
-        @keyframes rollIn {
-          0% { transform: translateY(-8px); opacity: 0; }
-          100% { transform: translateY(0); opacity: 1; }
-        }
-        .animate-roll-out {
-          animation: rollOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-        }
-        .animate-roll-in {
-          animation: rollIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-        }
-      `,
-        }}
-      />
+    <div
+      className={`relative w-full ${aspectClass} ${bgClass} ${borderClass ?? defaultBorder} rounded-[18px] sm:rounded-[22px] overflow-hidden transition-transform duration-200 hover:scale-[1.01] select-none group`}
+    >
+      {imageUrl ? (
+        <img
+          src={imageUrl}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <div
+          className={`absolute inset-0 flex flex-col justify-between ${
+            heightRatio === 1 ? "p-2.5 sm:p-3.5" : "p-3.5 sm:p-4"
+          }`}
+        >
+          {/* Subtle Accent Graphics */}
+          {accentElement && (
+            <div className="absolute inset-0 pointer-events-none overflow-hidden">
+              {accentElement}
+            </div>
+          )}
 
-      {/* Subtle Warm Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-160 h-96 bg-radial from-emerald-500/8 via-amber-500/6 to-transparent blur-[120px] rounded-full pointer-events-none -z-10" />
+          {/* Top Pill / Slot Tag */}
+          <div className="relative z-10 flex items-center justify-between">
+            <span
+              className={`text-[10px] sm:text-xs font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full ${
+                isDark
+                  ? "bg-white/10 text-stone-300 border border-white/15"
+                  : "bg-black/5 text-stone-700 border border-black/5"
+              }`}
+            >
+              {slotNumber}
+            </span>
+            <div
+              className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center ${
+                isDark ? "bg-white/10 text-white" : "bg-black/5 text-stone-700"
+              }`}
+            >
+              <ImageIcon className="w-3 h-3" />
+            </div>
+          </div>
 
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 text-left">
-        {/* Headline - Responsive: Stacked column on small screens, inline on md+ */}
-        <div className="w-full">
-          <h1 className="flex flex-col items-start gap-4 sm:gap-5 md:gap-3.5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight font-sans text-stone-900 leading-[1.2]">
-            {/* Sentence 1 */}
-            <div className="flex flex-col items-start md:inline-block text-left">
-              <span className="text-left text-stone-900">
-                You already have a great{" "}
-              </span>
-              <span
-                className={`w-fit self-start inline-block font-semibold italic text-stone-900 border-b-2 border-amber-500/70 pb-0.5 mt-0.5 md:mt-0 font-sans ${
-                  isVisible ? "animate-roll-in" : "animate-roll-out"
-                }`}
+          {/* Bottom Label Context */}
+          <div className="relative z-10">
+            <p
+              className={`text-xs sm:text-sm font-bold tracking-tight font-sans line-clamp-1 ${
+                isDark ? "text-white" : "text-stone-900"
+              }`}
+            >
+              {title}
+            </p>
+            <p
+              className={`text-[10px] sm:text-[11px] font-sans line-clamp-1 ${
+                isDark ? "text-stone-400" : "text-stone-500"
+              }`}
+            >
+              {subtitle}
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export function HeroSection() {
+  return (
+    <section className="relative bg-[#fafaf9] pt-6 sm:pt-10 lg:pt-14 pb-14 sm:pb-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 xl:gap-14 items-start">
+          {/* =========================================================
+              1. LEFT COLUMN: TYPOGRAPHY, CAPTION & ACTION BUTTONS
+             ========================================================= */}
+          <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center text-left pt-2">
+            {/* Main Headline (Sans-serif, bold, 3 lines matching screenshot) */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[68px] font-bold tracking-[-0.035em] text-stone-950 leading-[1.06] font-sans">
+              From Idea to <br />
+              Scalable Web <br />
+              Systems Instantly
+            </h1>
+
+            {/* Subtitle Caption */}
+            <p className="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-stone-500 font-sans leading-relaxed max-w-lg">
+              Stop wrestling with sluggish architectures. We engineer
+              high-performance frontend systems, interactive platforms, and
+              scalable digital products built for growth.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="mt-7 sm:mt-9 flex flex-wrap items-center gap-3.5 sm:gap-4">
+              <Link
+                href="#work"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-sm sm:text-base font-semibold transition-all group active:scale-95"
               >
-                {currentPair.asset}
-              </span>
+                <span>See Featured Work</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </Link>
+              <Link
+                href="#contact"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full border border-stone-200 hover:border-stone-300 bg-white hover:bg-stone-50 text-stone-800 text-sm sm:text-base font-medium transition-all active:scale-95"
+              >
+                <Calendar className="w-4 h-4 text-[#f26522]" />
+                <span>Book an Intro Call</span>
+              </Link>
             </div>
+          </div>
 
-            {/* Sentence 2 */}
-            <div className="flex flex-col items-start md:inline-block text-left">
-              <span className="text-left text-stone-900">
-                Let&apos;s scale it into{" "}
-              </span>
-              <span className="w-fit self-start inline-block whitespace-nowrap mt-0.5 md:mt-0">
-                <span
-                  className={`font-bold ${
-                    isVisible ? "animate-roll-in" : "animate-roll-out"
-                  } ${OUTCOME_STYLES[ACTIVE_OUTCOME_STYLE]}`}
-                >
-                  {currentPair.outcome}
-                </span>
-                <span className="text-stone-900 font-sans">.</span>
-              </span>
+          {/* =========================================================
+              2. RIGHT COLUMN: VISUAL CARDS CONTAINER (WITH RED BORDER)
+              Height ratios in order: 2 : 1 : 2 : 2 : 2 : 1
+              Column 1: Slot 1 (2) + Slot 2 (1) + Slot 3 (2) = 5 units
+              Column 2: Slot 4 (2) + Slot 5 (2) + Slot 6 (1) = 5 units
+             ========================================================= */}
+          <div className="lg:col-span-6 xl:col-span-6 relative border-2 border-red-600 rounded-xl">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              {/* --- Column 1 (Slots 1, 2, 3 -> Ratios: 2, 1, 2) --- */}
+              <div className="flex flex-col gap-3 sm:gap-4">
+                {/* 1st Card: Height Ratio 2 */}
+                <VisualCard
+                  id="slot-1"
+                  slotNumber="01"
+                  title="Brand Architecture"
+                  subtitle="Warm Sand • Ratio 2"
+                  heightRatio={2}
+                  bgClass="bg-[#f3ebe1]"
+                />
+
+                {/* 2nd Card: Height Ratio 1 */}
+                <VisualCard
+                  id="slot-2"
+                  slotNumber="02"
+                  title="Enterprise Systems"
+                  subtitle="Noir Monochrome • Ratio 1"
+                  heightRatio={2}
+                  bgClass="bg-[#121316]"
+                  isDark={true}
+                  accentElement={
+                    <div className="absolute inset-x-6 top-1/2 h-px bg-white/10" />
+                  }
+                />
+
+                {/* 3rd Card: Height Ratio 2 */}
+                <VisualCard
+                  id="slot-3"
+                  slotNumber="03"
+                  title="System Visuals"
+                  subtitle="Deep Obsidian • Ratio 2"
+                  heightRatio={1}
+                  bgClass="bg-[#0a0a0c]"
+                  isDark={true}
+                />
+              </div>
+
+              {/* --- Column 2 (Slots 4, 5, 6 -> Ratios: 2, 2, 1) --- */}
+              <div className="flex flex-col gap-3 sm:gap-4">
+                {/* 4th Card: Height Ratio 2 */}
+                <VisualCard
+                  id="slot-4"
+                  slotNumber="04"
+                  title="Product Experience"
+                  subtitle="Organic Sage • Ratio 2"
+                  heightRatio={1}
+                  bgClass="bg-[#e4ece5]"
+                />
+
+                {/* 5th Card: Height Ratio 2 */}
+                <VisualCard
+                  id="slot-5"
+                  slotNumber="05"
+                  title="Core Interfaces"
+                  subtitle="Cyan & Amber • Ratio 2"
+                  heightRatio={2}
+                  bgClass="bg-gradient-to-b from-[#328ebc] 50% to-[#e09819] 50%"
+                  isDark={true}
+                  accentElement={
+                    <div className="absolute right-6 inset-y-0 w-8 flex flex-col justify-around py-3 opacity-30">
+                      <div className="w-full h-1 bg-white rounded-full" />
+                      <div className="w-full h-1 bg-white rounded-full" />
+                      <div className="w-full h-1 bg-white rounded-full" />
+                      <div className="w-full h-1 bg-white rounded-full" />
+                    </div>
+                  }
+                />
+
+                {/* 6th Card: Height Ratio 1 */}
+                <VisualCard
+                  id="slot-6"
+                  slotNumber="06"
+                  title="Studio Showcase"
+                  subtitle="Ceramic Tone • Ratio 1"
+                  heightRatio={2}
+                  bgClass="bg-[#eae4dc]"
+                />
+              </div>
             </div>
-          </h1>
+          </div>
         </div>
 
-        {/* Action Buttons: Main CTA + Labs Link + Contact */}
-        <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-start gap-4 sm:gap-7">
-          <Link
-            href="#work"
-            className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 sm:text-base sm:px-7 sm:py-3 rounded-full font-semibold transition-all duration-150 focus:outline-none cursor-pointer select-none bg-linear-to-r from-emerald-800 via-emerald-700 to-teal-800 text-white hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-700 active:from-emerald-900 active:to-teal-900 shadow-md shadow-emerald-900/20 border border-emerald-600/40 hover:shadow-lg hover:shadow-emerald-900/25"
-          >
-            <span>See Featured Work</span>
-            <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 shrink-0" />
-          </Link>
-
-          <Link
-            href="#labs"
-            className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-stone-600 hover:text-emerald-700 transition-colors group px-2 py-2"
-          >
-            <FlaskConical className="w-4.5 h-4.5 text-emerald-600 group-hover:scale-110 transition-transform" />
-            <span className="underline underline-offset-4 decoration-stone-300 group-hover:decoration-emerald-600/70">
-              Envien Labs
-            </span>
-          </Link>
-
-          <Link
-            href="#contact"
-            className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-stone-600 hover:text-amber-700 transition-colors group px-2 py-2"
-          >
-            <Calendar className="w-4.5 h-4.5 text-amber-600 group-hover:scale-110 transition-transform" />
-            <span className="underline underline-offset-4 decoration-stone-300 group-hover:decoration-amber-600/70">
-              Book a Call
-            </span>
-          </Link>
+        {/* Metric Proof Strip below */}
+        <div className="mt-14 sm:mt-18 pt-8 border-t border-stone-200/80">
+          <ProofStripSection />
         </div>
-
-        <ProofStripSection />
       </div>
     </section>
   );
