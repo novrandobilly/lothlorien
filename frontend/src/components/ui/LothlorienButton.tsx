@@ -16,15 +16,15 @@ export interface LothlorienButtonProps
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-linear-to-r from-emerald-900 via-emerald-800 to-teal-900 text-amber-100 hover:from-emerald-800 hover:via-emerald-700 hover:to-teal-800 active:from-emerald-950 active:to-teal-950 shadow-md shadow-emerald-950/40 border border-amber-500/40 hover:border-amber-400/70 hover:shadow-[0_0_20px_-3px_rgba(212,175,55,0.25)]",
+    "bg-linear-to-r from-emerald-800 via-emerald-700 to-teal-800 text-white hover:from-emerald-700 hover:via-emerald-600 hover:to-teal-700 active:from-emerald-900 active:to-teal-900 shadow-md shadow-emerald-900/20 border border-emerald-600/40",
   secondary:
-    "bg-[#131722]/90 text-stone-200 hover:bg-[#1a2030] hover:text-amber-100 active:bg-[#0f121a] border border-stone-800 hover:border-amber-500/40 shadow-xs",
+    "bg-stone-100 text-stone-800 hover:bg-stone-200 active:bg-stone-300 border border-stone-200 shadow-xs",
   outline:
-    "border border-amber-500/35 bg-stone-900/30 text-amber-200/90 hover:bg-amber-500/10 hover:border-amber-400/65 hover:text-amber-100 active:bg-amber-500/20 backdrop-blur-xs",
+    "border border-stone-300 bg-white hover:bg-stone-50 text-stone-800 hover:border-stone-400 shadow-2xs",
   ghost:
-    "bg-transparent text-stone-300 hover:text-amber-200 hover:bg-stone-800/40 active:bg-stone-800/60",
+    "bg-transparent text-stone-700 hover:text-stone-900 hover:bg-stone-100 active:bg-stone-200",
   gold:
-    "bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 text-stone-950 font-semibold hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 active:from-amber-700 active:to-amber-600 shadow-md shadow-amber-950/40 border border-amber-300/60 hover:shadow-[0_0_20px_-3px_rgba(245,158,11,0.35)]",
+    "bg-amber-400 hover:bg-amber-500 text-stone-950 font-bold border border-amber-300 shadow-md shadow-amber-500/20",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

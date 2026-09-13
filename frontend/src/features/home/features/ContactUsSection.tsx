@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Check, Copy, Linkedin, Instagram, Github, User } from "lucide-react";
+import { Mail, Linkedin, Instagram, Github, User } from "lucide-react";
 import { useToast } from "@/context/ToastContext";
 
 function WhatsAppIcon({ className = "w-4.5 h-4.5" }: { className?: string }) {
@@ -64,16 +64,16 @@ export function ContactUsSection({
   return (
     <section
       id="contact"
-      className="scroll-mt-24 sm:scroll-mt-28 py-10 sm:py-12 relative bg-[#131825] border-t border-stone-800/90"
+      className="scroll-mt-24 sm:scroll-mt-28 py-10 sm:py-12 relative bg-[#f5f6f8] border-t border-stone-200"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="rounded-3xl bg-white/2 backdrop-blur-xs border border-stone-700/60 p-6 sm:p-8 md:p-10 shadow-xl shadow-black/40 hover:border-amber-500/35 transition-all">
+        <div className="rounded-3xl bg-white border border-stone-200 p-6 sm:p-8 md:p-10 shadow-xl shadow-stone-900/5 hover:border-amber-400/80 transition-all">
           {/* Main Content Area: Flex row on tablet/desktop, stacked on mobile */}
           <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-6 md:gap-10 text-center md:text-left mb-6 sm:mb-8">
             {/* Photo / Avatar Column */}
             <div className="shrink-0 flex flex-col items-center md:items-start">
               <div className="relative group/avatar cursor-pointer">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden border border-stone-700/70 bg-stone-900 shadow-md shadow-black/40 flex items-center justify-center relative">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 shadow-md shadow-stone-900/10 flex items-center justify-center relative">
                   {avatarSrc ? (
                     <Image
                       src={avatarSrc}
@@ -83,7 +83,7 @@ export function ContactUsSection({
                       className="object-cover object-top"
                     />
                   ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center bg-linear-to-b from-stone-800 to-stone-900 text-stone-500">
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-linear-to-b from-stone-100 to-stone-200 text-stone-400">
                       <User className="w-12 h-12 stroke-[1.3]" />
                     </div>
                   )}
@@ -95,15 +95,15 @@ export function ContactUsSection({
                   title="Active & responding"
                 >
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-[#131825]" />
+                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white" />
                 </span>
               </div>
 
               <div className="mt-3 text-center md:text-left">
-                <div className="text-sm font-serif font-semibold text-stone-200">
+                <div className="text-sm font-sans font-bold text-stone-900">
                   Novrando Billy
                 </div>
-                <div className="text-xs text-amber-200/90 font-sans">
+                <div className="text-xs text-amber-700 font-sans font-medium">
                   Envien Studio
                 </div>
               </div>
@@ -111,20 +111,19 @@ export function ContactUsSection({
 
             {/* Text & Action Column */}
             <div className="flex-1 flex flex-col items-center md:items-start">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif tracking-tight text-stone-100 mb-3 leading-[1.15]">
-                Send a Letter!
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-sans tracking-tight text-stone-900 mb-2 leading-[1.15]">
+                Let&apos;s Connect
               </h2>
 
-              <p className="text-stone-400 text-sm sm:text-base mb-6 max-w-2xl leading-relaxed font-sans">
-                Got questions, feedback, or just want to say hi? Drop a message
-                in my mailbox.
+              <p className="text-stone-600 text-sm sm:text-base mb-6 max-w-2xl leading-relaxed font-sans">
+                Available for frontend architecture, advisory, and select client engagements.
               </p>
 
               {/* Email CTA Button (copies email & triggers toast) */}
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="inline-flex items-center gap-3 bg-linear-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:via-amber-400 hover:to-amber-500 text-stone-950 font-semibold px-7 py-3 rounded-full text-sm sm:text-base shadow-lg shadow-amber-950/60 border border-amber-300/80 hover:shadow-[0_0_25px_-3px_rgba(245,158,11,0.4)] hover:-translate-y-0.5 transition-all group cursor-pointer font-sans"
+                className="inline-flex items-center gap-3 bg-amber-400 hover:bg-amber-500 text-stone-950 font-bold px-7 py-3 rounded-full text-sm sm:text-base shadow-md shadow-amber-500/20 border border-amber-300 hover:-translate-y-0.5 transition-all group cursor-pointer font-sans"
                 aria-label="Copy email address"
               >
                 <Mail className="w-4.5 h-4.5 text-stone-950 group-hover:scale-110 transition-transform" />
@@ -134,8 +133,8 @@ export function ContactUsSection({
           </div>
 
           {/* Social Links */}
-          <div className="pt-6 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 font-sans">
+          <div className="pt-6 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 font-sans">
               Connect elsewhere:
             </span>
             <div className="flex items-center justify-center gap-3 sm:gap-4">
@@ -148,7 +147,7 @@ export function ContactUsSection({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={item.name}
-                    className="flex items-center justify-center w-9 h-9 rounded-full bg-[#131724] text-stone-300 hover:text-amber-200 hover:bg-stone-800 hover:border-amber-500/40 hover:scale-110 transition-all border border-stone-800/90 shadow-xs"
+                    className="flex items-center justify-center w-9 h-9 rounded-full bg-stone-50 text-stone-600 hover:text-amber-800 hover:bg-amber-50 hover:border-amber-300 hover:scale-110 transition-all border border-stone-200 shadow-2xs"
                   >
                     <Icon className="w-4 h-4" />
                   </Link>

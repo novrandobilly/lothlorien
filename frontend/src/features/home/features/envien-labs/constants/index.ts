@@ -1,48 +1,40 @@
-import { TennisIcon, BagelIcon } from "@/features/home/icons";
-
 export interface LabProject {
   title: string;
   subtitle: string;
+  period: string;
   tag: string;
-  description: string;
-  bullets: string[];
+  skills: string[];
   url: string;
   buttonText: string;
-  icon: React.ComponentType<{ className?: string }>;
 }
 
 export const labProjects: LabProject[] = [
   {
+    period: "2024",
     title: "Kickserve App",
-    subtitle: "Racquet Sports Match & Tournament Engine",
-    tag: "Free Utility • Community",
-    description:
-      "App to manage tennis sessions and players freely (or padel, even badminton) with zero friction.",
-    bullets: [
-      "Up to 32 players with fair court rotation",
-      "Singles & Doubles Americano formats",
-      "Smart, no-repeat match scheduling algorithm",
-      "Live standings updated as matches progress",
-      "Share results and leaderboards instantly",
+    subtitle: "Racquet Match & Tournament Engine",
+    tag: "Free Community Utility",
+    skills: [
+      "Americano & Round Robin",
+      "Fair Court Rotation",
+      "Live Standings & Podiums",
+      "Instant One-Tap Share",
     ],
     url: "/projects/kickserve",
     buttonText: "Launch Kickserve",
-    icon: TennisIcon,
   },
   {
+    period: "2024",
     title: "Bagels PreOrder App",
-    subtitle: "Artisan Bakery Batch Reservation Tool",
-    tag: "Self-Use • Commerce Tool",
-    description:
-      "Bespoke ordering engine built to manage pre-orders and batch bakes for artisan sourdough bagels and salt bread.",
-    bullets: [
-      "Smooth multi-step checkout flow with order summary",
-      "Instant Indonesian QRIS payment integration",
-      "Live batch slot reservation with capacity limits",
-      "Automated WhatsApp order confirmation alerts",
+    subtitle: "Artisan Bakery Batch Reservation",
+    tag: "Self-Use Commerce Tool",
+    skills: [
+      "Batch Slot Allocation",
+      "Indonesian QRIS Payment",
+      "Automated WhatsApp Alerts",
+      "Live Capacity Limits",
     ],
     url: "/projects/bagels",
     buttonText: "Launch Bagels PreOrder",
-    icon: BagelIcon,
   },
 ];

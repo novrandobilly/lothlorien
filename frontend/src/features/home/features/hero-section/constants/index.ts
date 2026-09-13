@@ -27,9 +27,9 @@ export const ACTIVE_OUTCOME_STYLE: "emerald" | "gradient" | "highlight" = "gradi
 
 export const OUTCOME_STYLES = {
   emerald:
-    "text-emerald-400 border-b border-emerald-400/50 pb-0.5 inline-block font-serif italic",
+    "text-emerald-700 border-b-2 border-emerald-600/60 pb-0.5 inline-block font-sans font-bold italic",
   gradient:
-    "text-[#e5c158] border-b border-[#c5a059]/70 pb-0.5 inline-block font-serif italic",
+    "text-amber-700 border-b-2 border-amber-600/60 pb-0.5 inline-block font-sans font-bold italic",
   highlight:
-    "bg-amber-950/40 text-[#e5c158] px-2.5 py-0.5 rounded-md border border-amber-500/30 inline-block font-serif italic",
+    "bg-amber-100 text-amber-900 px-2.5 py-0.5 rounded-md border border-amber-300 inline-block font-sans font-bold italic",
 };

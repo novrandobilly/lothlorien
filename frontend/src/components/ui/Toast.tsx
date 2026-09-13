@@ -10,28 +10,28 @@ const typeConfig: Record<
   { icon: React.ReactNode; bg: string; border: string; text: string }
 > = {
   success: {
-    icon: <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />,
-    bg: "bg-[#0f1816]/95 backdrop-blur-md",
-    border: "border-emerald-500/30 shadow-[0_0_20px_-3px_rgba(16,185,129,0.2)]",
-    text: "text-emerald-200",
+    icon: <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />,
+    bg: "bg-white/95 backdrop-blur-md",
+    border: "border-emerald-200 shadow-lg shadow-emerald-500/10",
+    text: "text-emerald-950",
   },
   error: {
-    icon: <AlertCircle className="w-5 h-5 text-rose-400 shrink-0" />,
-    bg: "bg-[#1a0f12]/95 backdrop-blur-md",
-    border: "border-rose-500/30 shadow-[0_0_20px_-3px_rgba(244,63,94,0.2)]",
-    text: "text-rose-200",
+    icon: <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />,
+    bg: "bg-white/95 backdrop-blur-md",
+    border: "border-rose-200 shadow-lg shadow-rose-500/10",
+    text: "text-rose-950",
   },
   warning: {
-    icon: <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0" />,
-    bg: "bg-[#1a140d]/95 backdrop-blur-md",
-    border: "border-amber-500/30 shadow-[0_0_20px_-3px_rgba(245,158,11,0.2)]",
-    text: "text-amber-200",
+    icon: <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />,
+    bg: "bg-white/95 backdrop-blur-md",
+    border: "border-amber-200 shadow-lg shadow-amber-500/10",
+    text: "text-amber-950",
   },
   info: {
-    icon: <Info className="w-5 h-5 text-teal-400 shrink-0" />,
-    bg: "bg-[#0d1618]/95 backdrop-blur-md",
-    border: "border-teal-500/30 shadow-[0_0_20px_-3px_rgba(20,184,166,0.2)]",
-    text: "text-teal-200",
+    icon: <Info className="w-5 h-5 text-teal-600 shrink-0" />,
+    bg: "bg-white/95 backdrop-blur-md",
+    border: "border-teal-200 shadow-lg shadow-teal-500/10",
+    text: "text-teal-950",
   },
 };
 
@@ -61,7 +61,7 @@ export function ToastContainer({
             )}
           >
             {config.icon}
-            <div className={cn("flex-1 text-sm font-medium leading-5", config.text)}>
+            <div className={cn("flex-1 text-sm font-semibold leading-5", config.text)}>
               {toast.message}
             </div>
             <button

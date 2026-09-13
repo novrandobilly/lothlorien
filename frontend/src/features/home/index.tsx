@@ -7,7 +7,7 @@ import { HeroSection } from "./features/hero-section";
 
 export function HomePageFeature() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#090b10] text-[#f5f2eb] selection:bg-amber-400/20 selection:text-amber-200">
+    <div className="min-h-screen flex flex-col bg-[#fafaf9] text-stone-900 selection:bg-amber-500/20 selection:text-amber-900">
       {/* Sticky Header / Navigation */}
       <Header />
 

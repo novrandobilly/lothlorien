@@ -33,7 +33,7 @@ export function ModalContainer({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs transition-opacity duration-200 animate-in fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-900/40 backdrop-blur-xs transition-opacity duration-200 animate-in fade-in"
       onClick={() => {
         if (closeOnBackdrop) onClose();
       }}
@@ -43,27 +43,27 @@ export function ModalContainer({
       <div
         onClick={(e) => e.stopPropagation()}
         className={cn(
-          "w-full bg-[#111520] text-[#f5f2eb] rounded-2xl shadow-2xl border border-amber-500/25 overflow-hidden transition-all duration-200 animate-in zoom-in-95",
+          "w-full bg-white text-stone-900 rounded-2xl shadow-2xl border border-stone-200 overflow-hidden transition-all duration-200 animate-in zoom-in-95",
           maxWidthStyles[maxWidth]
         )}
       >
-        <div className="flex items-center justify-between px-6 py-4 border-b border-stone-800">
-          <div className="text-lg font-serif font-normal text-stone-100">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200">
+          <div className="text-lg font-sans font-bold text-stone-900">
             {title || "Modal"}
           </div>
           <button
             onClick={onClose}
             aria-label="Close dialog"
-            className="text-stone-400 hover:text-stone-200 transition-colors p-1 rounded-lg hover:bg-stone-800 cursor-pointer"
+            className="text-stone-400 hover:text-stone-700 transition-colors p-1 rounded-lg hover:bg-stone-100 cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="px-6 py-5 text-stone-300 text-sm leading-relaxed font-sans">{content}</div>
+        <div className="px-6 py-5 text-stone-700 text-sm leading-relaxed font-sans">{content}</div>
 
         {actions && (
-          <div className="flex items-center justify-end gap-3 px-6 py-4 bg-[#0d1017] border-t border-stone-800">
+          <div className="flex items-center justify-end gap-3 px-6 py-4 bg-stone-50 border-t border-stone-200">
             {actions}
           </div>
         )}

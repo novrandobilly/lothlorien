@@ -38,11 +38,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakartaSans.variable} ${cormorantGaramond.variable} dark`}
+      className={`${plusJakartaSans.variable} ${cormorantGaramond.variable}`}
       suppressHydrationWarning
     >
       <body
-        className="min-h-screen bg-[#090b10] text-[#f5f2eb] font-sans antialiased selection:bg-amber-400/20 selection:text-amber-200"
+        className="min-h-screen bg-[#fafaf9] text-stone-900 font-sans antialiased selection:bg-amber-500/20 selection:text-amber-900"
         suppressHydrationWarning
       >
         <AppProviders>{children}</AppProviders>

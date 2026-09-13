@@ -1,4 +1,3 @@
-import { AssessmentIcon } from "@/features/home/icons";
 import { Building2, Globe, Sparkles } from "lucide-react";
 
 export interface TransfezProjectItem {
@@ -18,15 +17,14 @@ export interface FeaturedSystem {
   client: string;
   category: string;
   role: string;
-  period?: string;
+  period: string;
   badge: string;
   badgeType: "enterprise" | "case-study" | "in-development";
   description: string;
-  highlights: string[];
+  skills: string[];
   url?: string;
   buttonText?: string;
   status: "live" | "case-study" | "in-development";
-  icon: React.ComponentType<{ className?: string }>;
   isTransfez?: boolean;
   subProjects?: TransfezProjectItem[];
 }
@@ -35,60 +33,60 @@ export const transfezSubProjects: TransfezProjectItem[] = [
   {
     id: "cross-border-remittance",
     title: "Cross-Border Remittance (Mobile & Web)",
-    category: "Core Consumer Financial Platform",
-    role: "Frontend Architecture & Flow Lead",
+    category: "Consumer Financial Platform",
+    role: "Frontend Architecture Lead",
     status: "Live in Production",
     summary:
-      "Customer-facing international transfer engine facilitating fast, compliant multi-currency remittances with live FX rates and real-time transaction tracking.",
+      "International transfer engine facilitating fast multi-currency remittances with live FX rates.",
     contributions: [
-      "Engineered real-time FX rate calculator and dynamic beneficiary verification flows",
-      "Streamlined multi-step checkout to significantly reduce transaction abandonment",
-      "Implemented resilient state recovery and real-time transaction status updates",
+      "Engineered real-time FX rate calculator and dynamic beneficiary verification",
+      "Streamlined multi-step checkout to reduce transaction abandonment",
+      "Implemented resilient state recovery and instant status updates",
     ],
     techStack: ["React Native", "Next.js", "TypeScript", "Tailwind CSS", "Zustand"],
   },
   {
     id: "b2b-corporate-disbursements",
-    title: "Corporate B2B Disbursements & Treasury Portal",
+    title: "Corporate B2B Disbursements Portal",
     category: "Enterprise Financial Operations",
     role: "Lead Web Engineer",
     status: "Live in Production",
     summary:
-      "Enterprise portal for high-volume corporate payroll, cross-border vendor disbursements, and treasury management with multi-level maker-checker approval matrices.",
+      "Enterprise portal for high-volume payroll and treasury with multi-level maker-checker approvals.",
     contributions: [
-      "Architected high-throughput batch upload & CSV validation table handling thousands of rows",
-      "Designed secure multi-tier authorization and maker-checker approval workflows",
-      "Built exportable financial reconciliation audits and instant payout verification",
+      "Architected high-throughput batch upload & CSV validation table",
+      "Designed secure multi-tier authorization and maker-checker workflows",
+      "Built exportable financial reconciliation audits and instant payout checks",
     ],
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "TanStack Table"],
   },
   {
     id: "transfez-design-system",
-    title: "Transfez Core Design System & UI Architecture",
+    title: "Transfez Core Design System",
     category: "Design Engineering & Infrastructure",
     role: "Design System Maintainer",
     status: "Core Infrastructure",
     summary:
-      "Centralized design tokens, reusable accessible component libraries, and UI design patterns unified across iOS, Android, and Web platforms.",
+      "Centralized design tokens and reusable UI component primitives across iOS, Android, and Web.",
     contributions: [
-      "Created tokenized typography, color, spacing scales, and dark/light mode themes",
-      "Developed 40+ accessible, WCAG-compliant UI primitives for rapid feature shipping",
-      "Enforced strict TypeScript contracts to ensure design token consistency across teams",
+      "Created tokenized typography, color, and spacing scales",
+      "Developed 40+ accessible WCAG-compliant UI primitives",
+      "Enforced strict TypeScript contracts across product teams",
     ],
     techStack: ["TypeScript", "Tailwind CSS", "Radix UI Primitives", "Storybook"],
   },
   {
     id: "kyc-verification-engine",
-    title: "Automated KYC & Identity Verification Engine",
+    title: "Automated KYC Verification Engine",
     category: "Compliance & Security",
     role: "Frontend Engineer",
     status: "Live in Production",
     summary:
-      "Frictionless biometric liveness check, national ID OCR extraction, and regulatory anti-money laundering (AML) compliance flow for rapid customer onboarding.",
+      "Biometric liveness check and ID document OCR extraction for rapid regulatory onboarding.",
     contributions: [
-      "Optimized responsive camera capture & ID document scanning with instant edge guidance",
-      "Built dynamic fallback paths for degraded or high-latency network connections",
-      "Enforced strict client-side payload encryption before dispatching to verification vaults",
+      "Optimized responsive camera capture & ID document scanning",
+      "Built resilient fallback paths for high-latency connections",
+      "Enforced client-side payload encryption before verification dispatch",
     ],
     techStack: ["React Native", "Camera & WebRTC APIs", "TypeScript", "Tailwind CSS"],
   },
@@ -97,24 +95,22 @@ export const transfezSubProjects: TransfezProjectItem[] = [
 export const featuredSystems: FeaturedSystem[] = [
   {
     id: "transfez",
-    title: "Transfez Platform & Ecosystem",
-    client: "Transfez (PT Indo Koala Remittance)",
-    category: "Cross-Border Fintech & Disbursements",
+    title: "Transfez Platform",
+    client: "Transfez • PT Indo Koala Remittance",
+    category: "Fintech & Disbursements",
     role: "Senior Frontend Engineer",
-    period: "September 2022 - Present",
+    period: "2022-24",
     badge: "Enterprise Platform",
     badgeType: "enterprise",
-    description:
-      "High-concurrency fintech mobile and web platforms powering international cross-border remittances and corporate disbursements across Southeast Asia.",
-    highlights: [
-      "Cross-border remittance mobile & web consumer platforms",
-      "Enterprise B2B bulk disbursements and treasury portal",
-      "Unified design system and shared component architecture",
-      "Automated biometric KYC & identity verification engine",
+    description: "Cross-border remittance & B2B corporate disbursements across Southeast Asia.",
+    skills: [
+      "Remittance Mobile & Web",
+      "B2B Disbursements Portal",
+      "Core Design System",
+      "Biometric KYC Engine",
     ],
-    buttonText: "Explore Transfez Projects (4)",
+    buttonText: "Explore Projects (4)",
     status: "live",
-    icon: Building2,
     isTransfez: true,
     subProjects: transfezSubProjects,
   },
@@ -122,61 +118,58 @@ export const featuredSystems: FeaturedSystem[] = [
     id: "online-assessment",
     title: "Online Assessment System",
     client: "Enterprise Evaluation Platform",
-    category: "Offline-First Enterprise Architecture",
+    category: "Offline-First Architecture",
     role: "Lead Frontend Architecture",
+    period: "2023-24",
     badge: "Case Study Available",
     badgeType: "case-study",
-    description:
-      "Mission-critical examination platform engineered for seamless exam delivery and evaluation, fully functional even under unstable or zero connectivity.",
-    highlights: [
-      "100% offline-first engine with background conflict-free sync",
-      "Sub-millisecond local response with zero test latency",
-      "Encrypted local data storage & session integrity",
-      "Real-time analytics and certified instant PDF export",
+    description: "Offline-first examination engine with instant zero-latency responses.",
+    skills: [
+      "Offline-First Engine",
+      "Sub-ms Local Response",
+      "Encrypted Storage Sync",
+      "Certified PDF Export",
     ],
     url: "/projects/online-assessment",
     buttonText: "Read Case Study",
     status: "case-study",
-    icon: AssessmentIcon,
   },
   {
     id: "inti-dinamis",
     title: "PT Inti Dinamis",
     client: "PT Inti Dinamis Perkasa",
-    category: "Corporate Digital Presence",
+    category: "Industrial Web Presence",
     role: "Corporate Web Engineering",
+    period: "2024",
     badge: "In Development",
     badgeType: "in-development",
-    description:
-      "Comprehensive corporate brand identity and modern web portal engineered for PT Inti Dinamis to present industrial solutions, machinery capabilities, and client credentials.",
-    highlights: [
-      "Tailored corporate storytelling and interactive services catalog",
-      "Modern static architecture optimized for sub-second performance",
-      "Responsive obsidian aesthetic crafted for industrial prestige",
-      "Integrated client RFQ and direct lead capture pipeline",
+    description: "Industrial machinery showcase and digital catalog engineered for sub-second performance.",
+    skills: [
+      "Machinery Catalog",
+      "Sub-Second Static Load",
+      "Lead RFQ Pipeline",
+      "Obsidian Brand Aesthetic",
     ],
-    buttonText: "Case Study Coming Soon",
+    buttonText: "Coming Soon",
     status: "in-development",
-    icon: Globe,
   },
   {
     id: "landing-page",
-    title: "High-Converting Landing Pages",
+    title: "Landing Page Framework",
     client: "Growth & Acquisition Systems",
-    category: "Conversion Engineering & Web Vitals",
-    role: "Performance & UI/UX Architecture",
+    category: "Performance & Conversion",
+    role: "Performance Engineer",
+    period: "2024",
     badge: "In Development",
     badgeType: "in-development",
-    description:
-      "Custom-crafted, conversion-focused landing page framework built for rapid marketing deployment, 95+ Core Web Vitals, and seamless campaign attribution.",
-    highlights: [
-      "Conversion-optimized visual hierarchy and persuasive layout",
-      "Sub-second load speeds with optimized asset delivery pipelines",
-      "Dynamic marketing attribution, UTM tracking, and event hooks",
-      "Accessible, micro-animated component interactions",
+    description: "Conversion-focused landing page framework built for 95+ Core Web Vitals.",
+    skills: [
+      "95+ Core Web Vitals",
+      "Conversion Funnel UI",
+      "Fast Deployment",
+      "Marketing Attribution",
     ],
-    buttonText: "Preview Coming Soon",
+    buttonText: "Coming Soon",
     status: "in-development",
-    icon: Sparkles,
   },
 ];
