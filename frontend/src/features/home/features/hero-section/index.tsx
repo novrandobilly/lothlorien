@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { LothlorienButton } from "@/components/ui/LothlorienButton";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, FlaskConical } from "lucide-react";
 import { ProofStripSection } from "./features/ProofStripSection";
 import { heroPairs, ACTIVE_OUTCOME_STYLE, OUTCOME_STYLES } from "./constants";
 
@@ -88,21 +88,31 @@ export function HeroSection() {
           </h1>
         </div>
 
-        {/* Action Buttons: Main CTA + Link text */}
+        {/* Action Buttons: Main CTA + Labs Link + Contact */}
         <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-start gap-4 sm:gap-7">
           <Link
             href="#work"
             className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 sm:text-base sm:px-7 sm:py-3 rounded-full font-medium transition-all duration-150 focus:outline-none cursor-pointer select-none bg-linear-to-r from-emerald-900 via-emerald-800 to-teal-900 text-amber-100 hover:from-emerald-800 hover:via-emerald-700 hover:to-teal-800 active:from-emerald-950 active:to-teal-950 shadow-md shadow-emerald-950/40 border border-amber-500/40 hover:border-amber-400/70 hover:shadow-[0_0_20px_-3px_rgba(212,175,55,0.25)]"
           >
-            <span>See My Apps</span>
+            <span>See Featured Work</span>
             <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 shrink-0" />
+          </Link>
+
+          <Link
+            href="#labs"
+            className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-stone-300 hover:text-emerald-300 transition-colors group px-2 py-2"
+          >
+            <FlaskConical className="w-4.5 h-4.5 text-emerald-400 group-hover:scale-110 transition-transform" />
+            <span className="underline underline-offset-4 decoration-stone-700 group-hover:decoration-emerald-400/70">
+              Envien Labs
+            </span>
           </Link>
 
           <Link
             href="#contact"
             className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-stone-300 hover:text-amber-200 transition-colors group px-2 py-2"
           >
-            <Calendar className="w-4.5 h-4.5 text-emerald-400 group-hover:scale-110 transition-transform" />
+            <Calendar className="w-4.5 h-4.5 text-amber-400 group-hover:scale-110 transition-transform" />
             <span className="underline underline-offset-4 decoration-stone-700 group-hover:decoration-amber-400/70">
               Book a Call
             </span>

@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { bagelsData } from "../constants";
-import { BagelIcon } from "@/features/home/features/case-studies/icons";
+import { BagelIcon } from "@/features/home/icons";
 
 export function BagelsCaseStudy() {
   return (

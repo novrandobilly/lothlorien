@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { assessmentData } from "../constants";
-import { AssessmentIcon } from "@/features/home/features/case-studies/icons";
+import { AssessmentIcon } from "@/features/home/icons";
 
 export function AssessmentCaseStudy() {
   return (

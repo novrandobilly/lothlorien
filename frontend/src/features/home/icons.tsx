@@ -68,4 +68,3 @@ export function AssessmentIcon({ className = "w-4.5 h-4.5" }: { className?: stri
     </svg>
   );
 }
-

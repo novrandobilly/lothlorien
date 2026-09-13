@@ -1,8 +1,8 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { CaseStudiesSection } from "./features/case-studies";
 import { ContactUsSection } from "./features/ContactUsSection";
-import { ExperiencesSection } from "./features/experiences";
+import { EnvienLabsSection } from "./features/envien-labs";
+import { FeaturedClientsSection } from "./features/featured-clients";
 import { HeroSection } from "./features/hero-section";
 
 export function HomePageFeature() {
@@ -11,11 +11,11 @@ export function HomePageFeature() {
       {/* Sticky Header / Navigation */}
       <Header />
 
-      {/* Main Content: 9 Modular Sections */}
+      {/* Main Content: Hero -> Featured Clients & Enterprise Systems -> Envien Studio Labs -> Contact */}
       <main className="flex-1">
         <HeroSection />
-        <CaseStudiesSection />
-        <ExperiencesSection />
+        <FeaturedClientsSection />
+        <EnvienLabsSection />
         <ContactUsSection />
       </main>
 

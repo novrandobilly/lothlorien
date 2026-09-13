@@ -26,8 +26,23 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Right side: Contact Button */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          {/* Right side: Nav Links + Contact Button */}
+          <div className="flex items-center gap-3 sm:gap-5">
+            <nav className="hidden sm:flex items-center gap-5 text-xs font-medium text-stone-300">
+              <Link
+                href="/#work"
+                className="hover:text-amber-200 transition-colors"
+              >
+                Featured
+              </Link>
+              <Link
+                href="/#labs"
+                className="hover:text-emerald-300 transition-colors"
+              >
+                Labs
+              </Link>
+            </nav>
+
             <Link
               href="/#contact"
               scroll={true}
