@@ -111,7 +111,7 @@ export function HeroSection() {
           {/* =========================================================
               1. LEFT COLUMN: TYPOGRAPHY, CAPTION & ACTION BUTTONS
              ========================================================= */}
-          <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center text-left pt-24">
+          <div className="w-full lg:col-span-7 flex flex-col justify-center text-left self-center">
             {/* Main Headline (Sans-serif, bold, 3 lines matching screenshot) */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[68px] font-bold tracking-[-0.035em] text-stone-950 leading-[1.06] font-sans">
               From Idea to <br />
@@ -146,12 +146,11 @@ export function HeroSection() {
           </div>
 
           {/* =========================================================
-              2. RIGHT COLUMN: VISUAL CARDS CONTAINER (WITH RED BORDER)
-              Height ratios in order: 2 : 1 : 2 : 2 : 2 : 1
-              Column 1: Slot 1 (2) + Slot 2 (1) + Slot 3 (2) = 5 units
-              Column 2: Slot 4 (2) + Slot 5 (2) + Slot 6 (1) = 5 units
+              2. RIGHT COLUMN: VISUAL CARDS CONTAINER
+              Responsive: w-full on mobile, lg:col-span-5 on desktop.
+              Shadow mask is desktop-only (hidden when stacked in column).
              ========================================================= */}
-          <div className="col-span-5 relative rounded-xl mask-[linear-gradient(to_bottom,transparent_0%,black_12%,black_88%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_12%,black_88%,transparent_100%)]">
+          <div className="w-full lg:col-span-5 relative rounded-xl lg:mask-[linear-gradient(to_bottom,transparent_0%,black_12%,black_88%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_12%,black_88%,transparent_100%)]">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {/* --- Column 1 (Slots 1, 2, 3 -> Ratios: 2, 1, 2) --- */}
               <div className="flex flex-col gap-3 sm:gap-4">
