@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { ContactCard } from "./features/ContactCard";
 
 interface ContactSectionProps {
@@ -11,10 +10,13 @@ export function ContactSection({ className = "" }: ContactSectionProps) {
   return (
     <section
       id="contact"
-      className={`scroll-mt-20 py-14 sm:py-20 lg:py-24 relative bg-[#fafaf9] ${className}`}
+      className={`scroll-mt-20 pb-14 sm:pb-20 lg:pb-24 relative bg-[#fafaf9] ${className}`}
     >
-      <div className="max-w-5xl mx-auto px-6 sm:px-8">
-        <ContactCard />
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Contact Card */}
+        <div className="mt-12 sm:mt-16 max-w-4xl mx-auto">
+          <ContactCard />
+        </div>
       </div>
     </section>
   );

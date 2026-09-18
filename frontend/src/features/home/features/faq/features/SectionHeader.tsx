@@ -2,12 +2,10 @@ import React from "react";
 
 interface SectionHeaderProps {
   title?: string;
-  subtitle?: string;
 }
 
 export function SectionHeader({
-  title = "What We Offer",
-  subtitle = "Tailored engineering engagements designed to turn ideas into production-ready software.",
+  title = "Common Questions",
 }: SectionHeaderProps) {
   return (
     <div className="flex flex-col items-center text-center">
@@ -20,12 +18,6 @@ export function SectionHeader({
         <span className="w-20 h-1 rounded-full bg-stone-300" />
         <span className="w-12 h-0.5 rounded-full bg-stone-200" />
       </div>
-
-      {subtitle && (
-        <p className="mt-4 text-base sm:text-lg text-stone-500 max-w-2xl font-sans">
-          {subtitle}
-        </p>
-      )}
     </div>
   );
 }

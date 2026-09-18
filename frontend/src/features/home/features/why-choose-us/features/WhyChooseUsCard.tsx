@@ -10,8 +10,8 @@ export function WhyChooseUsCard({ item }: WhyChooseUsCardProps) {
 
   return (
     <div className="group flex flex-col items-start text-left">
-      {/* Circular Icon Container matching screenshot */}
-      <div className="w-12 h-12 rounded-full bg-stone-100 border border-stone-200/80 flex items-center justify-center text-stone-800 shadow-sm group-hover:bg-stone-950 group-hover:text-white group-hover:border-stone-950 transition-all duration-300">
+      {/* Circular Icon Container matching site design */}
+      <div className="w-12 h-12 rounded-full bg-white border border-stone-200/80 flex items-center justify-center text-stone-800 shadow-2xs group-hover:bg-stone-950 group-hover:text-white group-hover:border-stone-950 transition-all duration-300">
         <Icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
       </div>
 

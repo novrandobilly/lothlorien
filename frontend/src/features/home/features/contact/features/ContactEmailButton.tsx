@@ -49,22 +49,22 @@ export function ContactEmailButton({
       type="button"
       onClick={handleCopyEmail}
       aria-label={`Copy email address ${email} to clipboard`}
-      className={`group relative inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 rounded-full font-semibold text-sm sm:text-base cursor-pointer transition-all duration-300 font-sans select-none active:scale-95 ${
+      className={`group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold text-sm sm:text-base cursor-pointer transition-all duration-200 font-sans select-none active:scale-95 shadow-sm ${
         copied
-          ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/25 border border-emerald-400"
-          : "bg-linear-to-r from-amber-500 via-amber-500 to-amber-600 hover:from-amber-400 hover:via-amber-500 hover:to-amber-500 text-stone-950 border border-amber-300/80 shadow-md shadow-amber-500/20 hover:shadow-lg hover:shadow-amber-500/30 hover:-translate-y-0.5"
+          ? "bg-emerald-600 text-white"
+          : "bg-stone-950 hover:bg-stone-800 text-white"
       } ${className}`}
     >
       {copied ? (
         <>
-          <Check className="w-5 h-5 text-white stroke-[2.5] animate-in zoom-in-50 duration-200" />
+          <Check className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-white stroke-[2.5]" />
           <span>Email Copied!</span>
         </>
       ) : (
         <>
-          <Mail className="w-5 h-5 text-stone-950 transition-transform duration-300 group-hover:scale-110" />
+          <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-stone-300 group-hover:text-white transition-colors" />
           <span className="tracking-tight">{email}</span>
-          <Copy className="w-4 h-4 text-stone-900/60 opacity-0 group-hover:opacity-100 transition-all duration-200 -ml-0.5" />
+          <Copy className="w-3.5 h-3.5 text-stone-400 group-hover:text-stone-200 transition-colors ml-0.5" />
         </>
       )}
     </button>
