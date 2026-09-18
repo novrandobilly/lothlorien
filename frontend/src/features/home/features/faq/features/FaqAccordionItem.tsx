@@ -53,7 +53,7 @@ export function FaqAccordionItem({
         }`}
       >
         <div className="overflow-hidden">
-          <p className="text-sm sm:text-base text-stone-500 font-sans leading-relaxed pr-6 sm:pr-12">
+          <p className="text-[16px] text-stone-500 font-sans leading-relaxed pr-6 sm:pr-12">
             {item.answer}
           </p>
         </div>

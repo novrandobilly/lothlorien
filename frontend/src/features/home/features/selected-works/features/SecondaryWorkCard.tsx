@@ -52,7 +52,7 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
           </p>
         )}
 
-        <p className="mt-3 text-sm text-stone-500 font-sans leading-relaxed">
+        <p className="mt-3 text-[16px] text-stone-500 font-sans leading-relaxed">
           {description}
         </p>
 

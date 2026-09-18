@@ -21,7 +21,7 @@ export function WhyChooseUsCard({ item }: WhyChooseUsCardProps) {
       </h3>
 
       {/* Benefit-led text */}
-      <p className="mt-2 text-sm sm:text-base text-stone-500 font-sans leading-relaxed">
+      <p className="mt-2 text-[16px] text-stone-500 font-sans leading-relaxed">
         {item.description}
       </p>
     </div>

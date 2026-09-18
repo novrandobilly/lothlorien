@@ -52,7 +52,7 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
             </p>
           )}
 
-          <p className="mt-4 text-sm sm:text-base text-stone-500 font-sans leading-relaxed max-w-xl">
+          <p className="mt-4 text-[16px] text-stone-500 font-sans leading-relaxed max-w-xl">
             {description}
           </p>
 

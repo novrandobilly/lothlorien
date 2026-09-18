@@ -28,7 +28,7 @@ export function ContactCard({ className = "" }: ContactCardProps) {
             {CONTACT_DETAILS.title}
           </h3>
 
-          <p className="text-stone-500 text-sm sm:text-base mt-2.5 sm:mt-3 mb-6 sm:mb-8 max-w-xl font-sans leading-relaxed">
+          <p className="text-stone-500 text-[16px] mt-2.5 sm:mt-3 mb-6 sm:mb-8 max-w-xl font-sans leading-relaxed">
             {CONTACT_DETAILS.subtitle}
           </p>
 

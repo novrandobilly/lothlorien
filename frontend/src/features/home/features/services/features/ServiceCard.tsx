@@ -60,9 +60,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
             {whatYouGet.map((item, idx) => (
               <li
                 key={idx}
-                className="flex items-start gap-2 text-xs sm:text-[13px] font-sans leading-relaxed text-stone-600"
+                className="flex items-start gap-2.5 text-[16px] font-sans leading-relaxed text-stone-600"
               >
-                <span className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5 bg-stone-400" />
+                <span className="w-1.5 h-1.5 rounded-full shrink-0 mt-2 bg-stone-400" />
                 <span>{item}</span>
               </li>
             ))}
@@ -78,9 +78,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
             {bestFor.map((item, idx) => (
               <li
                 key={idx}
-                className="flex items-start gap-2 text-xs sm:text-[13px] font-sans leading-relaxed text-stone-600"
+                className="flex items-start gap-2.5 text-[16px] font-sans leading-relaxed text-stone-600"
               >
-                <span className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5 bg-stone-400" />
+                <span className="w-1.5 h-1.5 rounded-full shrink-0 mt-2 bg-stone-400" />
                 <span>{item}</span>
               </li>
             ))}

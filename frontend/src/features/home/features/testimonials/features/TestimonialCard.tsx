@@ -26,12 +26,12 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
       {/* Quote Body with Italic, Quotes, and Expandable Multi-Paragraph Support */}
       <div className="space-y-3 sm:space-y-3.5">
         {!isExpanded && hasMultipleParagraphs ? (
-          <p className="italic text-stone-700 font-sans text-xs sm:text-sm lg:text-[14.5px] leading-relaxed">
+          <p className="italic text-stone-700 font-sans text-[16px] leading-relaxed">
             &ldquo;{paragraphs[0]}&hellip;&rdquo;{" "}
             <button
               type="button"
               onClick={() => setIsExpanded(true)}
-              className="not-italic inline-flex items-center text-xs font-semibold text-stone-950 underline underline-offset-2 hover:text-[#f26522] transition-colors cursor-pointer ml-1"
+              className="not-italic inline-flex items-center text-sm font-semibold text-stone-950 underline underline-offset-2 hover:text-[#f26522] transition-colors cursor-pointer ml-1.5"
             >
               Show more
             </button>
@@ -40,7 +40,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
           paragraphs.map((p, idx) => (
             <p
               key={idx}
-              className="italic text-stone-700 font-sans text-xs sm:text-sm lg:text-[14.5px] leading-relaxed"
+              className="italic text-stone-700 font-sans text-[16px] leading-relaxed"
             >
               {idx === 0 && <span>&ldquo;</span>}
               {p}
@@ -51,7 +51,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
                     <button
                       type="button"
                       onClick={() => setIsExpanded(false)}
-                      className="not-italic inline-flex items-center text-xs font-semibold text-stone-950 underline underline-offset-2 hover:text-[#f26522] transition-colors cursor-pointer ml-1.5"
+                      className="not-italic inline-flex items-center text-sm font-semibold text-stone-950 underline underline-offset-2 hover:text-[#f26522] transition-colors cursor-pointer ml-2"
                     >
                       Show less
                     </button>
