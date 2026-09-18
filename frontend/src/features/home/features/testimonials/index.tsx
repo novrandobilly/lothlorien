@@ -26,12 +26,9 @@ export function TestimonialsSection({
         <SectionHeader title={title} />
 
         {/* 2-Column Testimonials Layout (Clean unboxed columns matching wireframe) */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-start">
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-14 lg:gap-40 items-start">
           {items.map((testimonial) => (
-            <TestimonialCard
-              key={testimonial.id}
-              testimonial={testimonial}
-            />
+            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
           ))}
         </div>
       </div>
