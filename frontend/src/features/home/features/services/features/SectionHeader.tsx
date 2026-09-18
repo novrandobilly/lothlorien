@@ -2,30 +2,24 @@ import React from "react";
 
 interface SectionHeaderProps {
   title?: string;
-  subtitle?: string;
+  className?: string;
 }
 
 export function SectionHeader({
   title = "What We Offer",
-  subtitle = "Tailored engineering engagements designed to turn ideas into production-ready software.",
+  className = "",
 }: SectionHeaderProps) {
   return (
-    <div className="flex flex-col items-center text-center">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[-0.03em] text-stone-950 font-sans">
+    <div className={`flex flex-col items-center text-center ${className}`}>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-stone-950 font-sans">
         {title}
       </h2>
 
-      {/* Decorative double underline accent matching selected works */}
-      <div className="flex flex-col items-center gap-1 mt-3">
-        <span className="w-20 h-1 rounded-full bg-stone-300" />
-        <span className="w-12 h-0.5 rounded-full bg-stone-200" />
+      {/* Decorative double underline accent */}
+      <div className="flex flex-col items-center gap-1 mt-2.5">
+        <span className="w-16 h-1 rounded-full bg-stone-300" />
+        <span className="w-10 h-0.5 rounded-full bg-stone-200" />
       </div>
-
-      {subtitle && (
-        <p className="mt-4 text-base sm:text-lg text-stone-500 max-w-2xl font-sans">
-          {subtitle}
-        </p>
-      )}
     </div>
   );
 }

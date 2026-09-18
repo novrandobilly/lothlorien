@@ -6,7 +6,7 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({
-  title = "Why Choose Us",
+  title = "What they say",
   className = "",
 }: SectionHeaderProps) {
   return (

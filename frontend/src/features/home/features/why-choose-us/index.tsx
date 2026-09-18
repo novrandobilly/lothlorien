@@ -7,14 +7,12 @@ import { WhyChooseUsCard } from "./features/WhyChooseUsCard";
 
 interface WhyChooseUsSectionProps {
   title?: string;
-  subtitle?: string;
   items?: WhyChooseUsItem[];
   className?: string;
 }
 
 export function WhyChooseUsSection({
   title = "Why Choose Us",
-  subtitle,
   items = whyChooseUsItems,
   className = "",
 }: WhyChooseUsSectionProps) {
@@ -25,7 +23,7 @@ export function WhyChooseUsSection({
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <SectionHeader title={title} subtitle={subtitle} />
+        <SectionHeader title={title} />
 
         {/* 4-Column Strengths Grid */}
         <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8 xl:gap-10">
