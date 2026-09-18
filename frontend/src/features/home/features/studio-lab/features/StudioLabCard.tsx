@@ -12,7 +12,7 @@ export function StudioLabCard({ project }: StudioLabCardProps) {
 
   return (
     <div
-      className={`group relative flex flex-col justify-between w-full h-[520px] sm:h-[550px] rounded-3xl bg-[#f4f3ee] border border-stone-200/70 overflow-hidden ${
+      className={`group relative flex flex-col justify-between w-full h-130 sm:h-137.5 rounded-3xl bg-[#f4f3ee] border border-stone-200/70 overflow-hidden ${
         isComingSoon
           ? "opacity-40 select-none cursor-default"
           : "transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
@@ -58,7 +58,7 @@ export function StudioLabCard({ project }: StudioLabCardProps) {
       <div className="relative w-full h-[55%] rounded-t-2xl sm:rounded-t-3xl overflow-hidden bg-stone-900 flex items-end p-4 sm:p-5">
         {/* Gradient Artwork / Visual Preview */}
         <div
-          className={`absolute inset-0 bg-gradient-to-tr ${
+          className={`absolute inset-0 bg-linear-to-tr ${
             project.visualGradient ||
             "from-stone-900 via-stone-800 to-stone-700"
           } opacity-90 transition-transform duration-700 ${
@@ -67,7 +67,7 @@ export function StudioLabCard({ project }: StudioLabCardProps) {
         />
 
         {/* Subtle Decorative Pattern */}
-        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]" />
+        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1px,transparent_1px)] bg-size-[16px_16px]" />
 
         {/* Centered Decorative Watermark */}
         <div className="absolute inset-0 flex items-center justify-center opacity-10 select-none pointer-events-none">

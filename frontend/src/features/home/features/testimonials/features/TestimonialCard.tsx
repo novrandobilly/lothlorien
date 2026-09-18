@@ -23,43 +23,63 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
 
   return (
     <div className="flex flex-col justify-between h-full text-left">
-      {/* Quote Body with Italic, Quotes, and Expandable Multi-Paragraph Support */}
+      {/* Quote Body with Smooth Accordion Expansion */}
       <div className="space-y-3 sm:space-y-3.5">
-        {!isExpanded && hasMultipleParagraphs ? (
-          <p className="italic text-stone-700 font-sans text-[16px] leading-relaxed">
-            &ldquo;{paragraphs[0]}&hellip;&rdquo;{" "}
-            <button
-              type="button"
-              onClick={() => setIsExpanded(true)}
-              className="not-italic inline-flex items-center text-sm font-semibold text-stone-950 underline underline-offset-2 hover:text-[#f26522] transition-colors cursor-pointer ml-1.5"
-            >
-              Show more
-            </button>
-          </p>
-        ) : (
-          paragraphs.map((p, idx) => (
-            <p
-              key={idx}
-              className="italic text-stone-700 font-sans text-[16px] leading-relaxed"
-            >
-              {idx === 0 && <span>&ldquo;</span>}
-              {p}
-              {idx === paragraphs.length - 1 && (
-                <>
-                  <span>&rdquo;</span>{" "}
-                  {hasMultipleParagraphs && (
-                    <button
-                      type="button"
-                      onClick={() => setIsExpanded(false)}
-                      className="not-italic inline-flex items-center text-sm font-semibold text-stone-950 underline underline-offset-2 hover:text-[#f26522] transition-colors cursor-pointer ml-2"
-                    >
-                      Show less
-                    </button>
-                  )}
-                </>
-              )}
-            </p>
-          ))
+        {/* First Paragraph (Always visible) */}
+        <p className="italic text-stone-700 font-sans text-[16px] leading-relaxed">
+          <span>&ldquo;</span>
+          {paragraphs[0]}
+          {!isExpanded && hasMultipleParagraphs ? (
+            <>
+              <span>&hellip;&rdquo;</span>{" "}
+              <button
+                type="button"
+                onClick={() => setIsExpanded(true)}
+                className="not-italic inline-flex items-center text-sm font-semibold text-stone-950 underline underline-offset-2 hover:text-[#f26522] transition-colors cursor-pointer ml-1.5 active:scale-95"
+              >
+                See more
+              </button>
+            </>
+          ) : !hasMultipleParagraphs ? (
+            <span>&rdquo;</span>
+          ) : null}
+        </p>
+
+        {/* Expandable Remaining Paragraphs Container with CSS Grid Height Transition */}
+        {hasMultipleParagraphs && (
+          <div
+            className={`grid transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              isExpanded
+                ? "grid-rows-[1fr] opacity-100 mt-3 sm:mt-3.5"
+                : "grid-rows-[0fr] opacity-0 mt-0 pointer-events-none"
+            }`}
+          >
+            <div className="overflow-hidden space-y-3 sm:space-y-3.5">
+              {paragraphs.slice(1).map((p, idx) => {
+                const isLast = idx === paragraphs.length - 2;
+                return (
+                  <p
+                    key={idx}
+                    className="italic text-stone-700 font-sans text-[16px] leading-relaxed"
+                  >
+                    {p}
+                    {isLast && (
+                      <>
+                        <span>&rdquo;</span>{" "}
+                        <button
+                          type="button"
+                          onClick={() => setIsExpanded(false)}
+                          className="not-italic inline-flex items-center text-sm font-semibold text-stone-950 underline underline-offset-2 hover:text-[#f26522] transition-colors cursor-pointer ml-2 active:scale-95"
+                        >
+                          See less
+                        </button>
+                      </>
+                    )}
+                  </p>
+                );
+              })}
+            </div>
+          </div>
         )}
       </div>
 

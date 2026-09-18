@@ -50,7 +50,8 @@ export function StudioLabSection({
     const el = scrollContainerRef.current;
     if (!el) return;
 
-    const cardWidth = el.querySelector<HTMLElement>(".lab-card-item")?.offsetWidth || 320;
+    const cardWidth =
+      el.querySelector<HTMLElement>(".lab-card-item")?.offsetWidth || 320;
     const scrollAmount = cardWidth + 24; // Card width + gap
 
     el.scrollBy({
@@ -66,10 +67,7 @@ export function StudioLabSection({
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Uniform Centered Section Header */}
-        <SectionHeader
-          title={title}
-          description={description}
-        />
+        <SectionHeader title={title} description={description} />
 
         {/* Carousel Container */}
         <div className="mt-8 sm:mt-10 lg:mt-12">
@@ -109,7 +107,7 @@ export function StudioLabSection({
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="lab-card-item snap-start shrink-0 w-[280px] sm:w-[305px] md:w-[325px]"
+                className="lab-card-item snap-start shrink-0 w-70 sm:w-76.25 md:w-81.25"
               >
                 <StudioLabCard project={project} />
               </div>
