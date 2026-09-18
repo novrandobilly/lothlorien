@@ -19,7 +19,7 @@ export function WhyChooseUsSection({
   return (
     <section
       id="why-choose-us"
-      className={`scroll-mt-20 relative bg-[#fafaf9] py-10 sm:py-14 lg:py-16 ${className}`}
+      className={`scroll-mt-20 relative bg-[#f4f3ee] border-y border-stone-200/60 py-10 sm:py-14 lg:py-16 ${className}`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}

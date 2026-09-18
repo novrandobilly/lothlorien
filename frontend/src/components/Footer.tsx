@@ -3,7 +3,7 @@ import { EnvienLogo } from "@/components/ui/EnvienLogo";
 
 export function Footer() {
   return (
-    <footer className="bg-[#f4f3ee] text-stone-600 py-8 sm:py-10 border-t border-stone-200/80">
+    <footer className="bg-[#fafaf9] text-stone-600 py-8 sm:py-10 border-t border-stone-200/80">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-xs text-center sm:text-left">
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
           <div className="flex items-center gap-2">

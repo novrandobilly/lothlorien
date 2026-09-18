@@ -1,11 +1,12 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HeroSection } from "./features/hero-section";
-import { WhyChooseUsSection } from "./features/why-choose-us";
 import { SelectedWorksSection } from "./features/selected-works";
+import { StudioLabSection } from "./features/studio-lab";
+import { WhyChooseUsSection } from "./features/why-choose-us";
 import { ServicesSection } from "./features/services";
-import { TestimonialsSection } from "./features/testimonials";
 import { FaqSection } from "./features/faq";
+import { TestimonialsSection } from "./features/testimonials";
 import { ContactSection } from "./features/contact";
 
 export function HomePageFeature() {
@@ -14,10 +15,11 @@ export function HomePageFeature() {
       {/* Sticky Header / Navigation */}
       <Header />
 
-      {/* Main Content: Hero -> Selected Works -> Why Choose Us -> Services -> Testimonials -> FAQ -> Contact */}
+      {/* Main Content: Hero -> Selected Works -> Envien Studio Lab -> Why Choose Us -> Services -> FAQ -> Testimonials -> Contact */}
       <main className="flex-1">
         <HeroSection />
         <SelectedWorksSection />
+        <StudioLabSection />
         <WhyChooseUsSection />
         <ServicesSection />
         <FaqSection />
