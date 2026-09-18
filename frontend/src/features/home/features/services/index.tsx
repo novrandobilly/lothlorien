@@ -31,21 +31,6 @@ export function ServicesSection({
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
-
-        {/* Reassurance Strip */}
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-stone-200/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-stone-900 font-sans">
-            <span>Fixed-Scope Milestones</span>
-            <span className="text-stone-300">•</span>
-            <span>Direct Senior Execution</span>
-            <span className="text-stone-300">•</span>
-            <span>Zero Hourly Surprises</span>
-          </div>
-
-          <p className="text-xs sm:text-sm text-stone-500 font-sans">
-            Clear deliverables, fast turnaround, and transparent scopes before day one.
-          </p>
-        </div>
       </div>
     </section>
   );
