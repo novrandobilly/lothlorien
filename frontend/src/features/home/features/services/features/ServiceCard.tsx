@@ -31,7 +31,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           TITLE & ESTIMATED TIMELINE
          ========================================================= */}
       <div className="mt-4 sm:mt-5">
-        <div className="flex items-start">
+        <div className="flex items-start mb-2">
           <h3 className="text-xl sm:text-2xl font-bold tracking-tight font-sans leading-tight text-stone-950">
             {title}
           </h3>
