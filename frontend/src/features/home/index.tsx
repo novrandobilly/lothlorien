@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HeroSection } from "./features/hero-section";
+import { WhyChooseUsSection } from "./features/why-choose-us";
 import { SelectedWorksSection } from "./features/selected-works";
 
 export function HomePageFeature() {
@@ -9,10 +10,11 @@ export function HomePageFeature() {
       {/* Sticky Header / Navigation */}
       <Header />
 
-      {/* Main Content: Hero -> Selected Works */}
+      {/* Main Content: Hero -> Why Choose Us -> Selected Works */}
       <main className="flex-1">
         <HeroSection />
         <SelectedWorksSection />
+        <WhyChooseUsSection />
       </main>
 
       {/* Footer */}

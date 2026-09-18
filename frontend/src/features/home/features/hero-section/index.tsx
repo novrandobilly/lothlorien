@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
-import { ProofStripSection } from "./features/ProofStripSection";
 import { VisualCard } from "./features/VisualCard";
 import { visualCardsColumn1, visualCardsColumn2 } from "./constants";
 
@@ -71,11 +70,6 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Metric Proof Strip below */}
-        <div className="mt-14 sm:mt-18 pt-8 border-t border-stone-200/80">
-          <ProofStripSection />
         </div>
       </div>
     </section>
