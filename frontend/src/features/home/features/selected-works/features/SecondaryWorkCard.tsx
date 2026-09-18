@@ -11,7 +11,6 @@ interface SecondaryWorkCardProps {
 export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
   const {
     title,
-    subtitle,
     description,
     badge,
     tags,
@@ -46,12 +45,6 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
           {title}
         </h3>
 
-        {subtitle && (
-          <p className="mt-1 text-sm sm:text-base font-medium text-stone-700 font-sans">
-            {subtitle}
-          </p>
-        )}
-
         <p className="mt-2 text-[16px] text-stone-500 font-sans leading-relaxed">
           {description}
         </p>
@@ -77,10 +70,10 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
             {url && (
               <Link
                 href={url}
-                className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-xs sm:text-sm font-semibold transition-all group-hover:gap-2 active:scale-95 shrink-0"
+                className="group/btn inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-xs sm:text-sm font-semibold transition-all hover:gap-2 active:scale-95 shrink-0"
               >
                 <span>{buttonText}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
               </Link>
             )}
           </div>
