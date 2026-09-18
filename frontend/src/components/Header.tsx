@@ -70,6 +70,12 @@ export function Header() {
           >
             Labs
           </Link>
+          <Link
+            href="/#faq"
+            className="hover:text-stone-950 transition-colors"
+          >
+            FAQ
+          </Link>
         </nav>
 
         {/* Right CTA Button */}
