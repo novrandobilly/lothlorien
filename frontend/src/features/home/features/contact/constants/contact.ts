@@ -8,6 +8,10 @@ export const CONTACT_DETAILS = {
   name: "Novrando Billy",
   role: "Envien Studio",
   avatarSrc: "/envien-contact.webp",
+  aboutParagraphs: [
+    "I'm a Senior Frontend Engineer & UI/UX Architect specializing in building high-performance, scalable web systems and interactive digital platforms. With a focus on design precision, code quality, and resilient architectures, I partner with founders and product teams to translate ambitious ideas into reality.",
+    "Whether you're looking to build an MVP from scratch, modernize an existing codebase, or scale your frontend architecture, I'm always open to discussing new opportunities and engineering challenges.",
+  ],
   title: "Send a Letter!",
   subtitle:
     "Got questions, feedback, or just want to say hi? Drop a message in my mailbox.",

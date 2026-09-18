@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { EnvienLogo } from "@/components/ui/EnvienLogo";
-import { ArrowUpRight } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,20 +43,8 @@ export function Header() {
           </span>
         </Link>
 
-        {/* Center Nav Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium font-sans text-stone-600">
-          <Link
-            href="/"
-            className="text-stone-950 font-semibold hover:text-[#f26522] transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="/#about"
-            className="hover:text-stone-950 transition-colors"
-          >
-            About
-          </Link>
+        {/* Nav Links */}
+        <nav className="hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium font-sans text-stone-600">
           <Link
             href="/#work"
             className="hover:text-stone-950 transition-colors"
@@ -65,29 +52,18 @@ export function Header() {
             Work
           </Link>
           <Link
-            href="/#labs"
+            href="/#services"
             className="hover:text-stone-950 transition-colors"
           >
-            Labs
+            Services
           </Link>
-          <Link
-            href="/#faq"
-            className="hover:text-stone-950 transition-colors"
-          >
-            FAQ
-          </Link>
-        </nav>
-
-        {/* Right CTA Button */}
-        <div className="flex items-center gap-4">
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold rounded-full px-4 sm:px-5 py-2 sm:py-2.5 bg-stone-950 text-white hover:bg-stone-800 transition-all shadow-sm active:scale-95"
+            className="hover:text-stone-950 transition-colors"
           >
-            <span>Book a Call</span>
-            <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
+            Contact Us
           </Link>
-        </div>
+        </nav>
       </div>
     </header>
   );

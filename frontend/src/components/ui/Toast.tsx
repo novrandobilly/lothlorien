@@ -10,9 +10,9 @@ const typeConfig: Record<
   { icon: React.ReactNode; bg: string; border: string; text: string }
 > = {
   success: {
-    icon: <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />,
-    bg: "bg-white/95 backdrop-blur-md",
-    border: "border-emerald-200 shadow-lg shadow-emerald-500/10",
+    icon: <CheckCircle2 className="w-5 h-5 text-emerald-700 shrink-0" />,
+    bg: "bg-[#ecfdf5]/95 backdrop-blur-md",
+    border: "border-emerald-300 shadow-lg shadow-emerald-700/10",
     text: "text-emerald-950",
   },
   error: {

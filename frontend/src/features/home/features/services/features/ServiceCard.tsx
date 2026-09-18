@@ -8,7 +8,6 @@ interface ServiceCardProps {
 export function ServiceCard({ service }: ServiceCardProps) {
   const {
     number,
-    icon: Icon,
     timeline,
     title,
     whatYouGetTitle = "What You Get",
@@ -20,12 +19,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <div className="group relative rounded-2xl sm:rounded-3xl p-6 sm:p-7 flex flex-col justify-start h-full bg-white text-stone-950 border border-stone-200/80 transition-all duration-300 hover:border-stone-300 hover:shadow-sm select-none">
       {/* =========================================================
-          TOP ROW: TOP-LEFT ICON & TOP-RIGHT NUMBER
+          TOP ROW: TOP-RIGHT NUMBER
          ========================================================= */}
-      <div className="flex items-center justify-between w-full">
-        <div className="w-10 h-10 rounded-xl bg-stone-50 border border-stone-200/80 flex items-center justify-center text-stone-800 group-hover:bg-stone-950 group-hover:text-white transition-all duration-300 shadow-2xs">
-          <Icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-105" />
-        </div>
+      <div className="flex items-center justify-end w-full">
         <span className="text-2xl sm:text-3xl tracking-tight font-sans text-stone-400 group-hover:text-stone-950 font-light transition-colors duration-200">
           {number}
         </span>

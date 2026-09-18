@@ -57,7 +57,7 @@ export function FaqSection({
 
             {/* Right Column: Question Accordions List */}
             <div className="w-full lg:col-span-8 flex flex-col pt-1 lg:pt-0">
-              <div className="flex flex-col">
+              <div className="flex flex-col min-h-[220px] sm:min-h-[235px] lg:min-h-[245px]">
                 {activeCategory?.questions.map((q) => (
                   <FaqAccordionItem
                     key={q.id}

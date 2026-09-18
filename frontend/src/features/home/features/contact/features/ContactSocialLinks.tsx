@@ -24,13 +24,13 @@ export function ContactSocialLinks({
 }: ContactSocialLinksProps) {
   return (
     <div
-      className={`flex flex-wrap items-center justify-center gap-3 sm:gap-4 ${className}`}
+      className={`flex flex-wrap items-center justify-start gap-3 sm:gap-4 ${className}`}
     >
       <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 font-sans">
         {label}
       </span>
 
-      <div className="flex items-center justify-center gap-2.5 sm:gap-3">
+      <div className="flex items-center justify-start gap-2.5 sm:gap-3">
         {links.map((item) => {
           const Icon = ICON_MAP[item.iconName];
 

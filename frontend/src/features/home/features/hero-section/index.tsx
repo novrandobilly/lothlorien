@@ -32,18 +32,18 @@ export function HeroSection() {
             {/* Action Buttons */}
             <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-3.5">
               <Link
-                href="#work"
+                href="#contact"
                 className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-sm sm:text-base font-semibold transition-all group active:scale-95"
               >
-                <span>See Featured Work</span>
+                <Calendar className="w-4 h-4 text-[#f26522]" />
+                <span>Book a call</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <Link
-                href="#contact"
+                href="#work"
                 className="inline-flex items-center gap-2 px-5 py-3 sm:py-3.5 rounded-full border border-stone-200 hover:border-stone-300 bg-white hover:bg-stone-50 text-stone-800 text-sm sm:text-base font-medium transition-all active:scale-95"
               >
-                <Calendar className="w-4 h-4 text-[#f26522]" />
-                <span>Book an Intro Call</span>
+                <span>See our works</span>
               </Link>
             </div>
           </div>
