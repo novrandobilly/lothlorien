@@ -19,14 +19,14 @@ export function TestimonialsSection({
   return (
     <section
       id="what-they-say"
-      className={`scroll-mt-20 py-16 sm:py-20 lg:py-24 relative bg-[#f2eee6] border-y border-stone-200/80 ${className}`}
+      className={`scroll-mt-20 py-10 sm:py-14 lg:py-16 relative bg-[#f4f3ee] border-y border-stone-200/60 ${className}`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <SectionHeader title={title} />
 
         {/* 2-Column Testimonials Layout (Clean unboxed columns matching wireframe) */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-14 lg:gap-40 items-start">
+        <div className="mt-8 sm:mt-10 lg:mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 xl:gap-24 items-start">
           {items.map((testimonial) => (
             <TestimonialCard key={testimonial.id} testimonial={testimonial} />
           ))}

@@ -10,19 +10,19 @@ export function SelectedWorksSection() {
   return (
     <section
       id="work"
-      className="relative bg-[#fafaf9] pb-14 sm:pb-20 lg:pb-24"
+      className="scroll-mt-20 relative bg-[#f4f3ee] border-y border-stone-200/60 py-10 sm:py-14 lg:py-16"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <SectionHeader title="Selected Works" />
 
         {/* Feature Cards Bento Grid */}
-        <div className="mt-12 sm:mt-16 space-y-6 sm:space-y-8">
+        <div className="mt-8 sm:mt-10 lg:mt-12 space-y-5 sm:space-y-6">
           {/* Main Top Feature Card (Highlighted Feature 1) */}
           <MainWorkCard work={mainSelectedWork} />
 
           {/* Bottom 2-Column Grid (Highlighted Features 2 & 3) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
             {secondarySelectedWorks.map((work) => (
               <SecondaryWorkCard key={work.id} work={work} />
             ))}

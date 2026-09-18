@@ -19,7 +19,7 @@ What sets Billy apart is his communication and the positive energy he brings to 
     role: "SQA Engineer, Transfez",
     company: "Transfez",
     initials: "DS",
-    profileUrl: "https://www.linkedin.com/in/dedi-semara/",
+    profileUrl: "https://www.linkedin.com/in/dedisemara/",
   },
   {
     id: "testimonial-2",
@@ -32,6 +32,6 @@ He can explain and update you about development progress or bug fixes very clear
     role: "SQA Engineer, Transfez",
     company: "Transfez",
     initials: "MI",
-    profileUrl: "https://www.linkedin.com/in/marcel-ivaldri-rahman/",
+    profileUrl: "https://www.linkedin.com/in/mivaldri/",
   },
 ];

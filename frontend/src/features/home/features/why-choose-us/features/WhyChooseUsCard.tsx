@@ -16,12 +16,12 @@ export function WhyChooseUsCard({ item }: WhyChooseUsCardProps) {
       </div>
 
       {/* Title */}
-      <h3 className="mt-4 sm:mt-5 text-lg sm:text-xl font-bold font-sans text-stone-950 tracking-tight">
+      <h3 className="mt-3.5 sm:mt-4 text-lg sm:text-xl font-bold font-sans text-stone-950 tracking-tight">
         {item.title}
       </h3>
 
       {/* Benefit-led text */}
-      <p className="mt-2 text-[16px] text-stone-500 font-sans leading-relaxed">
+      <p className="mt-1.5 sm:mt-2 text-[16px] text-stone-500 font-sans leading-relaxed">
         {item.description}
       </p>
     </div>

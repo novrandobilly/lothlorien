@@ -37,15 +37,15 @@ export function FaqSection({
   return (
     <section
       id="faq"
-      className={`scroll-mt-20 py-14 sm:py-20 lg:py-24 relative bg-[#fafaf9] ${className}`}
+      className={`scroll-mt-20 py-10 sm:py-14 lg:py-16 relative bg-[#fafaf9] ${className}`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <SectionHeader title={title} />
 
         {/* Main 2-Column FAQ Panel matching site style */}
-        <div className="mt-12 sm:mt-16 rounded-2xl sm:rounded-3xl bg-[#f4f4f3] border border-stone-200/80 p-6 sm:p-10 lg:p-12 transition-all duration-300 hover:border-stone-300 hover:shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="mt-8 sm:mt-10 lg:mt-12 rounded-2xl sm:rounded-3xl bg-white border border-stone-200/80 p-6 sm:p-8 lg:p-10 transition-all duration-300 hover:border-stone-300 hover:shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
             {/* Left Column: Category Navigation */}
             <div className="w-full lg:col-span-4 flex flex-col justify-start">
               <CategoryNav

@@ -64,7 +64,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
       </div>
 
       {/* Author Details (Avatar + Name & Role) - Clickable Link */}
-      <div className="mt-8 sm:mt-10">
+      <div className="mt-6 sm:mt-8">
         {profileUrl ? (
           <Link
             href={profileUrl}

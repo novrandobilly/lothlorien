@@ -11,10 +11,10 @@ interface ContactCardProps {
 export function ContactCard({ className = "" }: ContactCardProps) {
   return (
     <div
-      className={`rounded-2xl sm:rounded-3xl bg-[#f4f4f3] border border-stone-200/80 p-7 sm:p-9 md:p-12 transition-all duration-300 hover:border-stone-300 hover:shadow-sm ${className}`}
+      className={`rounded-2xl sm:rounded-3xl bg-white border border-stone-200/80 p-6 sm:p-8 md:p-10 lg:p-11 transition-all duration-300 hover:border-stone-300 hover:shadow-sm ${className}`}
     >
       {/* Top Row: Avatar Profile + Main Headline & Email Action */}
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-8 sm:gap-10 md:gap-12 lg:gap-14 text-center md:text-left">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8 md:gap-10 lg:gap-12 text-center md:text-left">
         {/* Left Column: Avatar & Name */}
         <ContactProfile
           avatarSrc={CONTACT_DETAILS.avatarSrc}
@@ -28,7 +28,7 @@ export function ContactCard({ className = "" }: ContactCardProps) {
             {CONTACT_DETAILS.title}
           </h3>
 
-          <p className="text-stone-500 text-[16px] mt-2.5 sm:mt-3 mb-6 sm:mb-8 max-w-xl font-sans leading-relaxed">
+          <p className="text-stone-500 text-[16px] mt-2 sm:mt-2.5 mb-5 sm:mb-6 max-w-xl font-sans leading-relaxed">
             {CONTACT_DETAILS.subtitle}
           </p>
 
@@ -37,7 +37,7 @@ export function ContactCard({ className = "" }: ContactCardProps) {
       </div>
 
       {/* Bottom Row: Divider & Social Profile Links */}
-      <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-stone-200/80">
+      <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-stone-200/80">
         <ContactSocialLinks links={SOCIAL_LINKS} />
       </div>
     </div>

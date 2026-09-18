@@ -24,14 +24,14 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
   } = work;
 
   return (
-    <div className="group relative w-full bg-[#f4f4f3] rounded-2xl sm:rounded-3xl border border-stone-200/80 overflow-hidden transition-all duration-300 hover:border-stone-300 hover:shadow-sm">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-end">
+    <div className="group relative w-full bg-white rounded-2xl sm:rounded-3xl border border-stone-200/80 overflow-hidden transition-all duration-300 hover:border-stone-300 hover:shadow-sm">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-end">
         {/* =========================================================
             LEFT COLUMN: TITLE & COPY (Matching Highlighted Feature 1)
            ========================================================= */}
-        <div className="lg:col-span-6 xl:col-span-7 p-6 sm:p-8 lg:p-12 lg:pb-12 flex flex-col justify-center text-left">
+        <div className="lg:col-span-6 xl:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-center text-left">
           {badge && (
-            <div className="inline-flex items-center gap-2 mb-3">
+            <div className="inline-flex items-center gap-2 mb-2.5">
               <span
                 className="w-2 h-2 rounded-full"
                 style={{ backgroundColor: accentColor || "#f26522" }}
@@ -47,22 +47,22 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
           </h3>
 
           {subtitle && (
-            <p className="mt-1.5 text-base sm:text-lg font-medium text-stone-700 font-sans">
+            <p className="mt-1 text-base sm:text-lg font-medium text-stone-700 font-sans">
               {subtitle}
             </p>
           )}
 
-          <p className="mt-4 text-[16px] text-stone-500 font-sans leading-relaxed max-w-xl">
+          <p className="mt-3 text-[16px] text-stone-500 font-sans leading-relaxed max-w-xl">
             {description}
           </p>
 
           {/* Tags list */}
           {tags && tags.length > 0 && (
-            <div className="mt-6 flex flex-wrap items-center gap-2">
+            <div className="mt-5 flex flex-wrap items-center gap-2">
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 text-xs font-medium text-stone-600 bg-white border border-stone-200/80 rounded-full font-sans"
+                  className="px-3 py-1 text-xs font-medium text-stone-600 bg-stone-50 border border-stone-200/80 rounded-full font-sans"
                 >
                   {tag}
                 </span>
@@ -72,7 +72,7 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
 
           {/* Action button */}
           {url && (
-            <div className="mt-7">
+            <div className="mt-6">
               <Link
                 href={url}
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-sm font-semibold transition-all group-hover:gap-2 active:scale-95"
