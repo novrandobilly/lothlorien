@@ -8,7 +8,7 @@ import { visualCardsColumn1, visualCardsColumn2 } from "./constants";
 
 export function HeroSection() {
   return (
-    <section className="relative bg-[#fafaf9]  pb-14 sm:pb-20">
+    <section className="relative bg-[#fafaf9] pb-14 sm:pb-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 xl:gap-14 items-start">
           {/* =========================================================

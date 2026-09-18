@@ -11,30 +11,26 @@ export interface WhyChooseUsItem {
 export const whyChooseUsItems: WhyChooseUsItem[] = [
   {
     id: "senior-craft",
-    title: "Senior Frontend Craft",
-    description:
-      "6+ years of direct senior engineering without layers of delegation, ensuring robust architectures and clean code from day one.",
+    title: "6+ Years Experience",
+    description: "No juniors learning on your budget.",
     icon: Code2,
   },
   {
     id: "production-performance",
-    title: "Production-Grade Systems",
-    description:
-      "Engineered for sub-second speeds, 99.9% uptime, and high-concurrency throughput under mission-critical production loads.",
+    title: "Enterprise Track Record",
+    description: "Features engineered for zero downtime.",
     icon: Zap,
   },
   {
     id: "fintech-saas",
-    title: "Fintech & SaaS Precision",
-    description:
-      "Deep domain experience with cross-border remittances, maker-checker authorization, and strict compliance security standards.",
+    title: "Fintech & SaaS",
+    description: "Ironclad data protection and payment integrity.",
     icon: ShieldCheck,
   },
   {
     id: "cross-platform",
-    title: "Cross-Platform Cohesion",
-    description:
-      "Unified design systems and shared TypeScript contracts connecting web platforms and mobile ecosystems smoothly.",
+    title: "Web to Mobile",
+    description: "Seamless responsive and React Native apps.",
     icon: Smartphone,
   },
 ];

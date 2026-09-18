@@ -8,7 +8,10 @@ import { SectionHeader } from "./features/SectionHeader";
 
 export function SelectedWorksSection() {
   return (
-    <section id="work" className="relative bg-[#fafaf9] py-14 sm:py-20 lg:py-24">
+    <section
+      id="work"
+      className="relative bg-[#fafaf9] pb-14 sm:pb-20 lg:pb-24"
+    >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <SectionHeader
