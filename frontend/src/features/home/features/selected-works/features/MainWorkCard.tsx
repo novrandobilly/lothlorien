@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { SelectedWorkItem } from "../constants";
 import { WorkVisualPlaceholder } from "./WorkVisualPlaceholder";
@@ -13,6 +14,8 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
     title,
     description,
     badge,
+    clientLogo,
+    clientName,
     tags,
     url,
     buttonText = "See more",
@@ -53,11 +56,24 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
             </p>
           </div>
 
-          {/* Tags list & Action button in the same row */}
-          {((tags && tags.length > 0) || url || isOngoing || disabled) && (
-            <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-between gap-3">
-              {/* Left side: Tags */}
-              {tags && tags.length > 0 && (
+          {/* Client Logo & Action button in the same row */}
+          {(clientLogo || (tags && tags.length > 0) || url || isOngoing || disabled) && (
+            <div className="mt-6 sm:mt-8 flex items-center justify-between gap-3">
+              {/* Left side: Client Logo (or tags fallback) */}
+              {clientLogo ? (
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <span className="text-xs font-medium text-stone-400 font-sans">
+                    Client:
+                  </span>
+                  <Image
+                    src={clientLogo}
+                    alt={clientName || "Client logo"}
+                    height={18}
+                    width={70}
+                    className="h-4 sm:h-[18px] w-auto object-contain select-none"
+                  />
+                </div>
+              ) : tags && tags.length > 0 ? (
                 <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                   {tags.map((tag) => (
                     <span
@@ -68,6 +84,8 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
                     </span>
                   ))}
                 </div>
+              ) : (
+                <div />
               )}
 
               {/* Right side: Action button (hover scoped only to button) */}

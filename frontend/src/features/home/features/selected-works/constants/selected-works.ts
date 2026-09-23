@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import mnemosyneImg from "@/assets/experiences/mnemosyne.webp";
 import edorasImg from "@/assets/experiences/edoras.webp";
 import careerAccelerationImg from "@/assets/experiences/career-acceleration.webp";
+import intiDinamisLogo from "@/assets/experiences/logo-intidinamis.svg";
 
 export interface SelectedWorkItem {
   id: string;
@@ -9,6 +10,8 @@ export interface SelectedWorkItem {
   subtitle?: string;
   description: string;
   badge?: string;
+  clientLogo?: StaticImageData | string;
+  clientName?: string;
   tags?: string[];
   url?: string;
   buttonText?: string;
@@ -31,7 +34,8 @@ export const mainSelectedWork: SelectedWorkItem = {
   description:
     "Zero-latency examination engine featuring local encrypted storage sync, offline test resilience, and automated tamper-proof PDF generation.",
   badge: "Case Study Available",
-  tags: ["Offline-First", "IndexedDB", "Sub-ms Latency", "Next.js"],
+  clientLogo: intiDinamisLogo,
+  clientName: "PT Inti Dinamis",
   buttonText: "See case study",
   url: "/projects/online-assessment",
   image: mnemosyneImg,
@@ -53,7 +57,8 @@ export const secondarySelectedWorks: SelectedWorkItem[] = [
     description:
       "Modern, responsive corporate profile website designed to elevate brand authority, present consulting services, and drive client acquisition.",
     badge: "Company Profile",
-    tags: ["Next.js", "Tailwind CSS", "Corporate Web", "SEO"],
+    clientLogo: intiDinamisLogo,
+    clientName: "PT Inti Dinamis",
     buttonText: "See more",
     url: "#contact",
     image: edorasImg,
@@ -68,7 +73,8 @@ export const secondarySelectedWorks: SelectedWorkItem[] = [
     description:
       "High-converting promotional landing page engineered for executive webinars, featuring live countdowns, dynamic RSVP flows, and WhatsApp integration.",
     badge: "Ongoing Project",
-    tags: ["Landing Page", "Conversion Optimization", "Interactive UI"],
+    clientLogo: intiDinamisLogo,
+    clientName: "PT Inti Dinamis",
     buttonText: "Ongoing Project",
     image: careerAccelerationImg,
     imageAlt: "Executive Career Acceleration Online Class Landing Page",

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { SelectedWorkItem } from "../constants";
 import { WorkVisualPlaceholder } from "./WorkVisualPlaceholder";
@@ -13,6 +14,8 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
     title,
     description,
     badge,
+    clientLogo,
+    clientName,
     tags,
     url,
     buttonText = "See more",
@@ -27,7 +30,7 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
   return (
     <div className="group relative w-full bg-white rounded-2xl sm:rounded-3xl border border-stone-200/80 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-stone-300 hover:shadow-sm">
       {/* =========================================================
-          TOP: TITLE, BADGE, COPY, CAPSULE TAGS & CTA BUTTON
+          TOP: TITLE, BADGE, COPY, CLIENT LOGO & CTA BUTTON
          ========================================================= */}
       <div className="p-5 sm:p-6 pb-0">
         {/* Badge */}
@@ -51,11 +54,24 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
           {description}
         </p>
 
-        {/* Tags & Action Button in the same row */}
-        {((tags && tags.length > 0) || url || isOngoing || disabled) && (
-          <div className="mt-3.5 sm:mt-4 flex flex-wrap items-center justify-between gap-2.5">
-            {/* Left side: Tags */}
-            {tags && tags.length > 0 && (
+        {/* Client Logo & Action Button in the same row */}
+        {(clientLogo || (tags && tags.length > 0) || url || isOngoing || disabled) && (
+          <div className="mt-3.5 sm:mt-4 flex items-center justify-between gap-2.5">
+            {/* Left side: Client Logo (or tags fallback) */}
+            {clientLogo ? (
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-xs font-medium text-stone-400 font-sans">
+                  Client:
+                </span>
+                <Image
+                  src={clientLogo}
+                  alt={clientName || "Client logo"}
+                  height={18}
+                  width={70}
+                  className="h-4 sm:h-[18px] w-auto object-contain select-none"
+                />
+              </div>
+            ) : tags && tags.length > 0 ? (
               <div className="flex flex-wrap items-center gap-1.5">
                 {tags.map((tag) => (
                   <span
@@ -66,6 +82,8 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
                   </span>
                 ))}
               </div>
+            ) : (
+              <div />
             )}
 
             {/* Right side: Action Button or Disabled/Ongoing indicator */}

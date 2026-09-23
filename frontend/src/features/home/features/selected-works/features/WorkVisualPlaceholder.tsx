@@ -45,7 +45,7 @@ export function WorkVisualPlaceholder({
           sizes="(max-width: 768px) 100vw, 50vw"
           className={`object-cover object-top transition-all duration-500 ${
             isOngoing
-              ? "opacity-90 grayscale-[20%] group-hover:grayscale-0 group-hover:opacity-100"
+              ? "opacity-90 grayscale-20 group-hover:grayscale-0 group-hover:opacity-100"
               : "group-hover:scale-[1.01]"
           }`}
         />
