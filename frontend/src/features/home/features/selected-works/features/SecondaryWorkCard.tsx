@@ -38,7 +38,10 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
           <div className="inline-flex items-center gap-2 mb-2">
             <span
               className={`w-2 h-2 rounded-full ${isOngoing ? "animate-pulse" : ""}`}
-              style={{ backgroundColor: accentColor || (isOngoing ? "#f59e0b" : "#78716c") }}
+              style={{
+                backgroundColor:
+                  accentColor || (isOngoing ? "#f59e0b" : "#78716c"),
+              }}
             />
             <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 font-sans">
               {badge}
@@ -55,7 +58,11 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
         </p>
 
         {/* Client Logo & Action Button in the same row */}
-        {(clientLogo || (tags && tags.length > 0) || url || isOngoing || disabled) && (
+        {(clientLogo ||
+          (tags && tags.length > 0) ||
+          url ||
+          isOngoing ||
+          disabled) && (
           <div className="mt-3.5 sm:mt-4 flex items-center justify-between gap-2.5">
             {/* Left side: Client Logo (or tags fallback) */}
             {clientLogo ? (
@@ -68,7 +75,7 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
                   alt={clientName || "Client logo"}
                   height={18}
                   width={70}
-                  className="h-4 sm:h-[18px] w-auto object-contain select-none"
+                  className="h-4 sm:h-4.5 w-auto object-contain select-none"
                 />
               </div>
             ) : tags && tags.length > 0 ? (
@@ -88,18 +95,18 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
 
             {/* Right side: Action Button or Disabled/Ongoing indicator */}
             {isOngoing || disabled ? (
-              <div className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-stone-100 text-stone-400 text-xs sm:text-sm font-medium cursor-not-allowed border border-stone-200/70 shrink-0 select-none">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-stone-50 text-stone-400 text-xs font-medium border border-stone-200/50 cursor-not-allowed select-none shrink-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
                 <span>{buttonText || "Ongoing Project"}</span>
               </div>
             ) : (
               url && (
                 <Link
                   href={url}
-                  className="group/btn inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-xs sm:text-sm font-semibold transition-all hover:gap-2 active:scale-95 shrink-0"
+                  className="group/btn inline-flex items-center gap-1 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-stone-50 hover:bg-stone-100/80 text-stone-600 hover:text-stone-950 text-xs font-medium border border-stone-200/80 hover:border-stone-300 transition-all active:scale-95 shrink-0"
                 >
                   <span>{buttonText}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                  <ArrowUpRight className="w-3 h-3 text-stone-400 group-hover/btn:text-stone-700 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                 </Link>
               )
             )}

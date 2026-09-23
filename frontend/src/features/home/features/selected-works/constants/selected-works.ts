@@ -52,7 +52,7 @@ export const mainSelectedWork: SelectedWorkItem = {
 export const secondarySelectedWorks: SelectedWorkItem[] = [
   {
     id: "inti-dinamis",
-    title: "PT Inti Dinamis",
+    title: "Company Profile Website",
     subtitle: "Corporate Profile & Digital Presence",
     description:
       "Modern, responsive corporate profile website designed to elevate brand authority, present consulting services, and drive client acquisition.",
