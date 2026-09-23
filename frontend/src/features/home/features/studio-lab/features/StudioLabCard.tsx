@@ -12,7 +12,7 @@ export function StudioLabCard({ project }: StudioLabCardProps) {
 
   return (
     <div
-      className={`group relative flex flex-col justify-between w-full h-130 sm:h-137.5 rounded-3xl bg-[#f4f3ee] border border-stone-200/70 overflow-hidden ${
+      className={`group relative flex flex-col justify-between w-full h-130 sm:h-137.5 rounded-3xl bg-white border border-stone-200/80 overflow-hidden ${
         isComingSoon
           ? "opacity-40 select-none cursor-default"
           : "transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
@@ -28,7 +28,7 @@ export function StudioLabCard({ project }: StudioLabCardProps) {
             {project.tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="px-2.5 sm:px-3 py-1 rounded-full text-xs font-semibold bg-white/80 border border-stone-200/60 text-stone-700 font-sans shadow-2xs"
+                className="px-2.5 sm:px-3 py-1 rounded-full text-xs font-semibold bg-stone-50 border border-stone-200/80 text-stone-700 font-sans shadow-2xs"
               >
                 {tag}
               </span>
@@ -36,7 +36,7 @@ export function StudioLabCard({ project }: StudioLabCardProps) {
           </div>
 
           {/* Right Icon */}
-          <div className="w-8 h-8 rounded-full bg-white border border-stone-200/80 flex items-center justify-center text-xs font-semibold shrink-0 text-stone-700 shadow-2xs">
+          <div className="w-8 h-8 rounded-full bg-stone-50 border border-stone-200/80 flex items-center justify-center text-xs font-semibold shrink-0 text-stone-700 shadow-2xs">
             {project.categoryIcon || <Sparkles className="w-3.5 h-3.5" />}
           </div>
         </div>
