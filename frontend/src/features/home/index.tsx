@@ -19,7 +19,7 @@ export function HomePageFeature() {
       <main className="flex-1">
         <HeroSection />
         <SelectedWorksSection />
-        <StudioLabSection />
+        {/* <StudioLabSection /> */}
         <WhyChooseUsSection />
         <ServicesSection />
         <FaqSection />

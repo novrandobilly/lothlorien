@@ -1,4 +1,7 @@
 import { StaticImageData } from "next/image";
+import mnemosyneImg from "@/assets/experiences/mnemosyne.webp";
+import edorasImg from "@/assets/experiences/edoras.webp";
+import careerAccelerationImg from "@/assets/experiences/career-acceleration.webp";
 
 export interface SelectedWorkItem {
   id: string;
@@ -13,53 +16,65 @@ export interface SelectedWorkItem {
   imageAlt?: string;
   placeholderBg?: string;
   accentColor?: string;
+  isOngoing?: boolean;
+  disabled?: boolean;
 }
 
 /**
  * Main highlighted feature (Full-width top card)
+ * 1. Online Assessment System (mnemosyne.webp)
  */
 export const mainSelectedWork: SelectedWorkItem = {
-  id: "transfez",
-  title: "Transfez Platform",
-  subtitle: "Cross-Border Remittance & Enterprise Financial Operations",
+  id: "online-assessment",
+  title: "Online Assessment System",
+  subtitle: "Offline-First Examination Platform",
   description:
-    "High-throughput financial engine facilitating instant cross-border transfers, dynamic FX calculations, and enterprise B2B batch disbursement pipelines across Southeast Asia.",
-  badge: "Enterprise Platform",
-  tags: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand"],
-  buttonText: "See more",
-  url: "#contact",
+    "Zero-latency examination engine featuring local encrypted storage sync, offline test resilience, and automated tamper-proof PDF generation.",
+  badge: "Case Study Available",
+  tags: ["Offline-First", "IndexedDB", "Sub-ms Latency", "Next.js"],
+  buttonText: "See case study",
+  url: "/projects/online-assessment",
+  image: mnemosyneImg,
+  imageAlt: "Online Assessment System - Offline-First Examination Platform",
   placeholderBg: "bg-white",
-  accentColor: "#f26522",
+  accentColor: "#059669",
 };
 
 /**
  * Secondary highlighted features (2-column bottom grid)
+ * 2. PT Inti Dinamis Company Profile (edoras.webp)
+ * 3. Online Class Landing Page (career-acceleration.webp) - Ongoing Project / Disabled State
  */
 export const secondarySelectedWorks: SelectedWorkItem[] = [
   {
-    id: "online-assessment",
-    title: "Online Assessment System",
-    subtitle: "Offline-First Examination Platform",
+    id: "inti-dinamis",
+    title: "PT Inti Dinamis",
+    subtitle: "Corporate Profile & Digital Presence",
     description:
-      "Zero-latency examination engine featuring local encrypted storage sync, offline test resilience, and automated tamper-proof PDF generation.",
-    badge: "Case Study Available",
-    tags: ["Offline-First", "IndexedDB", "Sub-ms Latency"],
+      "Modern, responsive corporate profile website designed to elevate brand authority, present consulting services, and drive client acquisition.",
+    badge: "Company Profile",
+    tags: ["Next.js", "Tailwind CSS", "Corporate Web", "SEO"],
     buttonText: "See more",
-    url: "/projects/online-assessment",
+    url: "#contact",
+    image: edorasImg,
+    imageAlt: "PT Inti Dinamis - Corporate Company Profile Website",
     placeholderBg: "bg-white",
-    accentColor: "#2563eb",
+    accentColor: "#dc2626",
   },
   {
-    id: "kickserve",
-    title: "Kickserve App",
-    subtitle: "Racquet Match & Tournament Engine",
+    id: "career-acceleration",
+    title: "Online Class Landing Page",
+    subtitle: "Executive Career Acceleration Workshop",
     description:
-      "Interactive tournament management system with Americano rotations, real-time standings, and instant one-tap WhatsApp schedule sharing.",
-    badge: "Live Web App",
-    tags: ["Tournament Engine", "Live Standings", "Round Robin"],
-    buttonText: "See more",
-    url: "/projects/kickserve",
+      "High-converting promotional landing page engineered for executive webinars, featuring live countdowns, dynamic RSVP flows, and WhatsApp integration.",
+    badge: "Ongoing Project",
+    tags: ["Landing Page", "Conversion Optimization", "Interactive UI"],
+    buttonText: "Ongoing Project",
+    image: careerAccelerationImg,
+    imageAlt: "Executive Career Acceleration Online Class Landing Page",
     placeholderBg: "bg-white",
-    accentColor: "#16a34a",
+    accentColor: "#f59e0b",
+    isOngoing: true,
+    disabled: true,
   },
 ];
