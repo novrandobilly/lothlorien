@@ -33,7 +33,7 @@ export const mainSelectedWork: SelectedWorkItem = {
   subtitle: "Offline-First Examination Platform",
   description:
     "Zero-latency examination engine featuring local encrypted storage sync, offline test resilience, and automated tamper-proof PDF generation.",
-  badge: "Case Study Available",
+  badge: "Web Application",
   clientLogo: intiDinamisLogo,
   clientName: "PT Inti Dinamis",
   buttonText: "See case study",
@@ -64,7 +64,7 @@ export const secondarySelectedWorks: SelectedWorkItem[] = [
     image: edorasImg,
     imageAlt: "PT Inti Dinamis - Corporate Company Profile Website",
     placeholderBg: "bg-white",
-    accentColor: "#dc2626",
+    accentColor: "#059669",
   },
   {
     id: "career-acceleration",
@@ -75,7 +75,7 @@ export const secondarySelectedWorks: SelectedWorkItem[] = [
     badge: "Ongoing Project",
     clientLogo: intiDinamisLogo,
     clientName: "PT Inti Dinamis",
-    buttonText: "Ongoing Project",
+    buttonText: "Coming Soon",
     image: careerAccelerationImg,
     imageAlt: "Executive Career Acceleration Online Class Landing Page",
     placeholderBg: "bg-white",

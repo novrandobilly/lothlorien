@@ -30,10 +30,13 @@ export function WorkVisualPlaceholder({
     <div
       className={`relative w-full ${aspectClass} ${placeholderBg} ${roundedClass} border border-stone-200/80 shadow-sm overflow-hidden select-none group-hover:border-stone-300 transition-all duration-300 ${className}`}
     >
+      {/* Subtle White Masking Overlay for Ongoing / Disabled Project */}
       {isOngoing && (
-        <div className="absolute top-3 sm:top-3.5 right-3 sm:right-3.5 z-10 px-2.5 py-1 rounded-full bg-stone-950/80 backdrop-blur-md text-white text-[11px] font-medium tracking-wide flex items-center gap-1.5 shadow-sm border border-white/10 select-none">
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-          <span>In Development</span>
+        <div className="absolute inset-0 z-10 bg-white/70 backdrop-blur-[2px] flex flex-col items-center justify-center p-4 select-none transition-all duration-300">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-stone-200/90 shadow-sm text-stone-700 text-xs sm:text-sm font-semibold tracking-wide">
+            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+            <span>Coming Soon</span>
+          </div>
         </div>
       )}
 
@@ -45,7 +48,7 @@ export function WorkVisualPlaceholder({
           sizes="(max-width: 768px) 100vw, 50vw"
           className={`object-cover object-top transition-all duration-500 ${
             isOngoing
-              ? "opacity-90 grayscale-20 group-hover:grayscale-0 group-hover:opacity-100"
+              ? "opacity-75 grayscale-[20%]"
               : "group-hover:scale-[1.01]"
           }`}
         />

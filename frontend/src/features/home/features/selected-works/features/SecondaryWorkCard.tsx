@@ -40,7 +40,7 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
               className={`w-2 h-2 rounded-full ${isOngoing ? "animate-pulse" : ""}`}
               style={{
                 backgroundColor:
-                  accentColor || (isOngoing ? "#f59e0b" : "#78716c"),
+                  accentColor || (isOngoing ? "#f59e0b" : "#059669"),
               }}
             />
             <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 font-sans">
@@ -97,7 +97,7 @@ export function SecondaryWorkCard({ work }: SecondaryWorkCardProps) {
             {isOngoing || disabled ? (
               <div className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-stone-50 text-stone-400 text-xs font-medium border border-stone-200/50 cursor-not-allowed select-none shrink-0">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
-                <span>{buttonText || "Ongoing Project"}</span>
+                <span>{buttonText || "Coming Soon"}</span>
               </div>
             ) : (
               url && (
