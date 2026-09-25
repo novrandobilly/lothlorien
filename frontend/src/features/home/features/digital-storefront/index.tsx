@@ -2,23 +2,23 @@
 
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { studioLabProjects, LabProject } from "./constants";
+import { digitalStorefrontProjects, DigitalStorefrontProject } from "./constants";
 import { SectionHeader } from "./features/SectionHeader";
-import { StudioLabCard } from "./features/StudioLabCard";
+import { DigitalStorefrontCard } from "./features/DigitalStorefrontCard";
 
-interface StudioLabSectionProps {
+interface DigitalStorefrontSectionProps {
   title?: string;
   description?: string;
-  projects?: LabProject[];
+  projects?: DigitalStorefrontProject[];
   className?: string;
 }
 
-export function StudioLabSection({
-  title = "Envien Studio Lab",
+export function DigitalStorefrontSection({
+  title = "Digital Storefront",
   description = "Explorations, creative experiments, and interactive prototypes built for the love of craft.",
-  projects = studioLabProjects,
+  projects = digitalStorefrontProjects,
   className = "",
-}: StudioLabSectionProps) {
+}: DigitalStorefrontSectionProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -51,7 +51,7 @@ export function StudioLabSection({
     if (!el) return;
 
     const cardWidth =
-      el.querySelector<HTMLElement>(".lab-card-item")?.offsetWidth || 320;
+      el.querySelector<HTMLElement>(".storefront-card-item")?.offsetWidth || 320;
     const scrollAmount = cardWidth + 24; // Card width + gap
 
     el.scrollBy({
@@ -62,7 +62,7 @@ export function StudioLabSection({
 
   return (
     <section
-      id="lab"
+      id="digital-storefront"
       className={`scroll-mt-20 relative bg-[#f4f3ee] border-y border-stone-200/60 py-10 sm:py-14 lg:py-16 ${className}`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -107,9 +107,9 @@ export function StudioLabSection({
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="lab-card-item snap-start shrink-0 w-70 sm:w-76.25 md:w-81.25"
+                className="storefront-card-item snap-start shrink-0 w-70 sm:w-76.25 md:w-81.25"
               >
-                <StudioLabCard project={project} />
+                <DigitalStorefrontCard project={project} />
               </div>
             ))}
           </div>
@@ -119,4 +119,4 @@ export function StudioLabSection({
   );
 }
 
-export default StudioLabSection;
+export default DigitalStorefrontSection;

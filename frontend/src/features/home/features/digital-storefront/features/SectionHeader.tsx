@@ -7,7 +7,7 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({
-  title = "Envien Studio Lab",
+  title = "Digital Storefront",
   description = "Explorations, creative experiments, and interactive prototypes built for the love of craft.",
   className = "",
 }: SectionHeaderProps) {

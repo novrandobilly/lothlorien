@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Clock, Sparkles } from "lucide-react";
-import { LabProject } from "../constants";
+import { DigitalStorefrontProject } from "../constants";
 
-interface StudioLabCardProps {
-  project: LabProject;
+interface DigitalStorefrontCardProps {
+  project: DigitalStorefrontProject;
 }
 
-export function StudioLabCard({ project }: StudioLabCardProps) {
+export function DigitalStorefrontCard({ project }: DigitalStorefrontCardProps) {
   const isComingSoon = project.status === "coming_soon";
 
   return (
@@ -71,8 +71,8 @@ export function StudioLabCard({ project }: StudioLabCardProps) {
 
         {/* Centered Decorative Watermark */}
         <div className="absolute inset-0 flex items-center justify-center opacity-10 select-none pointer-events-none">
-          <span className="text-6xl sm:text-7xl font-bold font-sans tracking-tighter text-white uppercase">
-            LAB
+          <span className="text-5xl sm:text-6xl font-bold font-sans tracking-tighter text-white uppercase text-center px-4">
+            STOREFRONT
           </span>
         </div>
 

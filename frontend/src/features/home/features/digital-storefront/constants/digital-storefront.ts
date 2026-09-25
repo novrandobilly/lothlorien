@@ -1,4 +1,4 @@
-export interface LabProject {
+export interface DigitalStorefrontProject {
   id: string;
   title: string;
   description: string;
@@ -13,7 +13,7 @@ export interface LabProject {
   categoryIcon?: string;
 }
 
-export const studioLabProjects: LabProject[] = [
+export const digitalStorefrontProjects: DigitalStorefrontProject[] = [
   {
     id: "kinetic-canvas",
     title: "Kinetic Canvas",

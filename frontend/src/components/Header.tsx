@@ -49,8 +49,11 @@ export function Header() {
           >
             Work
           </Link>
-          <Link href="/#lab" className="hover:text-stone-950 transition-colors">
-            Lab
+          <Link
+            href="/#digital-storefront"
+            className="hover:text-stone-950 transition-colors"
+          >
+            Digital Storefront
           </Link>
           <Link
             href="/#services"
