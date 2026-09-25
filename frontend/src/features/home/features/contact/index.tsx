@@ -36,7 +36,7 @@ export function ContactSection({
             />
 
             <div className="flex-1 flex flex-col items-start text-left">
-              <div className="space-y-4 text-[16px] text-stone-600 font-sans leading-relaxed">
+              <div className="space-y-4 text-base text-stone-800 font-sans leading-relaxed">
                 {CONTACT_DETAILS.aboutParagraphs?.map((paragraph, idx) => (
                   <p key={idx}>{paragraph}</p>
                 ))}

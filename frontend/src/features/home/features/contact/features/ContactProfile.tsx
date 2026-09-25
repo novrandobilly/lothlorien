@@ -16,7 +16,9 @@ export function ContactProfile({
   className = "",
 }: ContactProfileProps) {
   return (
-    <div className={`flex flex-col items-center md:items-start shrink-0 ${className}`}>
+    <div
+      className={`flex flex-col items-center md:items-start shrink-0 ${className}`}
+    >
       {/* Avatar Container with Active Status Indicator */}
       <div className="relative group/avatar cursor-pointer">
         <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border border-stone-200/80 bg-white shadow-2xs relative transition-all duration-300 group-hover:shadow-xs group-hover:border-stone-300">
@@ -46,12 +48,11 @@ export function ContactProfile({
       </div>
 
       {/* Name and Studio Tag */}
-      <div className="mt-3.5 text-center md:text-left flex flex-col items-center md:items-start">
+      <div className="mt-3.5 text-center md:text-left flex flex-col items-center md:items-center">
         <div className="text-base sm:text-lg font-bold font-sans text-stone-950 leading-snug">
           {name}
         </div>
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 mt-1.5 rounded-full bg-white border border-stone-200/80 text-xs font-semibold uppercase tracking-wider text-stone-600 font-sans">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#f26522]" />
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 mt-1.5 rounded-full bg-white border border-stone-200/80 text-xs font-semibold uppercase tracking-wider text-stone-400 font-sans">
           <span>{role}</span>
         </div>
       </div>

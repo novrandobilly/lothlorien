@@ -5,12 +5,21 @@ export interface SocialLink {
 }
 
 export const CONTACT_DETAILS = {
-  name: "Novrando Billy",
-  role: "Envien Studio",
+  name: "Stanislaus Billy",
+  role: "Founder",
   avatarSrc: "/envien-contact.webp",
+  // aboutParagraphs: [
+  //   `Hi, I’m Billy. Welcome to Envien Studio.`,
+  //   `I built Envien Studio on the principle that technology only matters when it genuinely solves human problems. Listening comes first, understanding your core friction before writing a line of architecture.`,
+  //   `Whether partnering with aspiring teams or building platforms to help fellow creators share and sell their work, my hope is for Envien Studio to be a lasting blessing and catalyst for growth.`,
+  //   `If you have a vision to bring to life, let’s talk.`,
+  // ],
   aboutParagraphs: [
-    "I'm a Senior Frontend Engineer & UI/UX Architect specializing in building high-performance, scalable web systems and interactive digital platforms. With a focus on design precision, code quality, and resilient architectures, I partner with founders and product teams to translate ambitious ideas into reality.",
-    "Whether you're looking to build an MVP from scratch, modernize an existing codebase, or scale your frontend architecture, I'm always open to discussing new opportunities and engineering challenges.",
+    `Hi, I’m Billy. Welcome to Envien Studio.`,
+    `I built Envien Studio on a simple conviction: technology creates meaningful value only when it genuinely solves human problems. That is why listening sits at the foundation of everything I build, taking the time to understand the real friction you and your users face before architecting a solution.`,
+    `Beyond custom engineering, I hold deep respect for proactive creators who pour their energy into making great things. Bringing ideas to life is demanding enough. Distributing and selling them shouldn't be a barrier. Part of Envien Studio’s mission is creating platforms where creators can share, market, and monetize their work effortlessly.`,
+    `Ultimately, my hope is that Envien Studio serves as a genuine blessing and an engine of growth for the people and teams we partner with.`,
+    `If you have an idea to explore or a product challenge to solve, my door is always open.`,
   ],
   title: "Send a Letter!",
   subtitle:
