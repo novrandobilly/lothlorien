@@ -19,7 +19,7 @@ export interface KickserveData {
 
 export const kickserveData: KickserveData = {
   title: "Kickserve App",
-  badge: "Sports Tournament Manager",
+  badge: "Racket Sports Matchmaking & Scoring",
   description:
     "A lightweight session manager built for racquet sports (Tennis, Padel, Badminton).",
   launchUrl: "https://kickserve.envienstudio.com",
