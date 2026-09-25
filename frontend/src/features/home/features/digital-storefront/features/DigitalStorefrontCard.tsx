@@ -15,9 +15,7 @@ export function DigitalStorefrontCard({ project }: DigitalStorefrontCardProps) {
   return (
     <div
       className={`group relative flex flex-col justify-between w-full h-130 sm:h-137.5 rounded-3xl bg-white border border-stone-200/80 overflow-hidden ${
-        isComingSoon
-          ? "opacity-40 select-none cursor-default"
-          : "transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+        isComingSoon ? "opacity-40 select-none cursor-default" : ""
       }`}
     >
       {/* =========================================================
