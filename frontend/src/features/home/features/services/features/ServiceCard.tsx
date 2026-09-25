@@ -13,8 +13,8 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
     number,
     title,
     description,
-    formatTitle = "Format",
-    format,
+    benefitsTitle = service.formatTitle || "Benefits",
+    benefits = service.format || [],
     ctaText = "Get in touch",
     ctaUrl = "#contact",
   } = service;
@@ -56,7 +56,7 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
         </div>
 
         {/* =========================================================
-            COLUMN 3: DESCRIPTION, FORMAT SPECIFICATIONS & CTA
+            COLUMN 3: DESCRIPTION, BENEFITS SPECIFICATIONS & CTA
            ========================================================= */}
         <div className="w-full md:col-span-6 lg:col-span-5 flex flex-col justify-between">
           <div>
@@ -65,14 +65,14 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
               {description}
             </p>
 
-            {/* Format / Delivery Specifications */}
-            {format && format.length > 0 && (
+            {/* Benefits Specifications */}
+            {benefits && benefits.length > 0 && (
               <div className="mt-3 sm:mt-3.5 pt-2.5 sm:pt-3 border-t border-stone-200/70">
                 <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider font-sans text-stone-400">
-                  {formatTitle}
+                  {benefitsTitle}
                 </span>
                 <ul className="mt-1.5 space-y-1 sm:space-y-1.5">
-                  {format.map((item, idx) => (
+                  {benefits.map((item, idx) => (
                     <li
                       key={idx}
                       className="flex items-start gap-2 text-xs sm:text-[13px] font-sans text-stone-600 leading-tight"

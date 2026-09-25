@@ -4,8 +4,12 @@ export interface ServiceItem {
   tag: string;
   title: string;
   description: string;
+  benefitsTitle?: string;
+  benefits: string[];
+  /** @deprecated backward compatibility fallback */
   formatTitle?: string;
-  format: string[];
+  /** @deprecated backward compatibility fallback */
+  format?: string[];
   ctaText?: string;
   ctaUrl?: string;
 }
@@ -18,10 +22,10 @@ export const servicesData: ServiceItem[] = [
     title: "Web & Application Development",
     description:
       "I partner with founders and product teams to engineer resilient web apps, custom internal tools, and high-conversion platforms. You get direct senior architecture and clean code from day one, with zero agency handoffs.",
-    formatTitle: "Format",
-    format: [
+    benefitsTitle: "Benefits",
+    benefits: [
       "Direct 1-on-1 senior collaboration",
-      "Fixed sprint delivery (1–6 weeks)",
+      "Custom web app or internal tool built to spec",
     ],
     ctaText: "Start a project",
     ctaUrl: "#contact",
@@ -33,11 +37,8 @@ export const servicesData: ServiceItem[] = [
     title: "Envien Academy",
     description:
       "A focused, 3–4 hour live workshop held once a month. We dive into practical engineering craft, product mindset, and developer independence beyond standard tutorials.",
-    formatTitle: "Format",
-    format: [
-      "Live 3–4 hour interactive session",
-      "Monthly recurring cohorts",
-    ],
+    benefitsTitle: "Benefits",
+    benefits: ["Live 3–4 hour interactive session", "Monthly recurring"],
     ctaText: "Reserve your seat",
     ctaUrl: "#contact",
   },
@@ -48,11 +49,8 @@ export const servicesData: ServiceItem[] = [
     title: "Digital Products",
     description:
       "Carefully crafted, standalone web apps built for practical everyday utility. Lightweight and reliable software designed to work quietly out of the box.",
-    formatTitle: "Format",
-    format: [
-      "Instant access & hosted setup",
-      "Lifetime product updates",
-    ],
+    benefitsTitle: "Benefits",
+    benefits: ["Lifetime product updates"],
     ctaText: "Get access",
     ctaUrl: "#contact",
   },
@@ -63,12 +61,10 @@ export const servicesData: ServiceItem[] = [
     title: "Digital Product Marketplace",
     description:
       "A curated storefront dedicated to showcasing and selling tools built by indie software engineers. Helping quiet engineering craft find its first audience and paying customers.",
-    formatTitle: "Format",
-    format: [
-      "Curated builder showcase",
-      "Direct payment & checkout integration",
-    ],
+    benefitsTitle: "Benefits",
+    benefits: ["Curated builder showcase"],
     ctaText: "Explore marketplace",
     ctaUrl: "#contact",
   },
 ];
+
