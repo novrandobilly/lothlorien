@@ -1,88 +1,74 @@
-import { CircleDollarSign, Settings, Trophy, LucideIcon } from "lucide-react";
-
 export interface ServiceItem {
   id: string;
   number: string;
-  icon: LucideIcon;
-  timeline: string;
+  tag: string;
   title: string;
-  whatYouGetTitle?: string;
-  whatYouGet: string[];
-  bestForTitle?: string;
-  bestFor: string[];
-  ctaText: string;
+  description: string;
+  formatTitle?: string;
+  format: string[];
+  ctaText?: string;
   ctaUrl?: string;
-  tags?: string[];
 }
 
 export const servicesData: ServiceItem[] = [
   {
-    id: "growth-conversion",
+    id: "web-app-development",
     number: "01",
-    icon: CircleDollarSign,
-    timeline: "1–2 Weeks",
-    title: "Growth & Conversion",
-    whatYouGetTitle: "What You Get",
-    whatYouGet: [
-      "Company profile website",
-      "High-converting landing page",
-      "Direct-checkout online store",
-      "Lead capture funnel",
+    tag: "Custom Engineering",
+    title: "Web & Application Development",
+    description:
+      "I partner with founders and product teams to engineer resilient web apps, custom internal tools, and high-conversion platforms. You get direct senior architecture and clean code from day one, with zero agency handoffs.",
+    formatTitle: "Format",
+    format: [
+      "Direct 1-on-1 senior collaboration",
+      "Fixed sprint delivery (1–6 weeks)",
     ],
-    bestForTitle: "Best For",
-    bestFor: [
-      "Company branding",
-      "Product launches",
-      "Turning visitors into revenue",
-    ],
-    ctaText: "Scope Growth Sprint",
+    ctaText: "Start a project",
     ctaUrl: "#contact",
-    tags: ["Landing Pages", "E-Commerce", "Lead Gen", "Conversion"],
   },
   {
-    id: "operations-internal-tools",
+    id: "envien-academy",
     number: "02",
-    icon: Settings,
-    timeline: "2–4 Weeks",
-    title: "Operations & Internal Tools",
-    whatYouGetTitle: "What You Get",
-    whatYouGet: [
-      "Real-time inventory tracker",
-      "Automated scoring platform",
-      "Custom invoicing dashboard",
-      "Internal team portal",
+    tag: "Interactive Masterclass",
+    title: "Envien Academy",
+    description:
+      "A focused, 3–4 hour live workshop held once a month. We dive into practical engineering craft, product mindset, and developer independence beyond standard tutorials.",
+    formatTitle: "Format",
+    format: [
+      "Live 3–4 hour interactive session",
+      "Monthly recurring cohorts",
     ],
-    bestForTitle: "Best For",
-    bestFor: [
-      "Teams outgrowing spreadsheets",
-      "Automating manual workflows",
-      "Error-free operational control",
-    ],
-    ctaText: "Streamline Operations",
+    ctaText: "Reserve your seat",
     ctaUrl: "#contact",
-    tags: ["Internal Tools", "Dashboards", "Automation", "Workflows"],
   },
   {
-    id: "mvp-development",
+    id: "digital-products",
     number: "03",
-    icon: Trophy,
-    timeline: "3–6 Weeks",
-    title: "MVP Development",
-    whatYouGetTitle: "What You Get",
-    whatYouGet: [
-      "Early-stage SaaS app",
-      "Functional prototype platform",
-      "Niche marketplace portal",
-      "Proof-of-concept web app",
+    tag: "Independent Apps",
+    title: "Digital Products",
+    description:
+      "Carefully crafted, standalone web apps built for practical everyday utility. Lightweight and reliable software designed to work quietly out of the box.",
+    formatTitle: "Format",
+    format: [
+      "Instant access & hosted setup",
+      "Lifetime product updates",
     ],
-    bestForTitle: "Best For",
-    bestFor: [
-      "Early-stage concept validation",
-      "Pitching with working software",
-      "Fast market feedback loops",
-    ],
-    ctaText: "Build Your MVP",
+    ctaText: "Get access",
     ctaUrl: "#contact",
-    tags: ["MVP", "SaaS", "Prototypes", "Fast Delivery"],
+  },
+  {
+    id: "digital-product-marketplace",
+    number: "04",
+    tag: "Community & Distribution",
+    title: "Digital Product Marketplace",
+    description:
+      "A curated storefront dedicated to showcasing and selling tools built by indie software engineers. Helping quiet engineering craft find its first audience and paying customers.",
+    formatTitle: "Format",
+    format: [
+      "Curated builder showcase",
+      "Direct payment & checkout integration",
+    ],
+    ctaText: "Explore marketplace",
+    ctaUrl: "#contact",
   },
 ];

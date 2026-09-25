@@ -6,7 +6,7 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({
-  title = "What We Offer",
+  title = "Ways We Can Work Together",
   className = "",
 }: SectionHeaderProps) {
   return (
