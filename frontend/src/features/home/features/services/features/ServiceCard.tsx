@@ -50,7 +50,7 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
             COLUMN 2: SERVICE TITLE (Tablet & Desktop >= md)
            ========================================================= */}
         <div className="hidden md:flex md:col-span-5 lg:col-span-6 flex-col items-start pr-2 lg:pr-6">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-5xl font-bold tracking-tight text-stone-950 font-sans leading-snug">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-5xl font-normal tracking-tight text-stone-950 font-sans leading-snug">
             {title}
           </h3>
         </div>
