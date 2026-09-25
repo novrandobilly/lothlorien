@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImageData } from "next/image";
-import mnemosyneImg from "@/assets/experiences/mnemosyne.webp";
+import vcMenomsyneImg from "@/assets/hero-visual-card/vc-menomsyne.webp";
 import vcKickserveImg from "@/assets/hero-visual-card/vc-kickserve.webp";
 import vcIntiDinamisImg from "@/assets/hero-visual-card/vc-intidinamis.webp";
 
@@ -41,7 +41,7 @@ export const visualCards: VisualCardConfig[] = [
     colSpan: 2,
     aspectRatio: "16/10",
     bgClass: "bg-stone-100",
-    image: mnemosyneImg,
+    image: vcMenomsyneImg,
   },
   {
     id: "kickserve-card",

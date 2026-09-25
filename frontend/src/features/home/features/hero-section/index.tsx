@@ -53,7 +53,7 @@ export function HeroSection() {
               Supports 1 full-width landscape card (col-span-2) + portrait cards.
               Includes top & bottom shadow fade effect.
              ========================================================= */}
-          <div className="w-full lg:col-span-5 relative rounded-2xl overflow-hidden lg:mask-[linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%)]">
+          <div className="w-full lg:col-span-5 relative rounded-2xl overflow-hidden lg:mask-[linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%)] px-1">
             <div className="grid grid-cols-2 gap-3 sm:gap-3.5">
               {visualCards.map((card) => (
                 <VisualCard key={card.id} {...card} />

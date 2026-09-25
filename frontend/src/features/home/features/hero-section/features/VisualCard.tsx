@@ -58,7 +58,7 @@ export function VisualCard({
 
   return (
     <div
-      className={`relative w-full ${colSpanClass} ${aspectClass} ${bgClass} ${borderClass} rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.015] hover:shadow-md select-none group`}
+      className={`relative w-full ${colSpanClass} ${aspectClass} ${bgClass} ${borderClass} rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_2px_10px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1),0_2px_6px_rgba(0,0,0,0.04)] transition-all duration-300 hover:scale-[1.015] select-none group`}
     >
       {image ? (
         <>
