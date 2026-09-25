@@ -1,5 +1,5 @@
 import React from "react";
-import { Code2, Zap, ShieldCheck, Smartphone } from "lucide-react";
+import { UserCheck, Layers, Sparkles, MessageSquare } from "lucide-react";
 
 export interface HowEnvienStudioWorksItem {
   id: string;
@@ -10,30 +10,30 @@ export interface HowEnvienStudioWorksItem {
 
 export const howEnvienStudioWorksItems: HowEnvienStudioWorksItem[] = [
   {
-    id: "senior-craft",
+    id: "direct-senior-execution",
     title: "Direct Senior Execution",
     description:
       "Work directly with me from the first sketch to final deployment.",
-    icon: Code2,
+    icon: UserCheck,
   },
   {
-    id: "production-performance",
+    id: "built-to-last",
     title: "Built to Last",
     description:
-      "Clean, maintainable code structured so your product can grow without a mess",
-    icon: Zap,
+      "Clean, maintainable code structured so your product can grow without a mess.",
+    icon: Layers,
   },
   {
-    id: "fintech-saas",
+    id: "respect-details",
     title: "Respect for the Details",
     description:
       "Careful attention to the small interactions and edge cases that make an app feel right.",
-    icon: ShieldCheck,
+    icon: Sparkles,
   },
   {
-    id: "cross-platform",
+    id: "clear-communication",
     title: "Clear Communication",
-    description: "Straightforward updates and open conversations",
-    icon: Smartphone,
+    description: "Straightforward updates and open conversations.",
+    icon: MessageSquare,
   },
 ];
