@@ -5,14 +5,11 @@ interface SectionHeaderProps {
   className?: string;
 }
 
-export function SectionHeader({
-  title = "Get in Touch",
-  className = "",
-}: SectionHeaderProps) {
+export function SectionHeader({ className = "" }: SectionHeaderProps) {
   return (
     <div className={`flex flex-col items-center text-center ${className}`}>
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-stone-950 font-sans">
-        {title}
+        Let's Connect
       </h2>
 
       {/* Decorative double underline accent */}

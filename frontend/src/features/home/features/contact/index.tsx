@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import { SectionHeader } from "./features/SectionHeader";
 import { ContactProfile } from "./features/ContactProfile";
 import { ContactEmailButton } from "./features/ContactEmailButton";
@@ -12,10 +13,10 @@ interface ContactSectionProps {
   className?: string;
 }
 
-export function ContactSection({
-  title = "About & Contact",
-  className = "",
-}: ContactSectionProps) {
+export function ContactSection({ className = "" }: ContactSectionProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const paragraphs = CONTACT_DETAILS.aboutParagraphs || [];
+
   return (
     <section
       id="contact"
@@ -23,7 +24,7 @@ export function ContactSection({
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <SectionHeader title={title} />
+        <SectionHeader />
 
         {/* 2-Column Unboxed About Me + Contact Layout */}
         <div className="mt-8 sm:mt-10 lg:mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-start">
@@ -36,11 +37,47 @@ export function ContactSection({
             />
 
             <div className="flex-1 flex flex-col items-start text-left">
-              <div className="space-y-4 text-base text-stone-800 font-sans leading-relaxed">
-                {CONTACT_DETAILS.aboutParagraphs?.map((paragraph, idx) => (
-                  <p key={idx}>{paragraph}</p>
-                ))}
+              <div className="text-base text-stone-800 font-sans leading-relaxed">
+                <div className="space-y-4">
+                  {paragraphs.slice(0, 2).map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
+
+                {paragraphs.length > 2 && (
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      isExpanded
+                        ? "grid-rows-[1fr] opacity-100 mt-4"
+                        : "grid-rows-[0fr] opacity-0 mt-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="space-y-4">
+                        {paragraphs.slice(2).map((paragraph, idx) => (
+                          <p key={idx + 2}>{paragraph}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
+
+              {paragraphs.length > 2 && (
+                <button
+                  type="button"
+                  onClick={() => setIsExpanded((prev) => !prev)}
+                  aria-expanded={isExpanded}
+                  className="inline-flex items-center gap-1.5 mt-3.5 text-sm font-semibold text-stone-600 hover:text-stone-950 transition-colors cursor-pointer group/btn font-sans focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 rounded-sm"
+                >
+                  <span>{isExpanded ? "See less" : "See more"}</span>
+                  <ChevronDown
+                    className={`w-4 h-4 text-stone-400 group-hover/btn:text-stone-950 transition-transform duration-300 ${
+                      isExpanded ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              )}
             </div>
           </div>
 

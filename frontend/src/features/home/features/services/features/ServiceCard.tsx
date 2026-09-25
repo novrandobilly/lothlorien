@@ -24,7 +24,8 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
 
   return (
     <div
-      className={`group relative py-5 sm:py-6 lg:py-7 border-b border-stone-300/80 transition-colors duration-300 ${className}`}
+      id={service.id}
+      className={`group relative scroll-mt-24 py-5 sm:py-6 lg:py-7 border-b border-stone-300/80 transition-colors duration-300 ${className}`}
     >
       {/* Mobile (< md) Layout: Number and Title on top */}
       <div className="flex md:hidden items-start gap-3 mb-2.5">
