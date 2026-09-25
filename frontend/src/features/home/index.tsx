@@ -2,7 +2,9 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HeroSection } from "./features/hero-section";
 import { SelectedWorksSection } from "./features/selected-works";
-import { DigitalStorefrontSection } from "./features/digital-storefront";
+// Preserved for future multi-product showcase:
+// import { DigitalStorefrontSection } from "./features/digital-storefront";
+import { ProductsSection } from "./features/products";
 import { HowEnvienStudioWorksSection } from "./features/how-envien-studio-works";
 import { ServicesSection } from "./features/services";
 import { FaqSection } from "./features/faq";
@@ -15,11 +17,12 @@ export function HomePageFeature() {
       {/* Sticky Header / Navigation */}
       <Header />
 
-      {/* Main Content: Hero -> Selected Works -> Digital Storefront -> How Envien Studio Works -> Services -> FAQ -> Testimonials -> Contact */}
+      {/* Main Content: Hero -> Selected Works -> Products -> How Envien Studio Works -> Services -> FAQ -> Testimonials -> Contact */}
       <main className="flex-1">
         <HeroSection />
         <SelectedWorksSection />
-        <DigitalStorefrontSection />
+        {/* <DigitalStorefrontSection /> */}
+        <ProductsSection />
         <HowEnvienStudioWorksSection />
         <ServicesSection />
         <FaqSection />

@@ -50,10 +50,10 @@ export function Header() {
             Work
           </Link>
           <Link
-            href="/#digital-storefront"
+            href="/#products"
             className="hover:text-stone-950 transition-colors"
           >
-            Digital Storefront
+            Products
           </Link>
           <Link
             href="/#services"

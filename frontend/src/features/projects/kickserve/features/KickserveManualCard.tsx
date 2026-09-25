@@ -42,11 +42,11 @@ export function KickserveManualCard() {
       {/* Top Back Navigation Link */}
       <div className="mb-6 sm:mb-8">
         <Link
-          href="/#digital-storefront"
+          href="/#products"
           className="group inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-stone-500 hover:text-stone-950 transition-colors"
         >
           <ArrowLeft className="w-4 h-4 text-stone-400 group-hover:text-stone-950 group-hover:-translate-x-1 transition-all" />
-          <span>Back to Digital Storefront</span>
+          <span>Back to Products</span>
         </Link>
       </div>
 
@@ -169,11 +169,11 @@ export function KickserveManualCard() {
         {/* 7. Footer / Bottom Links inside the Card */}
         <div className="border-t border-stone-200/80 mt-12 sm:mt-14 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <Link
-            href="/#digital-storefront"
+            href="/#products"
             className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-stone-500 hover:text-stone-950 transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 text-stone-400 group-hover:text-stone-950 group-hover:-translate-x-1 transition-all" />
-            <span>Back to Digital Storefront</span>
+            <span>Back to Products</span>
           </Link>
 
           <a
