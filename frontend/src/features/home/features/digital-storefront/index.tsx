@@ -2,21 +2,19 @@
 
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { digitalStorefrontProjects, DigitalStorefrontProject } from "./constants";
+import { digitalStorefrontProjects } from "./constants";
 import { SectionHeader } from "./features/SectionHeader";
 import { DigitalStorefrontCard } from "./features/DigitalStorefrontCard";
 
 interface DigitalStorefrontSectionProps {
   title?: string;
   description?: string;
-  projects?: DigitalStorefrontProject[];
   className?: string;
 }
 
 export function DigitalStorefrontSection({
   title = "Digital Storefront",
   description = "Explorations, creative experiments, and interactive prototypes built for the love of craft.",
-  projects = digitalStorefrontProjects,
   className = "",
 }: DigitalStorefrontSectionProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -44,14 +42,15 @@ export function DigitalStorefrontSection({
       el.removeEventListener("scroll", checkScrollability);
       window.removeEventListener("resize", checkScrollability);
     };
-  }, [checkScrollability, projects]);
+  }, [checkScrollability, digitalStorefrontProjects]);
 
   const handleScroll = (direction: "left" | "right") => {
     const el = scrollContainerRef.current;
     if (!el) return;
 
     const cardWidth =
-      el.querySelector<HTMLElement>(".storefront-card-item")?.offsetWidth || 320;
+      el.querySelector<HTMLElement>(".storefront-card-item")?.offsetWidth ||
+      320;
     const scrollAmount = cardWidth + 24; // Card width + gap
 
     el.scrollBy({
@@ -104,7 +103,7 @@ export function DigitalStorefrontSection({
               msOverflowStyle: "none",
             }}
           >
-            {projects.map((project) => (
+            {digitalStorefrontProjects.map((project) => (
               <div
                 key={project.id}
                 className="storefront-card-item snap-start shrink-0 w-70 sm:w-76.25 md:w-81.25"

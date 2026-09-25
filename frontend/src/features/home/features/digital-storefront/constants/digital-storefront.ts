@@ -1,3 +1,6 @@
+import { StaticImageData } from "next/image";
+import dsKickserveImg from "@/assets/digital-storefront/ds-kickserve.webp";
+
 export interface DigitalStorefrontProject {
   id: string;
   title: string;
@@ -6,48 +9,26 @@ export interface DigitalStorefrontProject {
   status: "active" | "coming_soon";
   statusBadge?: string;
   visualGradient?: string;
+  image?: StaticImageData | string;
   imageSrc?: string;
   imageAlt?: string;
   demoUrl?: string;
+  buttonText?: string;
   githubUrl?: string;
   categoryIcon?: string;
 }
 
 export const digitalStorefrontProjects: DigitalStorefrontProject[] = [
   {
-    id: "kinetic-canvas",
-    title: "Kinetic Canvas",
-    description: "Interactive generative physics engine.",
-    tags: ["WebGL", "Physics"],
+    id: "kickserve",
+    title: "Kickserve",
+    description: "A matchmaking and scoring app for racket sports.",
+    tags: ["Matchmaking", "Racquet Sports"],
     status: "active",
-    statusBadge: "Live Demo",
-    visualGradient:
-      "from-emerald-600/30 via-teal-500/20 to-stone-900/80",
-    demoUrl: "#",
-    categoryIcon: "⚡",
-  },
-  {
-    id: "zenith-motion-lab",
-    title: "Zenith UI Engine",
-    description: "Fluid gesture interaction laboratory.",
-    tags: ["Framer Motion", "Micro-UX"],
-    status: "active",
-    statusBadge: "Live Demo",
-    visualGradient:
-      "from-orange-500/30 via-amber-500/20 to-stone-900/80",
-    demoUrl: "#",
-    categoryIcon: "✦",
-  },
-  {
-    id: "chroma-ai-tokens",
-    title: "Chroma AI",
-    description: "AI algorithmic palette studio.",
-    tags: ["Generative AI", "Tokens"],
-    status: "coming_soon",
-    statusBadge: "Coming Soon",
-    visualGradient:
-      "from-indigo-600/30 via-purple-500/20 to-stone-900/80",
-    demoUrl: "#",
-    categoryIcon: "🧪",
+    statusBadge: "Live App",
+    image: dsKickserveImg,
+    imageAlt: "Kickserve - Matchmaking and scoring app for racket sports",
+    demoUrl: "/projects/kickserve",
+    categoryIcon: "🎾",
   },
 ];
