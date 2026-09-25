@@ -1,81 +1,74 @@
 import React from "react";
 import { StaticImageData } from "next/image";
 import mnemosyneImg from "@/assets/experiences/mnemosyne.webp";
-import edorasImg from "@/assets/experiences/edoras.webp";
-import careerAccelerationImg from "@/assets/experiences/career-acceleration.webp";
-import customPlayersImg from "@/assets/kickserve/custom-players.png";
-import matchmakingImg from "@/assets/kickserve/match-making.png";
-import liveStandingsImg from "@/assets/kickserve/live-standings.png";
+import vcKickserveImg from "@/assets/hero-visual-card/vc-kickserve.webp";
+import vcIntiDinamisImg from "@/assets/hero-visual-card/vc-intidinamis.webp";
 
 export interface VisualCardConfig {
   id: string;
-  heightRatio: 1 | 2;
+  colSpan?: 1 | 2;
+  aspectRatio?:
+    | "landscape"
+    | "portrait"
+    | "square"
+    | "16/10"
+    | "16/9"
+    | "7/8"
+    | "3/4"
+    | "4/3"
+    | "1/1";
+  heightRatio?: 1 | 2;
   bgClass: string;
   image?: StaticImageData | string;
   alt?: string;
   label?: string;
   borderClass?: string;
+  objectPosition?: string;
   isDark?: boolean;
   accentElement?: React.ReactNode;
 }
 
 /**
- * Column 1 Visual Cards (Ratios: 2, 2, 1)
+ * Unified Visual Cards Bento:
+ * - 1 Full Landscape Web App (colSpan: 2, aspect-[16/10])
+ * - 2 Supporting Showcase Cards (colSpan: 1, aspect-[3/4])
  */
-export const visualCardsColumn1: VisualCardConfig[] = [
+export const visualCards: VisualCardConfig[] = [
   {
-    id: "slot-1",
+    id: "hero-landscape",
     alt: "Online Assessment Examination Platform",
     label: "Web Application",
-    heightRatio: 2,
+    colSpan: 2,
+    aspectRatio: "16/10",
     bgClass: "bg-stone-100",
     image: mnemosyneImg,
   },
   {
-    id: "slot-2",
-    alt: "PT Inti Dinamis Corporate Profile",
-    label: "Company Profile",
-    heightRatio: 2,
+    id: "kickserve-card",
+    alt: "Kickserve Padel Tournament Platform",
+    label: "Matchmaking Platform",
+    colSpan: 1,
+    aspectRatio: "3/4",
     bgClass: "bg-stone-100",
-    image: edorasImg,
+    image: vcKickserveImg,
   },
   {
-    id: "slot-3",
-    alt: "Kickserve Tournament Matchmaking",
-    label: "Matchmaking Engine",
-    heightRatio: 1,
-    bgClass: "bg-stone-900",
-    isDark: true,
-    image: matchmakingImg,
+    id: "intidinamis-card",
+    alt: "PT Inti Dinamis Corporate Profile",
+    label: "Company Profile",
+    colSpan: 1,
+    aspectRatio: "3/4",
+    bgClass: "bg-stone-100",
+    image: vcIntiDinamisImg,
   },
 ];
 
 /**
- * Column 2 Visual Cards (Ratios: 1, 2, 2)
+ * Backward-compatible column exports
  */
-export const visualCardsColumn2: VisualCardConfig[] = [
-  {
-    id: "slot-4",
-    alt: "Kickserve Player Roster System",
-    label: "Roster Management",
-    heightRatio: 1,
-    bgClass: "bg-stone-100",
-    image: customPlayersImg,
-  },
-  {
-    id: "slot-5",
-    alt: "Executive Career Acceleration Platform",
-    label: "Interactive Platform",
-    heightRatio: 2,
-    bgClass: "bg-stone-100",
-    image: careerAccelerationImg,
-  },
-  {
-    id: "slot-6",
-    alt: "Live Tournament Standings Leaderboard",
-    label: "Live Standings",
-    heightRatio: 2,
-    bgClass: "bg-stone-100",
-    image: liveStandingsImg,
-  },
+export const visualCardsColumn1: VisualCardConfig[] = [
+  visualCards[0],
+  visualCards[1],
 ];
+
+export const visualCardsColumn2: VisualCardConfig[] = [visualCards[2]];

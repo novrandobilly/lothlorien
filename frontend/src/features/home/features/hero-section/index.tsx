@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, MessageSquare } from "lucide-react";
 import { VisualCard } from "./features/VisualCard";
-import { visualCardsColumn1, visualCardsColumn2 } from "./constants";
+import { visualCards } from "./constants";
 
 export function HeroSection() {
   return (
@@ -49,25 +49,15 @@ export function HeroSection() {
           </div>
 
           {/* =========================================================
-              2. RIGHT COLUMN: VISUAL CARDS CONTAINER
-              Responsive: w-full on mobile, lg:col-span-5 on desktop.
-              Height capped with max-h and masked fade.
+              2. RIGHT COLUMN: VISUAL CARDS CONTAINER (BENTO GRID)
+              Supports 1 full-width landscape card (col-span-2) + portrait cards.
+              Includes top & bottom shadow fade effect.
              ========================================================= */}
-          <div className="w-full lg:col-span-5 relative rounded-2xl max-h-95 sm:max-h-110 lg:max-h-180 overflow-hidden lg:mask-[linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]">
+          <div className="w-full lg:col-span-5 relative rounded-2xl overflow-hidden lg:mask-[linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%)] lg:[-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_8%,black_92%,transparent_100%)]">
             <div className="grid grid-cols-2 gap-3 sm:gap-3.5">
-              {/* --- Column 1 (Slots 1, 2, 3 -> Ratios: 2, 2, 1) --- */}
-              <div className="flex flex-col gap-3 sm:gap-3.5">
-                {visualCardsColumn1.map((card) => (
-                  <VisualCard key={card.id} {...card} />
-                ))}
-              </div>
-
-              {/* --- Column 2 (Slots 4, 5, 6 -> Ratios: 1, 2, 2) --- */}
-              <div className="flex flex-col gap-3 sm:gap-3.5 pt-0 lg:pt-6">
-                {visualCardsColumn2.map((card) => (
-                  <VisualCard key={card.id} {...card} />
-                ))}
-              </div>
+              {visualCards.map((card) => (
+                <VisualCard key={card.id} {...card} />
+              ))}
             </div>
           </div>
         </div>
