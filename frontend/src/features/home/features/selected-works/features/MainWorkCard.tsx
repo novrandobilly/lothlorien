@@ -13,19 +13,17 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
   const {
     title,
     description,
-    badge,
     clientLogo,
     clientName,
-    tags,
     url,
     buttonText = "See more",
     image,
     imageAlt,
-    placeholderBg = "bg-white",
-    accentColor,
-    isOngoing,
-    disabled,
+    isDisabled,
   } = work;
+
+  const isExternal =
+    work.isExternal ?? (url ? /^https?:\/\//.test(url) : false);
 
   return (
     <div className="group relative w-full bg-white rounded-2xl sm:rounded-3xl border border-stone-200/80 overflow-hidden transition-all duration-300 hover:border-stone-300 hover:shadow-sm">
@@ -35,21 +33,6 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
            ========================================================= */}
         <div className="lg:col-span-6 p-6 sm:p-8 lg:p-10 flex flex-col justify-between text-left">
           <div>
-            {badge && (
-              <div className="inline-flex items-center gap-2 mb-2.5">
-                <span
-                  className={`w-2 h-2 rounded-full ${isOngoing ? "animate-pulse" : ""}`}
-                  style={{
-                    backgroundColor:
-                      accentColor || (isOngoing ? "#f59e0b" : "#059669"),
-                  }}
-                />
-                <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 font-sans">
-                  {badge}
-                </span>
-              </div>
-            )}
-
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-stone-950 font-sans">
               {title}
             </h3>
@@ -60,13 +43,9 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
           </div>
 
           {/* Client Logo & Action button in the same row */}
-          {(clientLogo ||
-            (tags && tags.length > 0) ||
-            url ||
-            isOngoing ||
-            disabled) && (
+          {(clientLogo || url || isDisabled) && (
             <div className="mt-6 sm:mt-8 flex items-center justify-between gap-3">
-              {/* Left side: Client Logo (or tags fallback) */}
+              {/* Left side: Client Logo */}
               {clientLogo ? (
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <span className="text-xs font-medium text-stone-400 font-sans">
@@ -80,23 +59,12 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
                     className="h-4 sm:h-4.5 w-auto object-contain select-none"
                   />
                 </div>
-              ) : tags && tags.length > 0 ? (
-                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                  {tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 text-xs font-medium text-stone-600 bg-stone-50 border border-stone-200/80 rounded-full font-sans"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               ) : (
                 <div />
               )}
 
               {/* Right side: Action button (hover scoped only to button) */}
-              {isOngoing || disabled ? (
+              {isDisabled ? (
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-stone-50 text-stone-400 text-xs font-medium border border-stone-200/50 cursor-not-allowed select-none shrink-0">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80" />
                   <span>{buttonText || "Coming Soon"}</span>
@@ -105,16 +73,8 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
                 url && (
                   <Link
                     href={url}
-                    target={
-                      work.isExternal ?? /^https?:\/\//.test(url)
-                        ? "_blank"
-                        : undefined
-                    }
-                    rel={
-                      work.isExternal ?? /^https?:\/\//.test(url)
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
                     className="group/btn inline-flex items-center gap-1 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-stone-50 hover:bg-stone-100/80 text-stone-600 hover:text-stone-950 text-xs font-medium border border-stone-200/80 hover:border-stone-300 transition-all active:scale-95 shrink-0"
                   >
                     <span>{buttonText}</span>
@@ -134,11 +94,9 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
           <WorkVisualPlaceholder
             image={image}
             alt={imageAlt || title}
-            placeholderBg={placeholderBg}
-            accentColor={accentColor}
             aspectClass="aspect-[16/10] sm:aspect-[16/11]"
             overflowBottom={true}
-            isOngoing={isOngoing}
+            isDisabled={isDisabled}
             className="w-full shadow-sm"
           />
         </div>

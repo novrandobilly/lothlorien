@@ -4,23 +4,19 @@ import Image, { StaticImageData } from "next/image";
 interface WorkVisualPlaceholderProps {
   image?: StaticImageData | string;
   alt?: string;
-  placeholderBg?: string;
-  accentColor?: string;
   className?: string;
   aspectClass?: string;
   overflowBottom?: boolean;
-  isOngoing?: boolean;
+  isDisabled?: boolean;
 }
 
 export function WorkVisualPlaceholder({
   image,
   alt = "Selected work showcase",
-  placeholderBg = "bg-white",
-  accentColor = "#78716c",
   className = "",
   aspectClass = "aspect-[16/10]",
   overflowBottom = true,
-  isOngoing = false,
+  isDisabled = false,
 }: WorkVisualPlaceholderProps) {
   const roundedClass = overflowBottom
     ? "rounded-t-xl sm:rounded-t-2xl rounded-b-none border-b-0"
@@ -28,10 +24,10 @@ export function WorkVisualPlaceholder({
 
   return (
     <div
-      className={`relative w-full ${aspectClass} ${placeholderBg} ${roundedClass} border border-stone-200/80 shadow-sm overflow-hidden select-none group-hover:border-stone-300 transition-all duration-300 ${className}`}
+      className={`relative w-full ${aspectClass} bg-white ${roundedClass} border border-stone-200/80 shadow-sm overflow-hidden select-none group-hover:border-stone-300 transition-all duration-300 ${className}`}
     >
-      {/* Subtle White Masking Overlay for Ongoing / Disabled Project */}
-      {isOngoing && (
+      {/* Subtle White Masking Overlay for Disabled / Upcoming Project */}
+      {isDisabled && (
         <div className="absolute inset-0 z-10 bg-white/70 backdrop-blur-[2px] flex flex-col items-center justify-center p-4 select-none transition-all duration-300">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-stone-200/90 shadow-sm text-stone-700 text-xs sm:text-sm font-semibold tracking-wide">
             <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
@@ -47,9 +43,7 @@ export function WorkVisualPlaceholder({
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className={`object-cover object-top transition-all duration-500 ${
-            isOngoing
-              ? "opacity-75 grayscale-[20%]"
-              : "group-hover:scale-[1.01]"
+            isDisabled ? "opacity-75 grayscale-20" : "group-hover:scale-[1.01]"
           }`}
         />
       ) : (
@@ -64,10 +58,7 @@ export function WorkVisualPlaceholder({
             </div>
             <div className="flex items-center gap-2">
               <span className="w-12 sm:w-16 h-1.5 rounded-full bg-stone-100" />
-              <span
-                className="w-2 h-2 rounded-full"
-                style={{ backgroundColor: accentColor }}
-              />
+              <span className="w-2 h-2 rounded-full bg-emerald-600" />
             </div>
           </div>
 
