@@ -8,7 +8,7 @@ import { visualCards } from "./constants";
 
 export function HeroSection() {
   return (
-    <section className="relative bg-[#fafaf9] pt-6 sm:pt-10 pb-4 sm:pb-6 overflow-hidden">
+    <section className="relative bg-[#fafaf9] pt-8 sm:pt-12 pb-6 sm:pb-8 overflow-hidden">
       {/* Subtle ambient warm background glow */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute -top-10 right-10 w-105 h-105 bg-[#f26522]/5 rounded-full blur-3xl pointer-events-none -z-10" />

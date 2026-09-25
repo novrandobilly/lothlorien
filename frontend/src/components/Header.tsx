@@ -25,21 +25,19 @@ export function Header() {
           : "bg-[#fafaf9] border-b border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-18 sm:h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-14 sm:h-16 flex items-center justify-between">
         {/* Brand Logo & Title */}
         <Link
           href="/"
           className="flex items-center gap-2.5 text-stone-950 tracking-tight group/logo"
           aria-label="Envien Studio Home"
         >
-          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#f26522] text-white flex items-center justify-center">
-            <EnvienLogo
-              className="h-3.5 sm:h-4 w-auto text-white"
-              variant="white"
-            />
-          </div>
-          <span className="text-lg sm:text-xl font-bold tracking-tight font-sans text-stone-950">
-            envien<span className="text-[#f26522]">.</span>
+          <EnvienLogo
+            className="h-4.5 sm:h-5 w-auto text-stone-950"
+            variant="black"
+          />
+          <span className="text-base sm:text-lg font-bold tracking-tight font-sans text-stone-950">
+            envien<span className="text-[#f26522]">studio</span>.
           </span>
         </Link>
 
@@ -51,10 +49,7 @@ export function Header() {
           >
             Work
           </Link>
-          <Link
-            href="/#lab"
-            className="hover:text-stone-950 transition-colors"
-          >
+          <Link href="/#lab" className="hover:text-stone-950 transition-colors">
             Lab
           </Link>
           <Link
@@ -74,4 +69,3 @@ export function Header() {
     </header>
   );
 }
-
