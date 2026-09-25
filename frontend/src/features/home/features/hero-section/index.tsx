@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, MessageSquare } from "lucide-react";
 import { VisualCard } from "./features/VisualCard";
 import { visualCardsColumn1, visualCardsColumn2 } from "./constants";
 
@@ -15,35 +15,27 @@ export function HeroSection() {
               1. LEFT COLUMN: TYPOGRAPHY, CAPTION & ACTION BUTTONS
              ========================================================= */}
           <div className="w-full lg:col-span-7 flex flex-col justify-center text-left self-center">
-            {/* Main Headline (Sans-serif, bold, 3 lines matching screenshot) */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[68px] font-bold tracking-[-0.035em] text-stone-950 leading-[1.06] font-sans">
-              From Idea to <br />
-              Scalable Web <br />
-              Systems Instantly
+            {/* Main Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] xl:text-[50px] font-bold tracking-[-0.035em] text-stone-950 leading-[1.15] font-sans">
+              <span className="block">Great ideas start by listening.</span>
+              <span className="block">What are we building?</span>
             </h1>
 
-            {/* Subtitle Caption */}
-            <p className="mt-4 sm:mt-5 text-base sm:text-lg md:text-xl text-stone-500 font-sans leading-relaxed max-w-lg">
-              Stop wrestling with sluggish architectures. We engineer
-              high-performance frontend systems, interactive platforms, and
-              scalable digital products built for growth.
-            </p>
-
             {/* Action Buttons */}
-            <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-3.5">
+            <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-3.5">
               <Link
                 href="#contact"
                 className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-sm sm:text-base font-semibold transition-all group active:scale-95"
               >
-                <Calendar className="w-4 h-4 text-[#f26522]" />
-                <span>Book a call</span>
+                <MessageSquare className="w-4 h-4 text-[#f26522]" />
+                <span>Let&apos;s talk</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <Link
                 href="#work"
                 className="inline-flex items-center gap-2 px-5 py-3 sm:py-3.5 rounded-full border border-stone-200 hover:border-stone-300 bg-white hover:bg-stone-50 text-stone-800 text-sm sm:text-base font-medium transition-all active:scale-95"
               >
-                <span>See our works</span>
+                <span>See what I&apos;ve built</span>
               </Link>
             </div>
           </div>
