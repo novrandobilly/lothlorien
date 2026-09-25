@@ -165,27 +165,6 @@ export function KickserveManualCard() {
             })}
           </div>
         </div>
-
-        {/* 7. Footer / Bottom Links inside the Card */}
-        <div className="border-t border-stone-200/80 mt-12 sm:mt-14 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <Link
-            href="/#products"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-stone-500 hover:text-stone-950 transition-colors group"
-          >
-            <ArrowLeft className="w-4 h-4 text-stone-400 group-hover:text-stone-950 group-hover:-translate-x-1 transition-all" />
-            <span>Back to Products</span>
-          </Link>
-
-          <a
-            href={kickserveData.launchUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-stone-900 hover:text-[#f26522] transition-colors group"
-          >
-            <span>Launch Kickserve</span>
-            <ExternalLink className="w-3.5 h-3.5 text-stone-400 group-hover:text-[#f26522] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-          </a>
-        </div>
       </div>
     </div>
   );

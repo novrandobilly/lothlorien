@@ -23,21 +23,22 @@ export const flagshipProduct: ProductItem = {
   id: "kickserve",
   eyebrow: "Kickserve App",
   title: "Kickserve",
-  headline: "Streamlined tournament & match management for racquet sports.",
+  headline: "Easy Matchmaking & Live Scoring for Racquet Sports.",
   description:
-    "A lightweight, court-side session manager built for Tennis, Padel, and Badminton. Eliminate manual bracket drawing with automated Americano rotations and instant live differentials.",
+    "A lightweight, court-side session manager built for racquet sports. Eliminate manual drawing with automated Americano rotations and live standings.",
   specs: [
     {
       label: "Built For",
-      value: "Tennis • Padel • Badminton",
+      value: "Tennis • Padel • Badminton • Table Tennis",
     },
     {
       label: "Key Features",
-      value: "Up to 32 Players • Americano Rotations • Live Differential Standings",
+      value:
+        "Up to 32 Players • Americano Rotations • Live Differential Standings",
     },
   ],
   ctaText: "Explore Kickserve",
   ctaUrl: "/projects/kickserve",
   image: dsKickserveImg,
-  imageAlt: "Kickserve - Racket Sports Matchmaking and Scoring App",
+  imageAlt: "Kickserve - Racquet Sports Matchmaking and Scoring App",
 };

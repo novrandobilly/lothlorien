@@ -68,22 +68,28 @@ export function ProductShowcase() {
           </div>
         </div>
 
-        {/* Right Column: Visual Product Showcase */}
-        <div className="lg:col-span-6 xl:col-span-5 w-full">
+        {/* Right Column: Visual Portrait PWA Showcase */}
+        <div className="lg:col-span-6 xl:col-span-5 flex items-center justify-center w-full py-2">
           <Link
             href={ctaUrl}
-            className="group relative block w-full aspect-4/3 sm:aspect-16/11 lg:aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden bg-stone-900 border border-stone-200/80 shadow-md transition-transform duration-300 hover:scale-[1.01]"
+            className="group/device relative block w-full max-w-65 sm:max-w-71.25 md:max-w-76.25 lg:max-w-70 xl:max-w-76.25 rounded-[38px] sm:rounded-[44px] p-2.5 sm:p-3 bg-stone-950 border-4 border-stone-800/90 shadow-2xl shadow-stone-950/15 ring-1 ring-stone-950/20 transition-all duration-300 hover:scale-[1.02] active:scale-98"
           >
-            <Image
-              src={image}
-              alt={imageAlt}
-              fill
-              className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 500px"
-              priority
-            />
-            {/* Subtle gradient vignette */}
-            <div className="absolute inset-0 bg-linear-to-t from-stone-950/40 via-transparent to-transparent opacity-60 pointer-events-none" />
+            {/* Dynamic Island / Speaker Notch */}
+            <div className="w-18 sm:w-22 h-3.5 sm:h-4 bg-stone-900 rounded-full mx-auto mb-2 sm:mb-2.5 flex items-center justify-end px-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-stone-800" />
+            </div>
+
+            {/* Smartphone Screen Viewport (750 x 1334 portrait) */}
+            <div className="relative w-full aspect-750/1334 rounded-b-[26px] sm:rounded-b-4xl overflow-hidden bg-stone-900 border border-stone-800/40 shadow-inner">
+              <Image
+                src={image}
+                alt={imageAlt}
+                fill
+                className="object-cover object-top transition-transform duration-700 ease-out group-hover/device:scale-105"
+                sizes="(max-width: 640px) 260px, (max-width: 1024px) 305px, 320px"
+                priority
+              />
+            </div>
           </Link>
         </div>
       </div>
