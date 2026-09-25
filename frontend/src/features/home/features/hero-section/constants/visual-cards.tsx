@@ -1,15 +1,11 @@
 import React from "react";
 import { StaticImageData } from "next/image";
-
-// =========================================================================
-// 1. IMPORT YOUR 6 IMAGES HERE WHEN READY:
-// =========================================================================
-// import card1Img from "@/assets/images/hero/card-1.png";
-// import card2Img from "@/assets/images/hero/card-2.png";
-// import card3Img from "@/assets/images/hero/card-3.png";
-// import card4Img from "@/assets/images/hero/card-4.png";
-// import card5Img from "@/assets/images/hero/card-5.png";
-// import card6Img from "@/assets/images/hero/card-6.png";
+import mnemosyneImg from "@/assets/experiences/mnemosyne.webp";
+import edorasImg from "@/assets/experiences/edoras.webp";
+import careerAccelerationImg from "@/assets/experiences/career-acceleration.webp";
+import customPlayersImg from "@/assets/kickserve/custom-players.png";
+import matchmakingImg from "@/assets/kickserve/match-making.png";
+import liveStandingsImg from "@/assets/kickserve/live-standings.png";
 
 export interface VisualCardConfig {
   id: string;
@@ -17,6 +13,7 @@ export interface VisualCardConfig {
   bgClass: string;
   image?: StaticImageData | string;
   alt?: string;
+  label?: string;
   borderClass?: string;
   isDark?: boolean;
   accentElement?: React.ReactNode;
@@ -28,29 +25,28 @@ export interface VisualCardConfig {
 export const visualCardsColumn1: VisualCardConfig[] = [
   {
     id: "slot-1",
-    alt: "Visual showcase 1",
+    alt: "Online Assessment Examination Platform",
+    label: "Web Application",
     heightRatio: 2,
-    bgClass: "bg-[#f3ebe1]",
-    // image: card1Img,
+    bgClass: "bg-stone-100",
+    image: mnemosyneImg,
   },
   {
     id: "slot-2",
-    alt: "Visual showcase 2",
+    alt: "PT Inti Dinamis Corporate Profile",
+    label: "Company Profile",
     heightRatio: 2,
-    bgClass: "bg-[#121316]",
-    isDark: true,
-    // image: card2Img,
-    accentElement: (
-      <div className="absolute inset-x-6 top-1/2 h-px bg-white/10" />
-    ),
+    bgClass: "bg-stone-100",
+    image: edorasImg,
   },
   {
     id: "slot-3",
-    alt: "Visual showcase 3",
+    alt: "Kickserve Tournament Matchmaking",
+    label: "Matchmaking Engine",
     heightRatio: 1,
-    bgClass: "bg-[#0a0a0c]",
+    bgClass: "bg-stone-900",
     isDark: true,
-    // image: card3Img,
+    image: matchmakingImg,
   },
 ];
 
@@ -60,24 +56,26 @@ export const visualCardsColumn1: VisualCardConfig[] = [
 export const visualCardsColumn2: VisualCardConfig[] = [
   {
     id: "slot-4",
-    alt: "Visual showcase 4",
+    alt: "Kickserve Player Roster System",
+    label: "Roster Management",
     heightRatio: 1,
-    bgClass: "bg-[#e4ece5]",
-    // image: card4Img,
+    bgClass: "bg-stone-100",
+    image: customPlayersImg,
   },
   {
     id: "slot-5",
-    alt: "Visual showcase 5",
+    alt: "Executive Career Acceleration Platform",
+    label: "Interactive Platform",
     heightRatio: 2,
-    bgClass: "bg-gradient-to-b from-[#328ebc] 50% to-[#e09819] 50%",
-    isDark: true,
-    // image: card5Img,
+    bgClass: "bg-stone-100",
+    image: careerAccelerationImg,
   },
   {
     id: "slot-6",
-    alt: "Visual showcase 6",
+    alt: "Live Tournament Standings Leaderboard",
+    label: "Live Standings",
     heightRatio: 2,
-    bgClass: "bg-[#eae4dc]",
-    // image: card6Img,
+    bgClass: "bg-stone-100",
+    image: liveStandingsImg,
   },
 ];
