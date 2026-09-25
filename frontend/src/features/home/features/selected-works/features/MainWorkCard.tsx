@@ -105,6 +105,16 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
                 url && (
                   <Link
                     href={url}
+                    target={
+                      work.isExternal ?? /^https?:\/\//.test(url)
+                        ? "_blank"
+                        : undefined
+                    }
+                    rel={
+                      work.isExternal ?? /^https?:\/\//.test(url)
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     className="group/btn inline-flex items-center gap-1 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-stone-50 hover:bg-stone-100/80 text-stone-600 hover:text-stone-950 text-xs font-medium border border-stone-200/80 hover:border-stone-300 transition-all active:scale-95 shrink-0"
                   >
                     <span>{buttonText}</span>

@@ -14,6 +14,7 @@ export interface SelectedWorkItem {
   clientName?: string;
   tags?: string[];
   url?: string;
+  isExternal?: boolean;
   buttonText?: string;
   image?: StaticImageData | string;
   imageAlt?: string;
@@ -29,15 +30,16 @@ export interface SelectedWorkItem {
  */
 export const mainSelectedWork: SelectedWorkItem = {
   id: "online-assessment",
-  title: "Online Assessment System",
+  title: "Psychological Assessment Engine",
   subtitle: "Offline-First Examination Platform",
-  description:
-    "Zero-latency examination engine featuring local encrypted storage sync, offline test resilience, and automated tamper-proof PDF generation.",
+  description: `I built this for Inti Dinamis to take paper-based psychological tests completely digital. 
+                If a candidate’s internet drops mid-test, zero answers are lost. 
+                Test results calculate into clean PDF reports the second they finish.`,
   badge: "Web Application",
   clientLogo: intiDinamisLogo,
   clientName: "PT Inti Dinamis",
-  buttonText: "See case study",
-  url: "/projects/online-assessment",
+  // buttonText: "See case study",
+  // url: "/projects/online-assessment",
   image: mnemosyneImg,
   imageAlt: "Online Assessment System - Offline-First Examination Platform",
   placeholderBg: "bg-white",
@@ -52,15 +54,15 @@ export const mainSelectedWork: SelectedWorkItem = {
 export const secondarySelectedWorks: SelectedWorkItem[] = [
   {
     id: "inti-dinamis",
-    title: "Company Profile Website",
+    title: "Inti Dinamis Website",
     subtitle: "Corporate Profile & Digital Presence",
-    description:
-      "Modern, responsive corporate profile website designed to elevate brand authority, present consulting services, and drive client acquisition.",
+    description: `A thoughtful web presence for Inti Dinamis training & consulting practice. 
+    We focused on clear typography, intentional spacing, and making it effortless for corporate HR teams to get in touch.`,
     badge: "Company Profile",
     clientLogo: intiDinamisLogo,
     clientName: "PT Inti Dinamis",
-    buttonText: "See more",
-    url: "#contact",
+    buttonText: "Visit Website",
+    url: "https://intidinamis.com",
     image: edorasImg,
     imageAlt: "PT Inti Dinamis - Corporate Company Profile Website",
     placeholderBg: "bg-white",
@@ -70,8 +72,7 @@ export const secondarySelectedWorks: SelectedWorkItem[] = [
     id: "career-acceleration",
     title: "Online Class Landing Page",
     subtitle: "Executive Career Acceleration Workshop",
-    description:
-      "High-converting promotional landing page engineered for executive webinars, featuring live countdowns, dynamic RSVP flows, and WhatsApp integration.",
+    description: `A dedicated landing page for Inti Dinamis upcoming online classes. It lays out the curriculum clearly, keeps track of live schedules, and lets attendees sign up directly via WhatsApp.`,
     badge: "Ongoing Project",
     clientLogo: intiDinamisLogo,
     clientName: "PT Inti Dinamis",
