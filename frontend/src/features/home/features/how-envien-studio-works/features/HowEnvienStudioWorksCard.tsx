@@ -1,11 +1,13 @@
 import React from "react";
-import { WhyChooseUsItem } from "../constants";
+import { HowEnvienStudioWorksItem } from "../constants";
 
-interface WhyChooseUsCardProps {
-  item: WhyChooseUsItem;
+interface HowEnvienStudioWorksCardProps {
+  item: HowEnvienStudioWorksItem;
 }
 
-export function WhyChooseUsCard({ item }: WhyChooseUsCardProps) {
+export function HowEnvienStudioWorksCard({
+  item,
+}: HowEnvienStudioWorksCardProps) {
   const Icon = item.icon;
 
   return (

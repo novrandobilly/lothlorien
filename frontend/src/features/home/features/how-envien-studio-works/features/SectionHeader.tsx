@@ -6,7 +6,7 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({
-  title = "Why Choose Us",
+  title = "How Envien Studio Works",
   className = "",
 }: SectionHeaderProps) {
   return (
