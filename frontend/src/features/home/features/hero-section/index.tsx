@@ -6,7 +6,8 @@ import Link from "next/link";
 import { ArrowRight, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
-// Curated high-res Unsplash photo matching modern design & software engineering studio
+// --- HERO BACKGROUND IMAGE OPTIONS ---
+// Option 1 (Original): Creative studio team collaboration
 const HERO_BG_IMAGE =
   "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80";
 
@@ -23,11 +24,11 @@ export function HeroSection() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[center_30%] sm:object-right"
+            className="object-cover object-[center_28%] sm:object-right"
           />
           {/* Multi-stop gradient overlay for strong text contrast on the left while keeping photo visible on the right */}
-          <div className="absolute inset-0 bg-linear-to-r from-stone-950/95 via-stone-950/80 to-stone-950/30 sm:to-transparent" />
-          <div className="absolute inset-0 bg-linear-to-t from-stone-950/70 via-transparent to-stone-950/40" />
+          <div className="absolute inset-0 bg-linear-to-r from-stone-950/95 via-stone-950/75 to-stone-950/30 sm:to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-stone-950/60 via-transparent to-stone-950/40" />
 
           {/* Ambient warm studio glow */}
           <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#f26522]/10 rounded-full blur-3xl pointer-events-none" />
@@ -37,26 +38,36 @@ export function HeroSection() {
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 lg:pt-48 pb-28 sm:pb-36 lg:pb-40">
           <div className="max-w-3xl">
             {/* Primary Headline - Strictly 2 rows, no wrap on all screen sizes */}
-            <h1 className="text-[clamp(1.15rem,5.5vw,3.75rem)] font-bold tracking-tight text-white leading-[1.15] font-sans drop-shadow-sm">
+            {/* --- MOBILE HEADING SIZE LEVELS (Easy-switch presets) --- */}
+            {/* Base (Current):   text-[clamp(1.3rem,5.8vw,3.75rem)] */}
+            {/* Level 1 (+10%):  text-[clamp(1.42rem,6.2vw,3.75rem)] */}
+            {/* Level 2 (+20%):  text-[clamp(1.55rem,6.8vw,3.75rem)] */}
+            {/* Level 3 (+30%):  text-[clamp(1.7rem,7.4vw,3.75rem)] */}
+            <h1 className="text-[clamp(1.7rem,7.4vw,3.75rem)] font-bold tracking-tight text-white leading-[1.15] font-sans drop-shadow-sm">
               <span className="block whitespace-nowrap text-stone-300 font-medium tracking-tight">
-                Great ideas start by listening.
+                Listening comes first.
               </span>
               <span className="block whitespace-nowrap text-white font-bold tracking-tight mt-1 sm:mt-1.5">
-                What are we building<span className="text-[#f26522]">?</span>
+                What&apos;s your vision<span className="text-[#f26522]">?</span>
               </span>
             </h1>
 
-            {/* Subtitle / Philosophy & Value Proposition Placeholder */}
+            {/* Subtitle / Philosophy & Value Proposition */}
             <p className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-stone-300 font-normal leading-relaxed drop-shadow-xs">
-              We engineer high-performance web systems, bespoke digital products, and intuitive user experiences designed to scale seamlessly with your business.
+              Great products are never built from guesswork.
+            </p>
+            <p className="max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-stone-300 font-normal leading-relaxed drop-shadow-xs">
+              When clarity leads the architecture, growth naturally follows.
             </p>
 
-            {/* Actions: Structured Solid Primary Button + Minimal Text Link */}
-            <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-5 sm:gap-6">
+            {/* Actions: Stacked column on phones, row on tablets/desktops */}
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               <Button
                 href="#contact"
                 leftIcon={<MessageSquare className="w-4 h-4 text-white" />}
-                rightIcon={<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
+                rightIcon={
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                }
               >
                 Let&apos;s talk
               </Button>
