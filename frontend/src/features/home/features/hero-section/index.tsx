@@ -13,7 +13,7 @@ export function HeroSection() {
   return (
     <section className="relative bg-stone-950 overflow-hidden">
       {/* Top Main Hero Canvas with Background Photo */}
-      <div className="relative min-h-145 sm:min-h-165 lg:min-h-185 flex items-center overflow-hidden">
+      <div className="relative min-h-svh sm:min-h-165 lg:min-h-185 flex items-center overflow-hidden">
         {/* Background Photograph */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -52,7 +52,7 @@ export function HeroSection() {
             </h1>
 
             {/* Subtitle / Philosophy & Value Proposition */}
-            <p className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-stone-300 font-normal leading-relaxed drop-shadow-xs">
+            <p className="mt-5 sm:mt-6 max-w-2xl text-base md:text-lg lg:text-xl text-stone-300 font-normal leading-relaxed drop-shadow-xs">
               Great products are never built from guesswork. When clarity leads
               the architecture, growth naturally follows.
             </p>
