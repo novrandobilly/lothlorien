@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 // Curated high-res Unsplash photo matching modern design & software engineering studio
 const HERO_BG_IMAGE =
@@ -33,34 +34,38 @@ export function HeroSection() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12 pt-32 sm:pt-40 lg:pt-48 pb-28 sm:pb-36 lg:pb-40">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 lg:pt-48 pb-28 sm:pb-36 lg:pb-40">
           <div className="max-w-3xl">
-            {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[54px] font-bold tracking-[-0.035em] text-white leading-[1.14] font-sans drop-shadow-sm">
-              <span className="block text-stone-300 font-medium tracking-tight">
+            {/* Primary Headline - Strictly 2 rows, no wrap on all screen sizes */}
+            <h1 className="text-[clamp(1.15rem,5.5vw,3.75rem)] font-bold tracking-tight text-white leading-[1.15] font-sans drop-shadow-sm">
+              <span className="block whitespace-nowrap text-stone-300 font-medium tracking-tight">
                 Great ideas start by listening.
               </span>
-              <span className="block text-white font-bold tracking-tight mt-1 sm:mt-2">
-                What should we build together
-                <span className="text-[#f26522]">?</span>
+              <span className="block whitespace-nowrap text-white font-bold tracking-tight mt-1 sm:mt-1.5">
+                What are we building<span className="text-[#f26522]">?</span>
               </span>
             </h1>
 
-            {/* Action Buttons */}
-            <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-3.5">
-              <Link
+            {/* Subtitle / Philosophy & Value Proposition Placeholder */}
+            <p className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-stone-300 font-normal leading-relaxed drop-shadow-xs">
+              We engineer high-performance web systems, bespoke digital products, and intuitive user experiences designed to scale seamlessly with your business.
+            </p>
+
+            {/* Actions: Structured Solid Primary Button + Minimal Text Link */}
+            <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-5 sm:gap-6">
+              <Button
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#f26522] hover:bg-[#d95316] text-white text-sm sm:text-base font-semibold shadow-lg shadow-[#f26522]/25 transition-all duration-200 group active:scale-95"
+                leftIcon={<MessageSquare className="w-4 h-4 text-white" />}
+                rightIcon={<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
               >
-                <MessageSquare className="w-4 h-4 text-white" />
-                <span>Let&apos;s talk</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+                Let&apos;s talk
+              </Button>
               <Link
                 href="#work"
-                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 rounded-full border border-white/20 hover:border-white/40 bg-white/10 hover:bg-white/15 backdrop-blur-md text-white text-sm sm:text-base font-medium shadow-2xs transition-all duration-200 active:scale-95"
+                className="inline-flex items-center gap-2 py-2 px-1 text-sm sm:text-base font-medium text-stone-300 hover:text-white transition-colors group/work"
               >
                 <span>See what I&apos;ve built</span>
+                <ArrowRight className="w-4 h-4 text-stone-400 group-hover/work:text-white group-hover/work:translate-x-1 transition-all" />
               </Link>
             </div>
           </div>
