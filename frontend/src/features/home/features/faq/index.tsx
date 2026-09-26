@@ -45,7 +45,7 @@ export function FaqSection({
 
         {/* Main 2-Column FAQ Panel matching site style */}
         <div className="mt-8 sm:mt-10 lg:mt-12 rounded-2xl sm:rounded-3xl bg-white border border-stone-200/80 p-6 sm:p-8 lg:p-10 transition-all duration-300 hover:border-stone-300 hover:shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-2 sm:gap-y-3 lg:gap-10 items-start">
             {/* Left Column: Category Navigation */}
             <div className="w-full lg:col-span-4 flex flex-col justify-start">
               <CategoryNav
@@ -56,7 +56,7 @@ export function FaqSection({
             </div>
 
             {/* Right Column: Question Accordions List */}
-            <div className="w-full lg:col-span-8 flex flex-col pt-1 lg:pt-0">
+            <div className="w-full lg:col-span-8 flex flex-col pt-0">
               <div className="flex flex-col min-h-55 sm:min-h-58.75 lg:min-h-61.25">
                 {activeCategory?.questions.map((q) => (
                   <FaqAccordionItem

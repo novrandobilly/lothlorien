@@ -60,7 +60,7 @@ export function CategoryNav({
 
       {/* Mobile / Tablet Horizontal Category Scroll/Tabs */}
       <nav
-        className="flex lg:hidden overflow-x-auto no-scrollbar gap-2 pb-2 mb-6 border-b border-stone-200/80"
+        className="flex lg:hidden overflow-x-auto no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden gap-2 pb-2 mb-0 border-b border-stone-200/80"
         aria-label="FAQ categories"
       >
         {categories.map((cat) => {

@@ -43,3 +43,21 @@ body {
 .animate-toast-in {
   animation: toastSlideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
