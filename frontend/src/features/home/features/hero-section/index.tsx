@@ -6,8 +6,6 @@ import Link from "next/link";
 import { ArrowRight, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
-// --- HERO BACKGROUND IMAGE OPTIONS ---
-// Option 1 (Original): Creative studio team collaboration
 const HERO_BG_IMAGE =
   "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80";
 
@@ -23,6 +21,7 @@ export function HeroSection() {
             alt="Envien Studio - Digital Product & Web Engineering Studio"
             fill
             priority
+            unoptimized
             sizes="100vw"
             className="object-cover object-[center_28%] sm:object-right"
           />
@@ -39,11 +38,11 @@ export function HeroSection() {
           <div className="max-w-3xl">
             {/* Primary Headline - Strictly 2 rows, no wrap on all screen sizes */}
             {/* --- MOBILE HEADING SIZE LEVELS (Easy-switch presets) --- */}
-            {/* Base (Current):   text-[clamp(1.3rem,5.8vw,3.75rem)] */}
+            {/* Base:            text-[clamp(1.3rem,5.8vw,3.75rem)] */}
             {/* Level 1 (+10%):  text-[clamp(1.42rem,6.2vw,3.75rem)] */}
             {/* Level 2 (+20%):  text-[clamp(1.55rem,6.8vw,3.75rem)] */}
             {/* Level 3 (+30%):  text-[clamp(1.7rem,7.4vw,3.75rem)] */}
-            <h1 className="text-[clamp(1.7rem,7.4vw,3.75rem)] font-bold tracking-tight text-white leading-[1.15] font-sans drop-shadow-sm">
+            <h1 className="text-[clamp(2rem,6.8vw,3.75rem)] font-bold tracking-tight text-white leading-[1.15] font-sans drop-shadow-sm">
               <span className="block whitespace-nowrap text-stone-300 font-medium tracking-tight">
                 Listening comes first.
               </span>
@@ -54,16 +53,15 @@ export function HeroSection() {
 
             {/* Subtitle / Philosophy & Value Proposition */}
             <p className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-stone-300 font-normal leading-relaxed drop-shadow-xs">
-              Great products are never built from guesswork.
-            </p>
-            <p className="max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-stone-300 font-normal leading-relaxed drop-shadow-xs">
-              When clarity leads the architecture, growth naturally follows.
+              Great products are never built from guesswork. When clarity leads
+              the architecture, growth naturally follows.
             </p>
 
             {/* Actions: Stacked column on phones, row on tablets/desktops */}
-            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6">
               <Button
                 href="#contact"
+                className="w-full sm:w-auto"
                 leftIcon={<MessageSquare className="w-4 h-4 text-white" />}
                 rightIcon={
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -73,7 +71,7 @@ export function HeroSection() {
               </Button>
               <Link
                 href="#work"
-                className="inline-flex items-center gap-2 py-2 px-1 text-sm sm:text-base font-medium text-stone-300 hover:text-white transition-colors group/work"
+                className="inline-flex items-center justify-start sm:justify-start gap-2 py-2 px-1 text-sm sm:text-base font-medium text-stone-300 hover:text-white transition-colors group/work"
               >
                 <span>See what I&apos;ve built</span>
                 <ArrowRight className="w-4 h-4 text-stone-400 group-hover/work:text-white group-hover/work:translate-x-1 transition-all" />
