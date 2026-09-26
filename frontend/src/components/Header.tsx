@@ -66,37 +66,72 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button with morphing icon animation */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden inline-flex items-center justify-center rounded-full p-2 text-stone-700 hover:bg-stone-900/5 hover:text-stone-950 transition-colors"
+          className="relative md:hidden inline-flex items-center justify-center rounded-full p-2 text-stone-700 hover:bg-stone-900/5 hover:text-stone-950 transition-colors w-9 h-9"
           aria-label="Toggle Navigation Menu"
         >
-          {isMobileMenuOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
+          <div className="relative w-5 h-5 flex items-center justify-center">
+            <Menu
+              className={cn(
+                "absolute h-5 w-5 transition-all duration-300 ease-out",
+                isMobileMenuOpen
+                  ? "opacity-0 rotate-90 scale-75"
+                  : "opacity-100 rotate-0 scale-100"
+              )}
+            />
+            <X
+              className={cn(
+                "absolute h-5 w-5 transition-all duration-300 ease-out",
+                isMobileMenuOpen
+                  ? "opacity-100 rotate-0 scale-100"
+                  : "opacity-0 -rotate-90 scale-75"
+              )}
+            />
+          </div>
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown Card - Light Frosted Glass */}
-      {isMobileMenuOpen && (
-        <div className="mt-2 w-full max-w-sm rounded-3xl p-5 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200 pointer-events-auto md:hidden backdrop-blur-xl border border-white/60 bg-white/90 text-stone-800">
-          <nav className="flex flex-col gap-1.5 text-sm font-semibold">
-            {navLinks.map((link) => (
+      {/* Mobile Menu Dropdown Card - Downward Dropdown Unfold Animation */}
+      <div
+        className={cn(
+          "w-full max-w-sm rounded-3xl overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden mt-2",
+          isMobileMenuOpen
+            ? "max-h-72 opacity-100 translate-y-0 pointer-events-auto visible shadow-2xl"
+            : "max-h-0 opacity-0 -translate-y-3 pointer-events-none invisible shadow-none"
+        )}
+      >
+        <div
+          className={cn(
+            "p-4 sm:p-5 rounded-3xl backdrop-blur-xl transition-all duration-300",
+            isScrolled
+              ? "bg-white/80 border border-stone-200/80 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.9),0_12px_32px_-6px_rgba(0,0,0,0.08)]"
+              : "bg-white/70 border border-white/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.8),0_10px_28px_-6px_rgba(0,0,0,0.15)]"
+          )}
+        >
+          <nav className="flex flex-col gap-1 text-sm font-semibold">
+            {navLinks.map((link, index) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="rounded-xl px-3.5 py-2.5 text-stone-700 hover:bg-stone-100 hover:text-[#f26522] transition-colors"
+                style={{
+                  transitionDelay: isMobileMenuOpen ? `${index * 30 + 40}ms` : "0ms",
+                }}
+                className={cn(
+                  "rounded-xl px-4 py-2.5 text-stone-700 hover:bg-stone-900/5 hover:text-[#f26522] transition-all duration-200",
+                  isMobileMenuOpen
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-2"
+                )}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }

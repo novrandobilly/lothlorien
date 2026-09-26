@@ -25,9 +25,7 @@ export interface SelectedWorkItem {
 export const mainSelectedWork: SelectedWorkItem = {
   id: "online-assessment",
   title: "Psychological Assessment Engine",
-  description: `I built this for Inti Dinamis to take paper-based psychological tests completely digital. 
-                If a candidate’s internet drops mid-test, zero answers are lost. 
-                Test results calculate into clean PDF reports the second they finish.`,
+  description: `Transform psychological assessment from paper-based testing into a fast, reliable digital experience, including automated scoring and professional reports.`,
   clientLogo: intiDinamisLogo,
   clientName: "PT Inti Dinamis",
   // buttonText: "See case study",
@@ -44,9 +42,8 @@ export const mainSelectedWork: SelectedWorkItem = {
 export const secondarySelectedWorks: SelectedWorkItem[] = [
   {
     id: "inti-dinamis",
-    title: "Inti Dinamis Website",
-    description: `A thoughtful web presence for Inti Dinamis training & consulting practice. 
-    I focused on clear typography, intentional spacing, and making it effortless for corporate HR teams to get in touch.`,
+    title: "Website of Inti Dinamis",
+    description: `Turning Inti Dinamis training & consulting business into a professional digital experience designed not only to look credible, but to build trust, communicate value, and turn corporate HR visitors into potential clients.`,
     clientLogo: intiDinamisLogo,
     clientName: "PT Inti Dinamis",
     buttonText: "Visit Website",
@@ -56,8 +53,8 @@ export const secondarySelectedWorks: SelectedWorkItem[] = [
   },
   {
     id: "career-acceleration",
-    title: "Online Class Landing Page",
-    description: `A dedicated landing page for Inti Dinamis upcoming online classes. It lays out the curriculum clearly, keeps track of live schedules, and lets attendees sign up directly via WhatsApp.`,
+    title: "Landing Page of Online Class",
+    description: `Driving registrations for upcoming online classes through a streamlined landing page featuring clear curriculum breakdowns, live schedule tracking, and direct WhatsApp sign-ups.`,
     clientLogo: intiDinamisLogo,
     clientName: "PT Inti Dinamis",
     buttonText: "Coming Soon",
