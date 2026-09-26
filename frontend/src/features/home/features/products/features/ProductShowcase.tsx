@@ -54,8 +54,8 @@ export function ProductShowcase() {
             </div>
           )}
 
-          {/* CTA Button */}
-          <div className="mt-7 sm:mt-9">
+          {/* CTA Button (Desktop) */}
+          <div className="mt-7 sm:mt-9 hidden lg:block">
             <Link
               href={ctaUrl}
               className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-stone-950/15 group active:scale-95"
@@ -89,6 +89,19 @@ export function ProductShowcase() {
                 sizes="(max-width: 640px) 260px, (max-width: 1024px) 305px, 320px"
                 priority
               />
+            </div>
+          </Link>
+        </div>
+
+        {/* Mobile CTA: Placed at the bottom of the container after the screenshot, horizontally centered */}
+        <div className="flex justify-center w-full lg:hidden">
+          <Link
+            href={ctaUrl}
+            className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-stone-950/15 group active:scale-95"
+          >
+            <span>{ctaText}</span>
+            <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-200 group-hover:translate-x-0.5">
+              <ArrowRight className="w-3 h-3 text-white" />
             </div>
           </Link>
         </div>
