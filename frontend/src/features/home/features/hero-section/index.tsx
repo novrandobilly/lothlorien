@@ -63,9 +63,6 @@ export function HeroSection() {
                 href="#contact"
                 className="w-full sm:w-auto"
                 leftIcon={<MessageSquare className="w-4 h-4 text-white" />}
-                rightIcon={
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                }
               >
                 Let&apos;s talk
               </Button>

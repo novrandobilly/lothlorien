@@ -27,11 +27,11 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
 
   return (
     <div className="group relative w-full bg-white rounded-2xl sm:rounded-3xl border border-stone-200/80 overflow-hidden transition-all duration-300 hover:border-stone-300 hover:shadow-sm">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 xl:gap-10 items-stretch">
         {/* =========================================================
             LEFT COLUMN: TITLE & COPY (Matching Highlighted Feature 1)
            ========================================================= */}
-        <div className="lg:col-span-6 p-6 sm:p-8 lg:p-10 flex flex-col justify-between text-left">
+        <div className="lg:col-span-6 p-6 sm:p-8 lg:p-10 pb-0 sm:pb-0 lg:pb-10 flex flex-col justify-between text-left">
           <div>
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-stone-950 font-sans">
               {title}
@@ -88,9 +88,9 @@ export function MainWorkCard({ work }: MainWorkCardProps) {
 
         {/* =========================================================
             RIGHT COLUMN: VISUAL PLACEHOLDER (Overflowing at bottom)
-            Proper top padding matching left column
+            Clean, balanced top spacing under client row on mobile
            ========================================================= */}
-        <div className="lg:col-span-6 px-6 sm:px-8 lg:px-0 lg:pr-8 xl:pr-10 pt-6 sm:pt-8 lg:pt-10 flex justify-center lg:justify-end items-end w-full self-end">
+        <div className="lg:col-span-6 px-6 sm:px-8 lg:px-0 lg:pr-8 xl:pr-10 pt-4 sm:pt-5 lg:pt-10 flex justify-center lg:justify-end items-end w-full self-end">
           <WorkVisualPlaceholder
             image={image}
             alt={imageAlt || title}

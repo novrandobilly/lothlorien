@@ -33,8 +33,7 @@ export const flagshipProduct: ProductItem = {
     },
     {
       label: "Key Features",
-      value:
-        "Up to 32 Players • Americano Rotations • Live Differential Standings",
+      value: "Up to 32 Players • Americano Rotations • Live Standings",
     },
   ],
   ctaText: "Explore Kickserve",
