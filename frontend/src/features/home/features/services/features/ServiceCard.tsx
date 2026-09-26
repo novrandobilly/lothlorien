@@ -29,7 +29,7 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
     >
       {/* Mobile (< md) Layout: Number and Title on top */}
       <div className="flex md:hidden items-start gap-3 mb-2.5">
-        <span className="text-lg font-serif italic text-stone-500 group-hover:text-[#f26522] transition-colors duration-200 shrink-0 mt-0.5">
+        <span className="text-lg font-serif font-bold italic text-[#f26522] shrink-0 mt-0.5">
           {formattedNumber}
         </span>
         <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-[#f26522] transition-colors duration-200 font-sans leading-snug">
@@ -42,7 +42,7 @@ export function ServiceCard({ service, className = "" }: ServiceCardProps) {
             COLUMN 1: NUMBER (Tablet & Desktop >= md)
            ========================================================= */}
         <div className="hidden md:block md:col-span-1 pt-0.5">
-          <span className="text-lg sm:text-xl lg:text-2xl font-serif italic text-stone-500 group-hover:text-[#f26522] transition-colors duration-200">
+          <span className="text-lg sm:text-xl lg:text-2xl font-serif font-bold italic text-[#f26522]">
             {formattedNumber}
           </span>
         </div>

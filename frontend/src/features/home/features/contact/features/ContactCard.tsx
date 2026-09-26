@@ -23,7 +23,7 @@ export function ContactCard({ className = "" }: ContactCardProps) {
         />
 
         {/* Right Column: Heading, Subtitle & Action */}
-        <div className="flex-1 flex flex-col items-center md:items-start">
+        <div className="flex-1 flex flex-col items-center md:items-start w-full">
           <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-stone-950 font-sans leading-tight">
             {CONTACT_DETAILS.title}
           </h3>

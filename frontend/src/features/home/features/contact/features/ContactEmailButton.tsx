@@ -4,6 +4,7 @@ import React, { useCallback } from "react";
 import { Mail } from "lucide-react";
 import { useToast } from "@/context/ToastContext";
 import { Button } from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
 
 interface ContactEmailButtonProps {
   email?: string;
@@ -48,7 +49,7 @@ export function ContactEmailButton({
       leftIcon={
         <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-stone-400 group-hover:text-white transition-colors" />
       }
-      className={className}
+      className={cn("w-full sm:w-auto", className)}
     >
       <span className="tracking-tight">{email}</span>
     </Button>
