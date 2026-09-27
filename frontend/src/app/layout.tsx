@@ -16,13 +16,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Envien Studio | Novrando Billy — Senior Frontend & UX Architect",
+  title: "Envien Studio | We listen your vision, we build together.",
   description:
     "Official personal site and digital space of Novrando Billy (Envien Studio) — Senior Frontend Engineer & UX Architect.",
   icons: {
-    icon: [
-      { url: "/envienstudio-logo-black.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/envienstudio-logo-black.svg", type: "image/svg+xml" }],
     shortcut: "/envienstudio-logo-black.svg",
     apple: "/envienstudio-logo-black.svg",
   },
