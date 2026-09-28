@@ -26,7 +26,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
       {/* Quote Body with Smooth Accordion Expansion */}
       <div className="space-y-3 sm:space-y-3.5">
         {/* First Paragraph (Always visible) */}
-        <p className="italic text-stone-700 font-sans text-[16px] leading-relaxed">
+        <p className="italic text-stone-700 font-medium text-[16px] leading-loose">
           <span>&ldquo;</span>
           {paragraphs[0]}
           {!isExpanded && hasMultipleParagraphs ? (
@@ -60,7 +60,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
                 return (
                   <p
                     key={idx}
-                    className="italic text-stone-700 font-sans text-[16px] leading-relaxed"
+                    className="italic text-stone-700 font-medium text-[16px] leading-loose"
                   >
                     {p}
                     {isLast && (
