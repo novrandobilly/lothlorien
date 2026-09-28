@@ -35,7 +35,7 @@ export function Header() {
           "w-full max-w-4xl lg:max-w-5xl rounded-full px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between pointer-events-auto transition-all duration-300 ease-out backdrop-blur-xl",
           isScrolled
             ? "bg-white/80 border border-stone-200/80 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.9),0_12px_32px_-6px_rgba(0,0,0,0.08)]"
-            : "bg-white/70 border border-white/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.8),0_10px_28px_-6px_rgba(0,0,0,0.15)]"
+            : "bg-white/70 border border-white/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.8),0_10px_28px_-6px_rgba(0,0,0,0.15)]",
         )}
       >
         {/* Brand Logo & Title */}
@@ -78,7 +78,7 @@ export function Header() {
                 "absolute h-5 w-5 transition-all duration-300 ease-out",
                 isMobileMenuOpen
                   ? "opacity-0 rotate-90 scale-75"
-                  : "opacity-100 rotate-0 scale-100"
+                  : "opacity-100 rotate-0 scale-100",
               )}
             />
             <X
@@ -86,7 +86,7 @@ export function Header() {
                 "absolute h-5 w-5 transition-all duration-300 ease-out",
                 isMobileMenuOpen
                   ? "opacity-100 rotate-0 scale-100"
-                  : "opacity-0 -rotate-90 scale-75"
+                  : "opacity-0 -rotate-90 scale-75",
               )}
             />
           </div>
@@ -99,7 +99,7 @@ export function Header() {
           "w-full max-w-sm rounded-3xl overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden mt-2",
           isMobileMenuOpen
             ? "max-h-72 opacity-100 translate-y-0 pointer-events-auto visible shadow-2xl"
-            : "max-h-0 opacity-0 -translate-y-3 pointer-events-none invisible shadow-none"
+            : "max-h-0 opacity-0 -translate-y-3 pointer-events-none invisible shadow-none",
         )}
       >
         <div
@@ -107,7 +107,7 @@ export function Header() {
             "p-4 sm:p-5 rounded-3xl backdrop-blur-xl transition-all duration-300",
             isScrolled
               ? "bg-white/80 border border-stone-200/80 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.9),0_12px_32px_-6px_rgba(0,0,0,0.08)]"
-              : "bg-white/70 border border-white/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.8),0_10px_28px_-6px_rgba(0,0,0,0.15)]"
+              : "bg-white/70 border border-white/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.8),0_10px_28px_-6px_rgba(0,0,0,0.15)]",
           )}
         >
           <nav className="flex flex-col gap-1 text-sm font-semibold">
@@ -117,13 +117,15 @@ export function Header() {
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 style={{
-                  transitionDelay: isMobileMenuOpen ? `${index * 30 + 40}ms` : "0ms",
+                  transitionDelay: isMobileMenuOpen
+                    ? `${index * 30 + 40}ms`
+                    : "0ms",
                 }}
                 className={cn(
                   "rounded-xl px-4 py-2.5 text-stone-700 hover:bg-stone-900/5 hover:text-[#f26522] transition-all duration-200",
                   isMobileMenuOpen
                     ? "opacity-100 translate-y-0"
-                    : "opacity-0 -translate-y-2"
+                    : "opacity-0 -translate-y-2",
                 )}
               >
                 {link.label}

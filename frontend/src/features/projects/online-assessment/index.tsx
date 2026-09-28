@@ -5,8 +5,12 @@ import { AssessmentCaseStudy } from "./features/AssessmentCaseStudy";
 
 export function AssessmentPageFeature() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#090b10] text-[#f5f2eb] selection:bg-cyan-400/20 selection:text-cyan-200">
-      {/* Navigation */}
+    <div className="min-h-screen flex flex-col bg-[#fafaf9] text-stone-900 selection:bg-amber-500/20 selection:text-amber-900 relative overflow-hidden">
+      {/* Subtle ambient warm background glow matching homepage & Kickserve */}
+      <div className="absolute top-20 -left-20 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-80 -right-20 w-96 h-96 bg-stone-400/5 rounded-full blur-3xl pointer-events-none -z-10" />
+
+      {/* Sticky Header / Navigation */}
       <Header />
 
       {/* Main Content: Case Study Container */}
@@ -23,3 +27,4 @@ export function AssessmentPageFeature() {
 export default AssessmentPageFeature;
 export * from "./constants";
 export * from "./features/AssessmentCaseStudy";
+export * from "./features/AssessmentGallery";

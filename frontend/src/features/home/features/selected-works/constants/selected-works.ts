@@ -28,8 +28,8 @@ export const mainSelectedWork: SelectedWorkItem = {
   description: `Transform psychological assessment from paper-based testing into a fast, reliable digital experience, including automated scoring and professional reports.`,
   clientLogo: intiDinamisLogo,
   clientName: "PT Inti Dinamis",
-  // buttonText: "See case study",
-  // url: "/projects/online-assessment",
+  buttonText: "See case study",
+  url: "/projects/online-assessment",
   image: mnemosyneImg,
   imageAlt: "Online Assessment System - Offline-First Examination Platform",
 };
