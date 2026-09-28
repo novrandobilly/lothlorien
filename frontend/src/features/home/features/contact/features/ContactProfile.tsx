@@ -21,7 +21,7 @@ export function ContactProfile({
     >
       {/* Avatar Container with Active Status Indicator */}
       <div className="relative group/avatar cursor-pointer">
-        <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border border-stone-200/80 bg-white shadow-2xs relative transition-all duration-300 group-hover:shadow-xs group-hover:border-stone-300">
+        <div className="w-28 sm:w-32 aspect-3/4 rounded-2xl overflow-hidden border border-stone-200/80 bg-white shadow-2xs relative transition-all duration-300 group-hover:shadow-xs group-hover:border-stone-300">
           {avatarSrc ? (
             <Image
               src={avatarSrc}
