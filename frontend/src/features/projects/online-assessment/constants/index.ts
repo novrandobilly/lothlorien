@@ -38,21 +38,21 @@ export const assessmentData: OnlineAssessmentData = {
   gallery: [
     {
       id: "participant-portal",
-      label: "Candidate Portal",
+      label: "Participant Portal",
       image: participantPovImg,
-      alt: "Candidate Assessment Portal - Overview of assigned psychometric batteries and instructions",
+      alt: "Participant Assessment Portal - Overview of assigned psychometric batteries and instructions",
+    },
+    {
+      id: "participant-details",
+      label: "Participant Details",
+      image: participantDetailsPovImg,
+      alt: "Participant Details & Scoring - Comprehensive module scoring, status indicators, and report export",
     },
     {
       id: "admin-dashboard",
       label: "Admin Dashboard",
       image: adminDashboardPovImg,
-      alt: "Admin Participant Overview - Real-time tracking of candidate progress and module completion status",
-    },
-    {
-      id: "participant-details",
-      label: "Candidate Scoring",
-      image: participantDetailsPovImg,
-      alt: "Candidate Scoring Breakdown - Comprehensive module scoring, status indicators, and report export",
+      alt: "Admin Participant Overview - Real-time tracking of participant progress and module completion status",
     },
     {
       id: "reporting-hub",
@@ -65,50 +65,46 @@ export const assessmentData: OnlineAssessmentData = {
     {
       title: "1. What is this app?",
       content:
-        "A specialized web assessment engine engineered for corporate psychological evaluations, aptitude batteries (DISC, Kraepelin/Pauli speed math, Raven matrices), and standardized recruitment testing. It ensures candidates experience zero latency and zero distraction throughout their examination.",
+        "A specialized web assessment engine engineered for corporate psychological evaluations, aptitude batteries, and standardized recruitment testing. As a lightweight, browser-based platform, participants only need a laptop and a stable internet connection as the minimum requirements to complete their evaluations seamlessly.",
     },
     {
       title: "2. The Core Problem & Logistics",
       content:
-        "Traditional paper testing requires physical test booklets, manual stopwatches, and 2–4 days of psychologist calculation per cohort. Meanwhile, standard online survey tools crash during intermittent Wi-Fi drops, causing lost answers, frozen countdown timers, and invalidating time-sensitive speed tests.",
+        "Traditional paper testing required physical test booklets, manual administration, and days of psychologist calculation per cohort. Because assessment requests arrive almost daily, manual scoring created compounding backlogs and delayed turnaround times. Furthermore, client companies frequently evaluate staff located in distant branch offices, making physical on-site testing and booklet distribution costly and impractical.",
       bullets: [
-        "Severe manual grading bottlenecks: Psychologists previously spent days calculating complex multi-dimensional scoring grids.",
-        "High recurring logistics costs: Printing thousands of physical test booklets and shipping confidential kits.",
-        "Connection fragility: Generic web forms lose answers and corrupt speed-test timers when internet drops.",
+        "Slow manual grading calculations",
+        "Daily incoming test backlogs",
+        "Distant branch office testing",
+        "High physical booklet costs",
       ],
     },
     {
-      title: "3. Automated Scoring & Psychograms",
+      title: "3. The Solution & Core Features",
       content:
-        "The core innovation is deterministic, real-time psychometric computation. The engine calculates multi-dimensional behavioral traits and pace curves instantly upon test completion, generating print-ready visual psychograms without manual calculation.",
+        "The online assessment engine resolves these bottlenecks with an automated digital testing and evaluation pipeline. Real-time psychometric algorithms eliminate manual calculation backlogs upon test completion, while browser-based accessibility enables client branch offices to conduct assessments on demand without physical logistics.",
       bullets: [
-        "DISC Behavioral Profiling: Instant calculation of Dominance, Influence, Steadiness, and Compliance matrices across Graph 1, 2, and 3.",
-        "Kraepelin & Pauli Speed Curves: Continuous pace analysis calculating work speed, accuracy rate, error distribution, and fatigue resistance curves.",
-        "Raven Matrix Cognitive Norms: Automatic mapping of raw abstract reasoning scores to standardized cognitive percentiles.",
-        "Instant Psychogram Export: Formats scores into clean vector radar charts, competency bars, and narrative summaries ready for immediate PDF export.",
+        "Instant real-time automated scoring calculations",
+        "Zero turnaround delays for daily requests",
+        "Remote browser testing for branch offices",
+        "Paperless system eliminating physical printing costs",
       ],
     },
     {
       title: "4. The Engineering & Tech Stack",
       content:
-        "Engineered with a client-first, resilient architecture prioritizing zero-latency interaction, offline durability, and tamper-resistant timing.",
+        "Engineered with a lightweight, client-focused architecture prioritizing instant candidate interactions, resilient data caching, and seamless backend synchronization.",
       bullets: [
-        "Next.js (App Router) & React 19: High-performance component model delivering instant hydration.",
-        "TypeScript & Tailwind CSS: Type-safe scoring algorithms and an accessible, distraction-free UI.",
-        "IndexedDB (Dexie) & Service Workers: Transactional local persistence guaranteeing zero lost answers during unexpected disconnections.",
-        "Dedicated Web Workers: Monotonic background timing engine immune to OS battery throttles and tab sleep.",
-        "Client-Side PDF & SVG Vector Export: Instant generation of print-ready psychologist psychogram reports.",
+        "React (Vite): Fast client-side SPA runtime",
+        "TypeScript: Type-safe psychometric scoring algorithms",
+        "Tailwind CSS: Clean, distraction-free examination UI",
+        "TanStack Query: Resilient server state caching",
+        "PocketBase: Lightweight real-time backend and auth",
       ],
     },
     {
-      title: "5. Operational Cost Reduction & Impact",
+      title: "5. Key Takeaways",
       content:
-        "By replacing paper test kits and manual grading with automated algorithmic scoring, the platform transformed assessment operations for PT Inti Dinamis.",
-      bullets: [
-        "Instant Grading (0s): Slashed psychogram delivery turnaround from 2–4 days to immediate completion.",
-        "~70% Operational Cost Reduction: Eliminated printing, physical kit logistics, and human grading overhead.",
-        "100% Submission Resilience: Maintained a zero data-loss record across remote test centers with unstable internet.",
-      ],
+        "Although PT Inti Dinamis was the contracting client, the true end-users are the participants taking exams and the administrators logging in every day. Early assumptions about what seemed intuitive or aesthetic were often humbled by the daily realities of active users. Because administrators and participants interact with the system continuously, their practical feedback ultimately shaped the UX decisions—reinforcing that genuine usability comes from listening to the people using it day in and day out.",
     },
   ],
 };
