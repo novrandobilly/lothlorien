@@ -1,7 +1,9 @@
 import { StaticImageData } from "next/image";
-import mnemosyneImg from "@/assets/experiences/mnemosyne.webp";
-import visualCardImg from "@/assets/hero-visual-card/vc-menomsyne.webp";
 import intiDinamisLogo from "@/assets/experiences/logo-intidinamis.svg";
+import participantPovImg from "@/assets/projects/online-assessment/participant-pov.webp";
+import adminDashboardPovImg from "@/assets/projects/online-assessment/admin-dashboard-pov.webp";
+import participantDetailsPovImg from "@/assets/projects/online-assessment/participant-details-pov.webp";
+import reportingPovImg from "@/assets/projects/online-assessment/reporting-pov.webp";
 
 export interface GalleryItem {
   id: string;
@@ -18,7 +20,6 @@ export interface AssessmentTopic {
 
 export interface OnlineAssessmentData {
   title: string;
-  badge: string;
   clientName: string;
   clientLogo: StaticImageData | string;
   description: string;
@@ -29,25 +30,35 @@ export interface OnlineAssessmentData {
 
 export const assessmentData: OnlineAssessmentData = {
   title: "Psychological Assessment Engine",
-  badge: "Psychometrics & Offline-First Engine",
-  clientName: "PT Inti Dinamis",
+  clientName: "Inti Dinamis",
   clientLogo: intiDinamisLogo,
-  description:
-    "An offline-first psychological evaluation engine engineered for high-stakes corporate testing, automated real-time scoring, instant psychogram generation, and zero data loss.",
+  description: `An enterprise-grade online assessment platform designed for corporate psychological evaluations, aptitude batteries, and standardized recruitment testing.`,
   ndaNotice:
     "Confidential Enterprise System — Deployed internally for PT Inti Dinamis. In compliance with client non-disclosure agreements and psychometric test integrity standards, live testing links are withheld. All previews shown are sanitized.",
   gallery: [
     {
-      id: "exam-runtime",
-      label: "Exam Interface",
-      image: mnemosyneImg,
-      alt: "Candidate Examination Runtime - Clean, focused psychometric assessment interface",
+      id: "participant-portal",
+      label: "Candidate Portal",
+      image: participantPovImg,
+      alt: "Candidate Assessment Portal - Overview of assigned psychometric batteries and instructions",
     },
     {
-      id: "overview-mockup",
-      label: "System Overview",
-      image: visualCardImg,
-      alt: "Online Assessment System Overview Mockup",
+      id: "admin-dashboard",
+      label: "Admin Dashboard",
+      image: adminDashboardPovImg,
+      alt: "Admin Participant Overview - Real-time tracking of candidate progress and module completion status",
+    },
+    {
+      id: "participant-details",
+      label: "Candidate Scoring",
+      image: participantDetailsPovImg,
+      alt: "Candidate Scoring Breakdown - Comprehensive module scoring, status indicators, and report export",
+    },
+    {
+      id: "reporting-hub",
+      label: "Batch Reporting",
+      image: reportingPovImg,
+      alt: "Batch Reporting & Export Hub - Cohort filtering by registration date and bulk report export",
     },
   ],
   topics: [

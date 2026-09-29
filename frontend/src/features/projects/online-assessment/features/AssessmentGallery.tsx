@@ -6,7 +6,7 @@ import { assessmentData } from "../constants";
 
 export function AssessmentGallery() {
   const [activeId, setActiveId] = useState<string>(
-    assessmentData.gallery[0]?.id || "exam-runtime"
+    assessmentData.gallery[0]?.id || "participant-portal",
   );
 
   const activeItem =
@@ -25,15 +25,11 @@ export function AssessmentGallery() {
             <span className="w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full bg-[#27c93f]" />
           </div>
 
-          <div className="px-3 py-0.5 rounded-full bg-stone-900 border border-stone-800 text-[11px] sm:text-xs text-stone-400 font-mono select-none">
-            psikotes.intidinamis.com
-          </div>
-
           <div className="w-12 sm:w-16" />
         </div>
 
         {/* Clean Screenshot Display */}
-        <div className="relative w-full aspect-[16/10] sm:aspect-[16/10] bg-stone-950 overflow-hidden">
+        <div className="relative w-full aspect-16/10 sm:aspect-16/10 bg-stone-950 overflow-hidden">
           <Image
             key={activeItem.id}
             src={activeItem.image}
@@ -47,7 +43,7 @@ export function AssessmentGallery() {
       </div>
 
       {/* Capsule Options - Simple Text with No Icons and No Extra Tags */}
-      <div className="flex justify-center gap-2 sm:gap-3 mt-4 sm:mt-5">
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-4 sm:mt-5">
         {assessmentData.gallery.map((item) => {
           const isActive = item.id === activeId;
           return (

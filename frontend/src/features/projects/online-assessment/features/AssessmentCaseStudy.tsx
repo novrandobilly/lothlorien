@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { ArrowLeft, Lock } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { assessmentData } from "../constants";
 import { AssessmentGallery } from "./AssessmentGallery";
 
@@ -45,7 +44,7 @@ export function AssessmentCaseStudy() {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-stone-950 tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl  font-bold font-sans text-stone-950 tracking-tight leading-tight">
             {title}
           </h1>
 
