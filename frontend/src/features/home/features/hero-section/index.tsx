@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +19,6 @@ export function HeroSection() {
             alt="Envien Studio - Digital Product & Web Engineering Studio"
             fill
             priority
-            unoptimized
             sizes="100vw"
             className="object-cover object-[center_28%] sm:object-right"
           />
