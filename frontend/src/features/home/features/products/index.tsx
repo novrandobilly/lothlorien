@@ -4,11 +4,13 @@ import { ProductShowcase } from "./features/ProductShowcase";
 
 interface ProductsSectionProps {
   title?: string;
+  description?: string;
   className?: string;
 }
 
 export function ProductsSection({
-  title = "In-House Product",
+  title = "Studio & Indie Releases",
+  description = "High-utility digital tools and templates crafted in-house, alongside standout projects from indie developers we help market to the world.",
   className = "",
 }: ProductsSectionProps) {
   return (
@@ -18,9 +20,9 @@ export function ProductsSection({
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Uniform Centered Section Header */}
-        <SectionHeader title={title} />
+        <SectionHeader title={title} description={description} />
 
-        {/* Flagship Product Showcase */}
+        {/* Product Showcase */}
         <div className="mt-8 sm:mt-10 lg:mt-12">
           <ProductShowcase />
         </div>

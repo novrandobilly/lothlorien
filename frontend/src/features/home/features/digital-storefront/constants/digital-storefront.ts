@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import dsKickserveImg from "@/assets/digital-storefront/ds-kickserve.webp";
+import petlogsImg from "@/assets/digital-storefront/rakuppi/petlogs.webp";
 
 export interface DigitalStorefrontProject {
   id: string;
@@ -31,4 +32,17 @@ export const digitalStorefrontProjects: DigitalStorefrontProject[] = [
     demoUrl: "/projects/kickserve",
     categoryIcon: "🎾",
   },
+  {
+    id: "petlogs",
+    title: "Petlogs",
+    description: "Daily activity tracking and health journal for pet owners.",
+    tags: ["Pet Journal", "PWA", "Rakuppi"],
+    status: "active",
+    statusBadge: "Live App",
+    image: petlogsImg,
+    imageAlt: "Petlogs - Smart pet activity tracker and daily journal",
+    demoUrl: "https://rakuppi.com/petlogs/",
+    categoryIcon: "🐾",
+  },
 ];
+

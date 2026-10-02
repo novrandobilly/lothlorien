@@ -7,8 +7,8 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({
-  title = "In-House Product",
-  description,
+  title = "Studio & Indie Releases",
+  description = "High-utility digital tools and templates crafted in-house, alongside standout projects from indie developers we help market to the world.",
   className = "",
 }: SectionHeaderProps) {
   return (
@@ -24,7 +24,7 @@ export function SectionHeader({
       </div>
 
       {description && (
-        <p className="mt-3.5 sm:mt-4 text-sm sm:text-base md:text-lg text-stone-500 font-sans max-w-xl leading-relaxed">
+        <p className="mt-3.5 sm:mt-4 text-sm sm:text-base md:text-lg text-stone-500 font-sans max-w-2xl leading-relaxed">
           {description}
         </p>
       )}
