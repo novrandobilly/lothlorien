@@ -1,30 +1,22 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ProductItem, productsData } from "../constants";
+import { ArrowUpRight } from "lucide-react";
+import { petlogsProduct } from "../../../constants";
+import ProductDeviceMockup from "../../../components/ProductDeviceMockup";
 
-interface ProductShowcaseCardProps {
-  product: ProductItem;
-}
-
-export function ProductShowcaseCard({ product }: ProductShowcaseCardProps) {
+export function PetlogsProduct() {
   const {
-    eyebrow,
-    badgeType,
-    partner,
     title,
     headline,
     description,
     specs,
     ctaText,
     ctaUrl,
-    isExternal,
+    partner,
     image,
     imageAlt,
-  } = product;
-
-  const isLinkExternal =
-    isExternal ?? (ctaUrl ? /^https?:\/\//.test(ctaUrl) : false);
+  } = petlogsProduct;
 
   return (
     <div className="group/card relative w-full bg-white rounded-2xl sm:rounded-3xl border border-stone-200/80 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-stone-300 hover:shadow-md">
@@ -47,7 +39,7 @@ export function ProductShowcaseCard({ product }: ProductShowcaseCardProps) {
 
             {/* Prominent Partner Logo (Edge-to-edge icon without container border/padding) */}
             {partner?.logo && (
-              <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 flex items-center justify-center transition-transform hover:scale-105">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 flex items-center justify-center">
                 <Image
                   src={partner.logo}
                   alt={partner.name}
@@ -87,17 +79,13 @@ export function ProductShowcaseCard({ product }: ProductShowcaseCardProps) {
           <div className="mt-5 w-full">
             <Link
               href={ctaUrl}
-              target={isLinkExternal ? "_blank" : undefined}
-              rel={isLinkExternal ? "noopener noreferrer" : undefined}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-stone-950 text-white hover:bg-stone-800 text-xs sm:text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-stone-950/15 group/btn active:scale-95"
             >
               <span>{ctaText}</span>
               <div className="w-4 h-4 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-200 group-hover/btn:translate-x-0.5">
-                {isLinkExternal ? (
-                  <ArrowUpRight className="w-2.5 h-2.5 text-white" />
-                ) : (
-                  <ArrowRight className="w-2.5 h-2.5 text-white" />
-                )}
+                <ArrowUpRight className="w-2.5 h-2.5 text-white" />
               </div>
             </Link>
           </div>
@@ -105,48 +93,17 @@ export function ProductShowcaseCard({ product }: ProductShowcaseCardProps) {
       </div>
 
       {/* =========================================================
-          BOTTOM: COMPACT SMARTPHONE VIEWPORT MOCKUP
+          BOTTOM: SMARTPHONE VIEWPORT MOCKUP
          ========================================================= */}
-      <div className="px-5 sm:px-6 lg:px-7 pb-6 pt-3 flex justify-center items-center w-full bg-stone-50/50 border-t border-stone-100">
-        <Link
-          href={ctaUrl}
-          target={isLinkExternal ? "_blank" : undefined}
-          rel={isLinkExternal ? "noopener noreferrer" : undefined}
-          className="group/device relative block w-full max-w-44 sm:max-w-50 md:max-w-48 lg:max-w-54 xl:max-w-58 rounded-[30px] sm:rounded-[36px] p-2 sm:p-2.5 bg-stone-950 border-[3px] sm:border-4 border-stone-800/90 shadow-xl shadow-stone-950/10 ring-1 ring-stone-950/20 transition-all duration-300 hover:scale-[1.03] active:scale-98 mt-1"
-        >
-          {/* Dynamic Island / Speaker Notch */}
-          <div className="w-14 sm:w-16 h-2.5 sm:h-3 bg-stone-900 rounded-full mx-auto mb-1.5 sm:mb-2 flex items-center justify-end px-1.5">
-            <div className="w-1 h-1 rounded-full bg-stone-800" />
-          </div>
-
-          {/* Smartphone Screen Viewport */}
-          <div className="relative w-full aspect-750/1334 rounded-b-[20px] sm:rounded-b-[26px] overflow-hidden bg-stone-900 border border-stone-800/40 shadow-inner">
-            <Image
-              src={image}
-              alt={imageAlt}
-              fill
-              className="object-cover object-top transition-transform duration-700 ease-out group-hover/device:scale-105"
-              sizes="(max-width: 640px) 180px, (max-width: 1024px) 220px, 240px"
-            />
-          </div>
-        </Link>
-      </div>
+      <ProductDeviceMockup
+        image={image}
+        imageAlt={imageAlt}
+        href={ctaUrl}
+        isExternal={true}
+        priority={false}
+      />
     </div>
   );
 }
 
-interface ProductShowcaseProps {
-  products?: ProductItem[];
-}
-
-export function ProductShowcase({
-  products = productsData,
-}: ProductShowcaseProps) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
-      {products.map((product) => (
-        <ProductShowcaseCard key={product.id} product={product} />
-      ))}
-    </div>
-  );
-}
+export default PetlogsProduct;
