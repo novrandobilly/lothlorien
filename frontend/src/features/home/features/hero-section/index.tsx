@@ -50,8 +50,10 @@ export function HeroSection() {
 
             {/* Subtitle / Philosophy & Value Proposition */}
             <p className="mt-5 sm:mt-6 max-w-2xl text-base md:text-lg lg:text-xl text-stone-300 font-normal leading-relaxed drop-shadow-xs">
-              Great products are never built from guesswork. When clarity leads
-              the architecture, growth naturally follows.
+              Great products are never built from guesswork.
+            </p>
+            <p className="max-w-2xl text-base md:text-lg lg:text-xl text-stone-300 font-normal leading-relaxed drop-shadow-xs">
+              When clarity leads the architecture, growth naturally follows.
             </p>
 
             {/* Actions: Stacked column on phones, row on tablets/desktops */}
@@ -67,7 +69,7 @@ export function HeroSection() {
                 href="#work"
                 className="inline-flex items-center justify-start sm:justify-start gap-2 py-2 px-1 text-sm sm:text-base font-medium text-stone-300 hover:text-white transition-colors group/work"
               >
-                <span>See what I&apos;ve built</span>
+                <span>See recent works</span>
                 <ArrowRight className="w-4 h-4 text-stone-400 group-hover/work:text-white group-hover/work:translate-x-1 transition-all" />
               </Link>
             </div>
