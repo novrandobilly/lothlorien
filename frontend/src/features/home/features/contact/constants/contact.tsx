@@ -40,7 +40,7 @@ export const CONTACT_DETAILS: ContactDetails = {
   title: "Send a Letter!",
   subtitle:
     "Got questions, feedback, or just want to say hi? Drop a message in my mailbox.",
-  email: "novrandobilly@gmail.com",
+  email: "novrandobilly@envienstudio.com",
 };
 
 export const SOCIAL_LINKS: SocialLink[] = [

@@ -12,7 +12,7 @@ interface ContactEmailButtonProps {
 }
 
 export function ContactEmailButton({
-  email = "novrandobilly@gmail.com",
+  email = "novrandobilly@envienstudio.com",
   className = "",
 }: ContactEmailButtonProps) {
   const { toast } = useToast();
