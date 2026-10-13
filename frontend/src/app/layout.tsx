@@ -1,8 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { AppProviders } from "@/components/providers/AppProviders";
-import { siteMetadata, siteViewport, siteStructuredData } from "@/constants/metadata";
+import {
+  siteMetadata,
+  siteViewport,
+  siteStructuredData,
+  GA_MEASUREMENT_ID,
+} from "@/constants/metadata";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -41,6 +47,7 @@ export default function RootLayout({
           }}
         />
         <AppProviders>{children}</AppProviders>
+        {GA_MEASUREMENT_ID && <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />}
       </body>
     </html>
   );

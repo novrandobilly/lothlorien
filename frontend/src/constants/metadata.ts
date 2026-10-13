@@ -6,6 +6,8 @@ export const SITE_TITLE = "Envien Studio | We listen your vision, we build toget
 export const SITE_DESCRIPTION =
   "Great products are never built from guesswork. When clarity leads the architecture, growth naturally follows.";
 export const DEFAULT_OG_IMAGE = "https://envienstudio.com/og-hero.png";
+export const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-5K6WQY6652";
 
 export const siteViewport: Viewport = {
   themeColor: "#0c0a09",
