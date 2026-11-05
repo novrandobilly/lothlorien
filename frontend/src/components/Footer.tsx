@@ -26,10 +26,10 @@ export function Footer() {
               className="flex items-center gap-2.5 text-white tracking-tight group/logo"
               aria-label="Envien Studio Home"
             >
-              <EnvienLogo className="h-5 w-auto text-white" variant="white" />
-              <span className="text-lg font-bold tracking-tight font-sans text-white">
+              <EnvienLogo className="h-8 w-auto" variant="white" />
+              {/* <span className="text-lg font-bold tracking-tight font-sans text-white">
                 envien<span className="text-[#f26522]">studio</span>.
-              </span>
+              </span> */}
             </Link>
 
             <p className="text-stone-400 text-sm font-sans leading-relaxed max-w-sm">
