@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { servicesData, ServiceItem } from "./constants";
 import { SectionHeader } from "./features/SectionHeader";

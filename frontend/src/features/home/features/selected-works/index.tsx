@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { mainSelectedWork, secondarySelectedWorks } from "./constants";
 import { MainWorkCard } from "./features/MainWorkCard";
