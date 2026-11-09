@@ -1,22 +1,22 @@
 import React from "react";
 import Image, { type ImageProps } from "next/image";
-import logoBlack from "@/assets/envienstudio-logo-black.svg";
+import logoColored from "@/assets/envienstudio-logo-colored.svg";
 import logoWhite from "@/assets/envienstudio-logo-white.svg";
 
 export interface EnvienLogoProps
   extends Omit<React.ComponentProps<typeof Image>, "src" | "alt"> {
   className?: string;
-  variant?: "white" | "black" | "current";
+  variant?: "white" | "colored";
   alt?: string;
 }
 
 export function EnvienLogo({
   className = "h-6 w-auto",
-  variant = "black",
+  variant = "colored",
   alt = "Envien Studio Logo",
   ...props
 }: EnvienLogoProps) {
-  const logoSrc = variant === "white" ? logoWhite : logoBlack;
+  const logoSrc = variant === "white" ? logoWhite : logoColored;
 
   return (
     <Image

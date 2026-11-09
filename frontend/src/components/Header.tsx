@@ -45,8 +45,8 @@ export function Header() {
           aria-label="Envien Studio Home"
         >
           <EnvienLogo
-            className="h-4.5 sm:h-8 w-auto"
-            variant="black"
+            className="h-8 w-auto"
+            variant="colored"
             priority
           />
           {/* <span className="text-base sm:text-lg font-bold tracking-tight font-sans text-stone-950">
