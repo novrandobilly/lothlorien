@@ -20,7 +20,11 @@ export function StrugglesSection({ content = strugglesContent }: StrugglesSectio
         </h2>
         <SituationList situations={content.situations} />
         <div className={`${bodyText} flex flex-col gap-5`}>
-          <p className="m-0">{content.opening}</p>
+          {content.opening.map((paragraph) => (
+            <p key={paragraph} className="m-0">
+              {paragraph}
+            </p>
+          ))}
           <TrapsParagraph intro={content.trapsIntro} traps={content.traps} />
         </div>
         <PullQuote text={content.pullQuote.text} emphasis={content.pullQuote.emphasis} />

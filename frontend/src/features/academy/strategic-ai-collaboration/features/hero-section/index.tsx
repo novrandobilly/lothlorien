@@ -11,10 +11,10 @@ interface HeroSectionProps {
 export function HeroSection({ content = heroContent }: HeroSectionProps) {
   return (
     <>
-      <InfoStrip items={content.infoStrip} />
+      <InfoStrip items={content.infoStrip} compact={content.infoStripCompact} />
       <section
         id="hero"
-        className="mx-auto w-full max-w-[1200px] px-5 pt-9 pb-16 sm:px-8 sm:pt-14 lg:pb-[104px]"
+        className="mx-auto w-full max-w-[1200px] px-5 pt-7 pb-16 sm:px-8 sm:pt-14 lg:pb-[104px]"
       >
         <div className="flex flex-wrap items-start gap-x-16 gap-y-10">
           <HeroLetter content={content} />

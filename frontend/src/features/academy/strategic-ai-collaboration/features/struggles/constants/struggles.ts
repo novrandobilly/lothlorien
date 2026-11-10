@@ -6,7 +6,7 @@ export interface CognitiveTrap {
 export interface StrugglesContent {
   title: string;
   situations: string[];
-  opening: string;
+  opening: string[];
   trapsIntro: string;
   traps: CognitiveTrap[];
   pullQuote: { text: string; emphasis: string };
@@ -22,7 +22,10 @@ export const strugglesContent: StrugglesContent = {
     "“Kalau semuanya bisa dikerjain AI, terus aku ngapain?”",
     "“Semua orang kayaknya udah jago AI, aku bingung mulai dari mana.”",
   ],
-  opening: "Kalau iya, kamu nggak sendirian. Saya juga pernah di sana, bahkan sering.",
+  opening: [
+    "Kalau iya, kamu nggak sendirian. Saya juga pernah di sana, bahkan sering.",
+    "Sebagai front-end engineer, hampir setiap hari saya minta tolong AI. Kerjaan yang dulu butuh 2–3 hari kini selesai dalam satu jam. Anehnya, hari ketika kerjaan saya paling cepat selesai justru jadi hari saya paling gelisah.",
+  ],
   trapsIntro:
     "Masalahnya ternyata bukan AI-nya. Justru karena AI sering benar, kita berhenti memeriksa. Ada tiga jebakan yang bekerja diam-diam:",
   traps: [

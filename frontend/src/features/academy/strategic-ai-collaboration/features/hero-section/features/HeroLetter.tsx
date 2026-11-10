@@ -24,7 +24,7 @@ export function HeroLetter({ content }: HeroLetterProps) {
   const [lineOne, lineTwo] = content.titleLines;
 
   return (
-    <div className="flex min-w-0 flex-[1.4_1_560px] flex-col gap-7">
+    <div className="flex min-w-0 flex-[1.4_1_560px] flex-col gap-6 sm:gap-7">
       <div className="flex flex-col gap-[18px]">
         <h1
           className={`${SERIF} m-0 text-[clamp(46px,12vw,96px)] font-medium leading-[0.95] tracking-[-0.035em]`}
@@ -36,7 +36,7 @@ export function HeroLetter({ content }: HeroLetterProps) {
           </span>
         </h1>
         <p
-          className={`${SERIF} m-0 text-[clamp(20px,2vw,26px)] italic leading-snug text-[#3D3833]`}
+          className={`${SERIF} m-0 text-[clamp(19px,2vw,26px)] italic leading-snug text-[#3D3833]`}
         >
           {content.subtitle}
         </p>
