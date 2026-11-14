@@ -13,7 +13,7 @@ export const closingLetterContent: ClosingLetterContent = {
     "Saya tidak bisa menjamin masa depan pekerjaan siapa pun. Yang bisa kita kendalikan adalah cara kita bekerja. Orang yang mampu mengarahkan, menguji, dan mempertanggungjawabkan hasil AI akan jauh lebih sulit digantikan.",
   ],
   signOff: "Sampai ketemu di Zoom,",
-  signature: "Envien",
+  signature: "Stanislaus Billy",
   photo: {
     label: "FOTO · LANSKAP 3:2",
     description:

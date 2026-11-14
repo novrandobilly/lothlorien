@@ -14,10 +14,12 @@ export function StrugglesSection({ content = strugglesContent }: StrugglesSectio
 
   return (
     <section id="surat" className="scroll-mt-6 border-t border-[#E6E0D7] px-5 py-16 sm:px-8 lg:py-28">
+      <h2
+        className={`${SERIF} mx-auto mb-10 max-w-4xl text-center text-[clamp(34px,5vw,52px)] font-medium leading-[1.05] tracking-[-0.02em] text-balance`}
+      >
+        {content.title}
+      </h2>
       <div className="mx-auto flex max-w-[720px] flex-col gap-10">
-        <h2 className={`${SERIF} m-0 text-[clamp(34px,5vw,52px)] font-medium leading-[1.05] tracking-[-0.02em]`}>
-          {content.title}
-        </h2>
         <SituationList situations={content.situations} />
         <div className={`${bodyText} flex flex-col gap-5`}>
           {content.opening.map((paragraph) => (

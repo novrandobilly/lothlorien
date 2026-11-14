@@ -26,17 +26,12 @@ export const salesFaqContent: SalesFaqContent = {
       id: "cant-attend",
       question: "Kalau nggak bisa hadir live?",
       answer:
-        "Rekaman dikirim setelah sesi. Tapi manfaat terbesarnya ada di latihan langsung, jadi pilih batch yang bisa kamu hadiri.",
+        "Rekaman dikirim setelah sesi. Tapi manfaat terbesarnya ada di latihan langsung, jadi usahakan hadir live.",
     },
     {
       id: "zoom-link",
       question: "Kapan link Zoom dikirim?",
-      answer: "[KAPAN & LEWAT MANA: email / WhatsApp]",
-    },
-    {
-      id: "move-refund",
-      question: "Bisa pindah batch atau refund?",
-      answer: "[KEBIJAKAN PINDAH BATCH & REFUND]",
+      answer: "Otomatis, begitu pembayaran berhasil. Link Zoom muncul di halaman konfirmasi Mayar dan dikirim ke email yang kamu isi saat membayar.",
     },
   ],
 };

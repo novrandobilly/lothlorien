@@ -1,29 +1,27 @@
 export interface EnrollmentContent {
   title: string;
-  pickerLabel: string;
-  pastLabel: string;
-  pastStatus: string;
-  notifyLead: string;
-  notifyLinkLabel: string;
-  notifyHref: string;
-  formEyebrow: string;
-  fields: { name: string; email: string; phone: string; phonePrefix: string };
-  submitPrefix: string;
+  lead: string;
+  bring: { label: string; items: string[] };
+  cardEyebrow: string;
+  ctaPrefix: string;
+  notOpenLabel: string;
   footnote: string;
-  dummyNotice: string;
 }
 
 export const enrollmentContent: EnrollmentContent = {
-  title: "Pilih tanggalmu",
-  pickerLabel: "Pilih batch workshop",
-  pastLabel: "Batch sebelumnya",
-  pastStatus: "Selesai · kursi penuh",
-  notifyLead: "Tanggalnya belum cocok?",
-  notifyLinkLabel: "Kabari saya saat batch baru dibuka",
-  notifyHref: "#",
-  formEyebrow: "Kamu mendaftar untuk",
-  fields: { name: "Nama lengkap", email: "Email", phone: "Nomor WhatsApp", phonePrefix: "+62" },
-  submitPrefix: "Daftar",
-  footnote: "Setelah ini kamu diarahkan ke pembayaran Mayar. Konfirmasi dikirim ke email.",
-  dummyNotice: "Ini halaman contoh. Pembayaran Mayar belum tersambung.",
+  title: "Amankan kursimu",
+  lead: "Satu batch, maksimal 25 orang, supaya latihannya tetap personal dan semua tugas sempat dibahas.",
+  bring: {
+    label: "Yang perlu kamu siapkan",
+    items: [
+      "Laptop atau komputer dengan Zoom terpasang",
+      "Satu tugas nyata dari pekerjaanmu",
+      "Aplikasi AI chat yang biasa kamu pakai",
+    ],
+  },
+  cardEyebrow: "Batch yang sedang dibuka",
+  ctaPrefix: "Daftar & bayar",
+  notOpenLabel: "Pendaftaran segera dibuka",
+  footnote:
+    "Kamu akan diarahkan ke halaman pembayaran Mayar. Setelah pembayaran berhasil, link Zoom dikirim otomatis ke email kamu.",
 };

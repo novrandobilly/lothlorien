@@ -38,7 +38,8 @@ export function HeroLetter({ content }: HeroLetterProps) {
         <p
           className={`${SERIF} m-0 text-[clamp(19px,2vw,26px)] italic leading-snug text-[#3D3833]`}
         >
-          {content.subtitle}
+          {content.subtitleLead}
+          <span className="block">{content.subtitleQuestion}</span>
         </p>
       </div>
 

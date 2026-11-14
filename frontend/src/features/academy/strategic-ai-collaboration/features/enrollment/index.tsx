@@ -1,18 +1,16 @@
 import React from "react";
-import { SERIF, openBatches as defaultOpenBatches, pastBatches as defaultPastBatches, WorkshopBatch } from "../../constants";
+import { SERIF, openBatches as defaultOpenBatches, WorkshopBatch } from "../../constants";
 import { enrollmentContent, EnrollmentContent } from "./constants";
 import { EnrollmentPanel } from "./features/EnrollmentPanel";
 
 interface EnrollmentSectionProps {
   content?: EnrollmentContent;
   openBatches?: WorkshopBatch[];
-  pastBatches?: WorkshopBatch[];
 }
 
 export function EnrollmentSection({
   content = enrollmentContent,
   openBatches = defaultOpenBatches,
-  pastBatches = defaultPastBatches,
 }: EnrollmentSectionProps) {
   return (
     <section id="daftar" className="scroll-mt-6 bg-[#16130F] px-5 py-16 text-[#FAF7F2] sm:px-8 lg:py-28">
@@ -24,7 +22,6 @@ export function EnrollmentSection({
           </h2>
         }
         openBatches={openBatches}
-        pastBatches={pastBatches}
         content={content}
       />
     </section>

@@ -21,8 +21,6 @@ export function HeroSection({ content = heroContent }: HeroSectionProps) {
           <HeroPortrait
             label={content.portrait.label}
             description={content.portrait.description}
-            name={content.signatureName}
-            role={content.signatureRole}
           />
         </div>
       </section>

@@ -14,7 +14,7 @@ interface MobileCtaBarProps {
 // Phone only: appears once the hero has scrolled away, hides while the enrollment section is on screen.
 export function MobileCtaBar({
   batch = openBatches[0],
-  ctaLabel = "Pilih tanggal",
+  ctaLabel = "Daftar",
   heroId = "hero",
   enrollId = "daftar",
 }: MobileCtaBarProps) {

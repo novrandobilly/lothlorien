@@ -6,8 +6,6 @@ export interface FitColumn {
 
 export interface AudienceFitContent {
   columns: FitColumn[];
-  bringLabel: string;
-  bringText: string;
 }
 
 export const audienceFitContent: AudienceFitContent = {
@@ -16,8 +14,9 @@ export const audienceFitContent: AudienceFitContent = {
       id: "fit",
       title: "Cocok untuk kamu yang…",
       items: [
-        "Sudah memakai AI, tapi sering ragu dengan hasilnya",
         "Khawatir pekerjaanmu tergantikan AI",
+        "Sudah memakai AI, tapi sering ragu dengan hasilnya",
+        "Baru mau mulai pakai AI, tanpa dasar apa pun",
         "Ingin cara kerja yang jelas, bukan kumpulan prompt",
       ],
     },
@@ -27,6 +26,4 @@ export const audienceFitContent: AudienceFitContent = {
       items: ["Mencari tutorial teknis membangun model atau coding AI", "Hanya ingin daftar prompt siap pakai"],
     },
   ],
-  bringLabel: "Yang perlu dibawa:",
-  bringText: "laptop, satu tugas nyata dari pekerjaanmu, dan aplikasi AI chat yang biasa kamu pakai.",
 };
