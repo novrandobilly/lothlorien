@@ -33,14 +33,14 @@ export const servicesData: ServiceItem[] = [
   {
     id: "envien-academy",
     number: "02",
-    tag: "Interactive Masterclass",
+    tag: "Live Workshop",
     title: "Envien Academy",
     description:
-      "A focused, 3–4 hour live workshop held once a month. We dive into practical engineering craft, product mindset, and developer independence beyond standard tutorials.",
+      'A focused 3-hour live workshop, held monthly on Zoom. Now running: "Kerja Bareng AI, Siapa Takut?" a hands-on class for professionals who want to finish real work with AI and stay in control of the result.',
     benefitsTitle: "Benefits",
-    benefits: ["Live 3–4 hour interactive session", "Monthly recurring"],
-    ctaText: "Reserve your seat",
-    ctaUrl: "#contact",
+    benefits: ["Live 3-hour interactive session", "Monthly recurring"],
+    ctaText: "See the workshop",
+    ctaUrl: "/academy/strategic-ai-collaboration",
   },
   {
     id: "digital-products",
@@ -67,4 +67,3 @@ export const servicesData: ServiceItem[] = [
     ctaUrl: "#contact",
   },
 ];
-

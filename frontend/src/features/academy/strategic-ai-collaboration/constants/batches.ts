@@ -30,7 +30,7 @@ export const workshopBatches: WorkshopBatch[] = [
     calendarEnd: "20261128T050000Z",
     capacity: 40,
     price: "Rp 125.000",
-    paymentUrl: "",
+    paymentUrl: "https://envienstudio.myr.id/pl/strategic-ai-collaboration-batch-01",
     status: "open",
   },
 ];

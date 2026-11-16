@@ -3,7 +3,7 @@ export interface EnrollmentContent {
   lead: string;
   bring: { label: string; items: string[] };
   cardEyebrow: string;
-  ctaPrefix: string;
+  ctaLabel: string;
   notOpenLabel: string;
   footnote: string;
 }
@@ -20,7 +20,7 @@ export const enrollmentContent: EnrollmentContent = {
     ],
   },
   cardEyebrow: "Batch yang sedang dibuka",
-  ctaPrefix: "Daftar & bayar",
+  ctaLabel: "Daftar Sekarang",
   notOpenLabel: "Pendaftaran segera dibuka",
   footnote:
     "Kamu akan diarahkan ke halaman pembayaran Mayar. Setelah pembayaran berhasil, link Zoom dikirim otomatis ke email kamu.",

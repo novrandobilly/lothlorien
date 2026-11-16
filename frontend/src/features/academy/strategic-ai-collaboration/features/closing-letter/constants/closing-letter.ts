@@ -1,9 +1,12 @@
+import type { StaticImageData } from "next/image";
+import closingLetterImg from "@/assets/academy/strategic-ai-collaboration/closing-letter.png";
+
 export interface ClosingLetterContent {
   title: string;
   paragraphs: string[];
   signOff: string;
   signature: string;
-  photo: { label: string; description: string };
+  photo: { image: StaticImageData; alt: string };
 }
 
 export const closingLetterContent: ClosingLetterContent = {
@@ -15,8 +18,7 @@ export const closingLetterContent: ClosingLetterContent = {
   signOff: "Sampai ketemu di Zoom,",
   signature: "Stanislaus Billy",
   photo: {
-    label: "FOTO · LANSKAP 3:2",
-    description:
-      "Kamu berbicara ke kamera, seperti sedang membuka sesi Zoom. Senyum santai, tangan sedang menjelaskan.",
+    image: closingLetterImg,
+    alt: "Stanislaus Billy menjelaskan sesuatu ke peserta lewat laptop, seperti sedang membuka sesi Zoom",
   },
 };

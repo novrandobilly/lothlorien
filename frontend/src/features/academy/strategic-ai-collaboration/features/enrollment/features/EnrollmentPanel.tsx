@@ -35,7 +35,7 @@ export function EnrollmentPanel({ heading, openBatches, content }: EnrollmentPan
             key={batch.id}
             batch={batch}
             eyebrow={content.cardEyebrow}
-            ctaPrefix={content.ctaPrefix}
+            ctaLabel={content.ctaLabel}
             notOpenLabel={content.notOpenLabel}
             footnote={content.footnote}
           />

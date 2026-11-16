@@ -1,3 +1,6 @@
+import type { StaticImageData } from "next/image";
+import heroPortraitImg from "@/assets/academy/strategic-ai-collaboration/hero-portrait.png";
+
 export interface HeroContent {
   infoStrip: string[];
   infoStripCompact: string;
@@ -8,7 +11,7 @@ export interface HeroContent {
   highlight: string;
   primaryCta: string;
   secondaryCta: string;
-  portrait: { label: string; description: string };
+  portrait: { image: StaticImageData; alt: string };
 }
 
 export const heroContent: HeroContent = {
@@ -28,8 +31,7 @@ export const heroContent: HeroContent = {
   primaryCta: "Daftar sekarang",
   secondaryCta: "Baca suratnya dulu",
   portrait: {
-    label: "FOTO · POTRET 4:5",
-    description:
-      "Kamu di meja kerja, menatap kamera, laptop terbuka. Cahaya alami dari samping, latar ruang kerjamu sendiri.",
+    image: heroPortraitImg,
+    alt: "Stanislaus Billy tersenyum di meja kerja dengan laptop terbuka",
   },
 };
