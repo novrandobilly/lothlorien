@@ -36,3 +36,7 @@ export const workshopBatches: WorkshopBatch[] = [
 ];
 
 export const openBatches = workshopBatches.filter((batch) => batch.status === "open");
+
+// Every "Daftar" CTA goes straight to the Mayar checkout of the nearest open batch; falls back to the enrollment section until a batch has a payment link.
+export const PRIMARY_CHECKOUT_HREF =
+  openBatches.find((batch) => batch.paymentUrl !== "")?.paymentUrl || "#daftar";

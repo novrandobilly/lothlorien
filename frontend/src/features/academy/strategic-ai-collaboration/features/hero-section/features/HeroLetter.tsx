@@ -1,5 +1,5 @@
 import React from "react";
-import { SERIF, ENROLL_ANCHOR, LETTER_ANCHOR } from "../../../constants";
+import { SERIF, LETTER_ANCHOR, PRIMARY_CHECKOUT_HREF } from "../../../constants";
 import { CtaLink } from "../../../components/CtaLink";
 import { TextLink } from "../../../components/TextLink";
 import { HeroContent } from "../constants";
@@ -54,7 +54,7 @@ export function HeroLetter({ content }: HeroLetterProps) {
       </div>
 
       <div className="flex flex-wrap items-center gap-x-7 gap-y-3 pt-1">
-        <CtaLink href={ENROLL_ANCHOR} className="w-full sm:w-auto">
+        <CtaLink href={PRIMARY_CHECKOUT_HREF} className="w-full sm:w-auto">
           {content.primaryCta}
         </CtaLink>
         <TextLink href={LETTER_ANCHOR}>{content.secondaryCta}</TextLink>

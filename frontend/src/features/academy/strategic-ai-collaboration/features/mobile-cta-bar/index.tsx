@@ -53,7 +53,7 @@ export function MobileCtaBar({
         </span>
         <span className="text-[17px] font-bold text-[#16130F]">{batch.price}</span>
       </span>
-      <CtaLink href={ENROLL_ANCHOR} size="md">
+      <CtaLink href={batch.paymentUrl || ENROLL_ANCHOR} size="md">
         {ctaLabel}
       </CtaLink>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { EnvienLogo } from "@/components/ui/EnvienLogo";
 import { CtaLink } from "../../components/CtaLink";
-import { ENROLL_ANCHOR } from "../../constants";
+import { PRIMARY_CHECKOUT_HREF } from "../../constants";
 
 interface SalesHeaderProps {
   ctaLabel?: string;
@@ -15,7 +15,7 @@ export function SalesHeader({ ctaLabel = "Daftar" }: SalesHeaderProps) {
       <Link href="/" aria-label="Envien Studio, ke beranda" className="inline-flex min-h-11 items-center">
         <EnvienLogo className="h-6 w-auto" />
       </Link>
-      <CtaLink href={ENROLL_ANCHOR} size="sm">
+      <CtaLink href={PRIMARY_CHECKOUT_HREF} size="sm">
         {ctaLabel}
       </CtaLink>
     </header>
