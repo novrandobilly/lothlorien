@@ -1,15 +1,22 @@
 import React from "react";
-import { PhotoPlaceholder } from "../../../components/PhotoPlaceholder";
+import type { StaticImageData } from "next/image";
+import { Photo } from "../../../components/Photo";
 
 interface HeroPortraitProps {
-  label: string;
-  description: string;
+  image: StaticImageData;
+  alt: string;
 }
 
-export function HeroPortrait({ label, description }: HeroPortraitProps) {
+export function HeroPortrait({ image, alt }: HeroPortraitProps) {
   return (
     <div className="flex min-w-0 flex-[1_1_320px] flex-col">
-      <PhotoPlaceholder label={label} description={description} className="aspect-[4/5]" />
+      <Photo
+        src={image}
+        alt={alt}
+        priority
+        sizes="(min-width: 1024px) 480px, 100vw"
+        className="aspect-[4/5]"
+      />
     </div>
   );
 }

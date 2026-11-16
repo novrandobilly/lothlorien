@@ -19,8 +19,8 @@ export function HeroSection({ content = heroContent }: HeroSectionProps) {
         <div className="flex flex-wrap items-start gap-x-16 gap-y-10">
           <HeroLetter content={content} />
           <HeroPortrait
-            label={content.portrait.label}
-            description={content.portrait.description}
+            image={content.portrait.image}
+            alt={content.portrait.alt}
           />
         </div>
       </section>

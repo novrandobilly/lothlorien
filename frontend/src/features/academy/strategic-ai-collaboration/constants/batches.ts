@@ -6,6 +6,9 @@ export interface WorkshopBatch {
   date: string;
   shortDate: string;
   time: string;
+  // UTC, Google Calendar format (YYYYMMDDTHHMMSSZ). Used for the "save to calendar" link on the thank-you page.
+  calendarStart: string;
+  calendarEnd: string;
   capacity: number;
   price: string;
   originalPrice?: string;
@@ -22,10 +25,12 @@ export const workshopBatches: WorkshopBatch[] = [
     code: "Batch 01",
     date: "Sabtu, 28 November 2026",
     shortDate: "28 Nov",
-    time: "09.00–12.00 WIB",
-    capacity: 25,
-    price: "Rp 149.000",
-    paymentUrl: "",
+    time: "09.00-12.00 WIB",
+    calendarStart: "20261128T020000Z",
+    calendarEnd: "20261128T050000Z",
+    capacity: 40,
+    price: "Rp 125.000",
+    paymentUrl: "https://envienstudio.myr.id/pl/strategic-ai-collaboration-batch-01",
     status: "open",
   },
 ];

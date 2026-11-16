@@ -3,14 +3,14 @@ export interface EnrollmentContent {
   lead: string;
   bring: { label: string; items: string[] };
   cardEyebrow: string;
-  ctaPrefix: string;
+  ctaLabel: string;
   notOpenLabel: string;
   footnote: string;
 }
 
 export const enrollmentContent: EnrollmentContent = {
   title: "Amankan kursimu",
-  lead: "Satu batch, maksimal 25 orang, supaya latihannya tetap personal dan semua tugas sempat dibahas.",
+  lead: "Satu batch, maksimal 40 orang, supaya sesi latihannya tetap terarah dan interaktif.",
   bring: {
     label: "Yang perlu kamu siapkan",
     items: [
@@ -20,7 +20,7 @@ export const enrollmentContent: EnrollmentContent = {
     ],
   },
   cardEyebrow: "Batch yang sedang dibuka",
-  ctaPrefix: "Daftar & bayar",
+  ctaLabel: "Daftar Sekarang",
   notOpenLabel: "Pendaftaran segera dibuka",
   footnote:
     "Kamu akan diarahkan ke halaman pembayaran Mayar. Setelah pembayaran berhasil, link Zoom dikirim otomatis ke email kamu.",

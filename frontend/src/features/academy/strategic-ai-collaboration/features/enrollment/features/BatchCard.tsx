@@ -5,13 +5,13 @@ import { CtaLink } from "../../../components/CtaLink";
 interface BatchCardProps {
   batch: WorkshopBatch;
   eyebrow: string;
-  ctaPrefix: string;
+  ctaLabel: string;
   notOpenLabel: string;
   footnote: string;
 }
 
 // One open batch with its own checkout button. Without a payment link the button shows as not yet open.
-export function BatchCard({ batch, eyebrow, ctaPrefix, notOpenLabel, footnote }: BatchCardProps) {
+export function BatchCard({ batch, eyebrow, ctaLabel, notOpenLabel, footnote }: BatchCardProps) {
   const isOpen = batch.paymentUrl !== "";
 
   return (
@@ -32,7 +32,7 @@ export function BatchCard({ batch, eyebrow, ctaPrefix, notOpenLabel, footnote }:
 
       {isOpen ? (
         <CtaLink href={batch.paymentUrl} className="w-full">
-          {ctaPrefix} — {batch.price}
+          {ctaLabel}
         </CtaLink>
       ) : (
         <span

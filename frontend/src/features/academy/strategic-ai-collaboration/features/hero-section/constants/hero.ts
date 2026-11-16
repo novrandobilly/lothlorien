@@ -1,3 +1,6 @@
+import type { StaticImageData } from "next/image";
+import heroPortraitImg from "@/assets/academy/strategic-ai-collaboration/hero-portrait.png";
+
 export interface HeroContent {
   infoStrip: string[];
   infoStripCompact: string;
@@ -8,16 +11,16 @@ export interface HeroContent {
   highlight: string;
   primaryCta: string;
   secondaryCta: string;
-  portrait: { label: string; description: string };
+  portrait: { image: StaticImageData; alt: string };
 }
 
 export const heroContent: HeroContent = {
   infoStrip: [
     "Workshop online · 3 jam via Zoom",
-    "Sabtu, 28 November 2026 · 09.00–12.00 WIB",
-    "Rp 149.000 · Maks. 25 kursi",
+    "Sabtu, 28 November 2026 · 09.00-12.00 WIB",
+    "Rp 125.000 · Maks. 40 kursi",
   ],
-  infoStripCompact: "Sab, 28 Nov · Zoom 3 jam · Rp 149.000",
+  infoStripCompact: "Sab, 28 Nov · Zoom 3 jam · Rp 125.000",
   titleLines: ["Kerja bareng AI,", "siapa takut"],
   subtitleLead: "Untuk kamu yang diam-diam bertanya,",
   subtitleQuestion: "“Apakah saya akan tergantikan AI?”",
@@ -28,8 +31,7 @@ export const heroContent: HeroContent = {
   primaryCta: "Daftar sekarang",
   secondaryCta: "Baca suratnya dulu",
   portrait: {
-    label: "FOTO · POTRET 4:5",
-    description:
-      "Kamu di meja kerja, menatap kamera, laptop terbuka. Cahaya alami dari samping, latar ruang kerjamu sendiri.",
+    image: heroPortraitImg,
+    alt: "Stanislaus Billy tersenyum di meja kerja dengan laptop terbuka",
   },
 };

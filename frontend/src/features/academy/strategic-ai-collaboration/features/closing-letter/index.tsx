@@ -1,6 +1,6 @@
 import React from "react";
 import { SERIF } from "../../constants";
-import { PhotoPlaceholder } from "../../components/PhotoPlaceholder";
+import { Photo } from "../../components/Photo";
 import { closingLetterContent, ClosingLetterContent } from "./constants";
 
 interface ClosingLetterSectionProps {
@@ -12,10 +12,11 @@ export function ClosingLetterSection({ content = closingLetterContent }: Closing
     <section id="penutup" className="scroll-mt-6 border-y border-[#E6E0D7] bg-[#F3EEE6] px-5 py-16 sm:px-8 lg:py-28">
       <div className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-16 gap-y-10">
         <div className="min-w-0 flex-[1_1_360px]">
-          <PhotoPlaceholder
-            label={content.photo.label}
-            description={content.photo.description}
-            className="aspect-[3/2] bg-[#EAE3D8]"
+          <Photo
+            src={content.photo.image}
+            alt={content.photo.alt}
+            sizes="(min-width: 1024px) 560px, 100vw"
+            className="aspect-[3/2]"
           />
         </div>
         <div className="flex min-w-0 flex-[1.1_1_400px] flex-col gap-5">
