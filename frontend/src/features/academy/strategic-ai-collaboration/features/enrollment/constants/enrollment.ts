@@ -10,7 +10,7 @@ export interface EnrollmentContent {
 
 export const enrollmentContent: EnrollmentContent = {
   title: "Amankan kursimu",
-  lead: "Satu batch, maksimal 25 orang, supaya latihannya tetap personal dan semua tugas sempat dibahas.",
+  lead: "Satu batch, maksimal 40 orang, supaya sesi latihannya tetap terarah dan interaktif.",
   bring: {
     label: "Yang perlu kamu siapkan",
     items: [

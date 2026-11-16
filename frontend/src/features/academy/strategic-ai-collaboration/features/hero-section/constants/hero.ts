@@ -14,10 +14,10 @@ export interface HeroContent {
 export const heroContent: HeroContent = {
   infoStrip: [
     "Workshop online · 3 jam via Zoom",
-    "Sabtu, 28 November 2026 · 09.00–12.00 WIB",
-    "Rp 149.000 · Maks. 25 kursi",
+    "Sabtu, 28 November 2026 · 09.00-12.00 WIB",
+    "Rp 125.000 · Maks. 40 kursi",
   ],
-  infoStripCompact: "Sab, 28 Nov · Zoom 3 jam · Rp 149.000",
+  infoStripCompact: "Sab, 28 Nov · Zoom 3 jam · Rp 125.000",
   titleLines: ["Kerja bareng AI,", "siapa takut"],
   subtitleLead: "Untuk kamu yang diam-diam bertanya,",
   subtitleQuestion: "“Apakah saya akan tergantikan AI?”",

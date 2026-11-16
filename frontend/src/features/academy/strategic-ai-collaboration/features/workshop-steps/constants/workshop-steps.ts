@@ -14,40 +14,35 @@ export interface WorkshopStepsContent {
 export const workshopStepsContent: WorkshopStepsContent = {
   title: "Tiga jam, satu kerjaan nyatamu.",
   intro:
-    "Bukan menghafal template prompt. Kamu bawa satu tugas dari pekerjaanmu, lalu kita selesaikan bersama lewat empat langkah.",
+    "Bukan menghafal template prompt. Kamu bawa satu tugas dari pekerjaanmu, lalu kita kerjakan bersama lewat 4 Lapisan Kerja Bareng AI.",
   steps: [
     {
       number: "1",
-      title: "Petakan kerjaanmu",
-      description:
-        "Tentukan tujuan dan standar “berhasil”, lalu pilah langkah mana yang kamu pegang, kolaborasikan, dan delegasikan.",
+      title: "Foundation",
+      description: "Tentukan tujuan, standar \u201cberhasil\u201d, dan bagian kerja yang kamu pegang.",
     },
     {
       number: "2",
-      title: "Brief AI seperti rekan kerja",
-      description:
-        "Susun satu brief berisi target hasil, konteks, alur kerja, dan sikap AI, supaya jawabannya berhenti muter-muter.",
+      title: "Processing",
+      description: "Brief AI seperti rekan kerja: target hasil, konteks, dan alur kerja.",
     },
     {
       number: "3",
-      title: "Uji hasilnya",
-      description:
-        "Periksa fakta dan logikanya, minta AI membantah dirinya sendiri, lalu beri koreksi yang terarah.",
+      title: "Verification",
+      description: "Uji fakta dan tantang logika AI, terutama jawaban yang terdengar paling meyakinkan.",
     },
     {
       number: "4",
-      title: "Jadikan milikmu",
-      description:
-        "Pahami isinya sampai bisa kamu jelaskan tanpa melihat layar, jaga data sensitif, dan siap mempertanggungjawabkannya.",
+      title: "Governance",
+      description: "Pahami isinya, jaga data, dan siap mempertanggungjawabkan hasilnya.",
     },
   ],
   takeaway: {
     eyebrow: "Yang kamu bawa pulang",
-    headline: "Satu kerjaan nyata yang selesai bareng AI, dan Peta Personal untuk Senin pagi.",
+    headline: "Satu kerjaan nyata yang selesai bareng AI, dan Peta Personal untuk kerjaanmu selanjutnya.",
     extras: [
+      { label: "Cheat sheet", text: "4 lapisan" },
       { label: "Rekaman sesi", text: "untuk diputar ulang" },
-      { label: "Handout:", text: "cheat sheet 4 lapisan & template Peta Personal" },
-      { label: "Check-in 2 minggu", text: "setelah sesi" },
     ],
   },
 };

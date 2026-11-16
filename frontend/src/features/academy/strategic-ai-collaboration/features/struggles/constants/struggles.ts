@@ -24,7 +24,7 @@ export const strugglesContent: StrugglesContent = {
   ],
   opening: [
     "Kalau iya, kamu nggak sendirian. Saya juga pernah di sana, bahkan sering.",
-    "Sebagai front-end engineer, hampir setiap hari saya minta tolong AI. Kerjaan yang dulu butuh 2–3 hari kini selesai dalam satu jam. Anehnya, hari ketika kerjaan saya paling cepat selesai justru jadi hari saya paling gelisah.",
+    "Sebagai front-end engineer, hampir setiap hari saya minta tolong AI. Kerjaan yang dulu butuh 2-3 hari kini selesai dalam satu jam. Anehnya, hari ketika kerjaan saya paling cepat selesai justru jadi hari saya paling gelisah.",
   ],
   trapsIntro:
     "Masalahnya ternyata bukan AI-nya. Justru karena AI sering benar, kita berhenti memeriksa. Ada tiga jebakan yang bekerja diam-diam:",

@@ -32,7 +32,7 @@ export function BatchCard({ batch, eyebrow, ctaPrefix, notOpenLabel, footnote }:
 
       {isOpen ? (
         <CtaLink href={batch.paymentUrl} className="w-full">
-          {ctaPrefix} — {batch.price}
+          {ctaPrefix} · {batch.price}
         </CtaLink>
       ) : (
         <span
